@@ -1,3 +1,5 @@
+from pprint import pprint
+import math
 import json
 from munkres import Munkres
 
@@ -18,7 +20,7 @@ class GramPair:
         return [GramElement(self.edge, "edge"), GramElement(self.node, node_type)]
 
     @staticmethod
-    def flatten(lst, node_type="type"):
+    def flatten(lst, node_type="type", edge_type="edge"):
         return [sum([x._flatten(node_type) for x in y], []) for y in lst]
 
 class GramElement:
@@ -27,12 +29,17 @@ class GramElement:
     Edges and Nodes are treated differently.  May even want a mechanism for comparing different
     types of objects
     """
-    def __init__(self, value, type_):
+    def __init__(self, value, type_, extract=None):
+        """
+        """
         self.value = value
         self.type = type_
+        self.extract = extract
 
     @property
     def label(self):
+        if self.extract:
+            return self.extract(self.value)
         if self.type == "edge":
             return self.value
         if self.type == "type":
@@ -52,6 +59,11 @@ class GramElement:
         return False
 
 def _node_sim(a, b, func="wup"):
+    """
+    Compute the score between to trips "type" GramElements
+    """
+    if (a.label == "ROOT") or (b.label == "ROOT") or (a.type != "type") or (b.type != "type"):
+        return a.label == b.label
     a = ont[a.label]
     b = ont[b.label]
 
@@ -60,9 +72,12 @@ def _node_sim(a, b, func="wup"):
     elif func == "cosine":
         return a.cosine(b)
     elif func == "eq" or func is None:
-        return a == b
+        return float(a == b)
 
 def node_sim(func="wup"):
+    """
+    func types are "wup", "cosine", and "eq"
+    """
     return lambda a, b: _node_sim(a, b, func=func)
 
 
@@ -83,8 +98,14 @@ def ngrams_trips(graph, n=1):
     input is json_format["parse"]
     """
     if type(graph) is list:
-        return sum([ngrams_trips(x, n=n) for x in graph], [])
+        # flatten the graph and ignore root keys
+        new_graph = {}
+        for g in graph:
+            for x, y in g.items():
+                new_graph[x] = y
+        return ngrams_trips(new_graph, n=n)
     else:
+        # we are ignoring the root key and starting from each node.
         res = [ngrams_from_node_trips(graph, x, role="ROOT", n=n) for x in graph if x != "root"]
         return sum([r for r in res if r], []) # get rid of empties
 
@@ -120,9 +141,9 @@ class NGramScorer:
         Score(x, y) = gate_cond(x, y) * sum(sim(x, y) * coeff(xi,yi))
     """
     def __init__(self,
-                 sim=lambda a, b: int(a == b),
-                 coeff=lambda a, b: int(a == b),
-                 gate=lambda a, b: int(a == b),
+                 sim=node_sim(None),
+                 coeff=lambda a, b: 1,
+                 gate=lambda a, b: 1,
                  align="greedy"):
         self.sim = sim
         if coeff is None:
@@ -151,27 +172,17 @@ class NGramScorer:
             score += self.coeff(ai, bi) * self.sim(ai, bi)
         return gate * score/len(ngram_1)
 
-    def align(self, ngrams_1, ngrams_2, method=None):
+    def align(self, ngrams_1, ngrams_2, method=None, aligned=False):
         """
         Find the max score alignment between ngram pairs
-        Make sure to deal with unequal sets
+        aligned -> True returns alignment iff method allows
+            greedy, munkres
 
-        https://liyanxu.blog/2018/10/19/greedy-approximation/
-
-        Hypothesis: Greedy approximation is a good approximation as long as similarity
-        is function is convex
-        """
-        ngrams_1 = GramPair.flatten(ngrams_1)
-        ngrams_2 = GramPair.flatten(ngrams_2)
+       """
         if method is None:
             method = self._align
         if method.startswith("greedy"):
-            return self.greedy(ngrams_1, ngrams_2)
-            total = 0
-            for a in ngrams_1:
-                for b in ngrams_2:
-                    total += self.score_ngram(a, b)
-            return total/(len(a)*len(b))
+            return self.greedy(ngrams_1, ngrams_2, aligned=aligned)
         elif method == "average":
             # non-symmetric
             return self.average(ngrams_1, ngrams_2, unbalanced=True)
@@ -187,7 +198,7 @@ class NGramScorer:
             return sqrt((self.average(ngrams_1, ngrams_2) ** 2 +
                     self.average(ngrams_2, ngrams_1) ** 2)/2)
         elif method == "munkres":
-            self.munkres(ngrams_1, ngrams_2)
+            self.munkres(ngrams_1, ngrams_2, aligned=aligned)
 
     def average(self, ngrams_1, ngrams_2, unbalanced=False):
         s1 = len(ngrams_1)
@@ -201,25 +212,35 @@ class NGramScorer:
             total.append(max([self.score_ngrams(a, b) for b in ngrams_2]))
         return reversed(sorted(total))[:s1]/s2
 
-    def greedy(self, ngrams_1, ngrams_2, aligned=True):
+    def greedy(self, ngrams_1, ngrams_2, aligned=False):
+        """
+        Determine an alignment by greedy approximation.
+
+        Hypothesis: Greedy approximation is a good approximation as long as similarity
+        is function is convex
+        """
         hyps = []
         for i in range(len(ngrams_1)):
             for j in range(len(ngrams_2)):
                 hyps.append((self.score_ngram(ngrams_1[i], ngrams_2[j]), i, j))
         hyps = sorted(hyps, key=lambda x: -x[0])
-        taken = set()
+        taken1, taken2 = set(), set()
         res = []
-        for h in hyps:
-            if h[1] in taken or -h[2] in taken:
+        for s, h1, h2 in hyps:
+            if h1 in taken1 or h2 in taken2:
                 continue
-            res.append([h[0], ngrams_1[h[1]], ngrams_2[h[2]]])
-            taken.update([h[1], -h[2]])
+            res.append([s, ngrams_1[h1], ngrams_2[h2]])
+            taken1.add(h1)
+            taken2.add(h2)
         if aligned:
             return res
         else:
             return sum([r[0] for r in res])/len(res)
 
     def munkres(self, ngrams_1, ngrams_2, aligned=False):
+        """
+        Use the munkres algorithm to compute optimal matching.
+        """
         def pad(inp, l):
             if len(inp) < l:
                 return inp + [0]*(l-len(inp))
@@ -235,14 +256,62 @@ class NGramScorer:
         indices = m.compute(matrix)
         if aligned:
             return [[1 - matrix[i][j], ngrams_1[i], ngrams_2[j]] for i, j in matrix]
+        # Why is this not normalized when the others are?
         return sum([1 - matrix[i][j] for i, j in matrix])
 
+    def bleu(self, ngrams_1, ngrams_2, n=3, weights=[], aligned=False):
+        """
+        BLEU = BrevityPenalty * exp(geometric-mean(log(pk)))
+        pk = K-gram precision
+        """
+        if type(n) is list:
+            weights = n
+            n = len(weights)
+        else:
+            weights = [1/n for i in range(n)]
+
+        #HARDCODED trips
+        ngrams_1 = [ngrams(ngrams_1, i+1, "trips") for i in range(n)]
+        ngrams_2 = [ngrams(ngrams_2, i+1, "trips") for i in range(n)]
+        alignment = [self.align(
+                        GramPair.flatten(ng1),
+                        GramPair.flatten(ng2), aligned=aligned) for ng1, ng2 in zip(ngrams_1, ngrams_2)]
+        if aligned:
+            return alignment
+        score = zip(weights, alignment)
+        score = sum([a*math.log(b) for a, b in score])
+        bp = math.exp(min(1 - len(ngrams_1)/len(ngrams_2), 0))
+        return bp * math.exp(score)
+
 def compare_trips(f1, f2, max_ngrams=3, sim=None, coeff=None, gate=None, align="greedy"):
+    """
+    sim: "wup", "cosine", "eq"
+    coeff:
+    gate: "span", "lex"
+    align: "greedy", "average", "max_average", "bidir_average", "hyp_average", "munkres"
+    """
     scorer = NGramScorer(node_sim(sim), coeff, gate, align)
     f1 = json.load(open(f1))["parse"]
-    f2 = json.load(open(f2))["parse"]
+    f2 = json.load(open(f2))
+    if f2.get("alternatives"):
+        f2 = f2["alternatives"][1]
+    else:
+        raise ValueError("Alternatives not found")
+        f2 = f2["parse"]
+    #pprint(scorer.bleu(f1, f2, n=3, aligned=True))
 
-    ngrams_1 = [ngrams(f1, i+1, "trips") for i in range(max_ngrams)]
-    ngrams_2 = [ngrams(f2, i+1, "trips") for i in range(max_ngrams)]
+    return scorer.bleu(f1, f2, n=max_ngrams, aligned=False)
 
-    return [scorer.align(ng1, ng2) for ng1, ng2 in zip(ngrams_1, ngrams_2)]
+def compare_sentence(sentence, max_ngrams=3, sim=None, align="greedy"):
+    """
+    compare a parse against its first alternative
+    """
+    from tripscli.parse.web.parse import TripsParser
+    parser = TripsParser(url="http://trips.ihmc.us/parser/cgi/step", debug=False)
+    scorer = NGramScorer(sim=node_sim(sim), align=align)
+    parser.set_parameter("number-parses-desired", 2)
+    js = parser.query(sentence)
+    f1 = js["parse"]
+    f2 = js.get("alternatives")[0]
+    #pprint(scorer.bleu(f1, f2, n=max_ngrams, aligned=True))
+    return scorer.bleu(f1, f2, n=max_ngrams, aligned=False)
