@@ -255,9 +255,9 @@ class NGramScorer:
         m = Munkres()
         indices = m.compute(matrix)
         if aligned:
-            return [[1 - matrix[i][j], ngrams_1[i], ngrams_2[j]] for i, j in matrix]
+            return [[1 - matrix[i][j], ngrams_1[i], ngrams_2[j]] for i, j in indices]
         # Why is this not normalized when the others are?
-        return sum([1 - matrix[i][j] for i, j in matrix])
+        return sum([1 - matrix[i][j] for i, j in indices])
 
     def bleu(self, ngrams_1, ngrams_2, n=3, weights=[], aligned=False):
         """
@@ -313,5 +313,5 @@ def compare_sentence(sentence, max_ngrams=3, sim=None, align="greedy"):
     js = parser.query(sentence)
     f1 = js["parse"]
     f2 = js.get("alternatives")[0]
-    #pprint(scorer.bleu(f1, f2, n=max_ngrams, aligned=True))
+    pprint([[y for y in x if y[0] != 1.0] for x in scorer.bleu(f1, f2, n=max_ngrams, aligned=True)])
     return scorer.bleu(f1, f2, n=max_ngrams, aligned=False)
