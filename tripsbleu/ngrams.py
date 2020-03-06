@@ -264,7 +264,7 @@ class NGramScorer:
         # Make the cost matrix
         ng1 = len(ngrams_1)
         if ng1 < len(ngrams_2):
-            return munkres(ngrams_2, ngrams_1, aligned)
+            return self.munkres(ngrams_2, ngrams_1, aligned)
         matrix = [pad([1 - self.score_ngram(ngrams_1[i], ngrams_2[j])
                        for j in range(len(ngrams_2))], ng1)
                   for i in range(len(ngrams_1))]
