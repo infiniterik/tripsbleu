@@ -8,16 +8,17 @@ class GramPair:
     A gram is a combination of a node and an incoming edge.
     the default incoming edge is "ROOT" and can be ignored
     """
-    def __init__(self, node, edge="ROOT", graph_type="trips"):
+    def __init__(self, node, edge="ROOT", graph_type="trips", id=None):
         self.node = node
         self.edge = edge
         self.graph_type = graph_type
+        self.id = id
 
     def __repr__(self):
         return "%s->%s" % (self.edge, self.node["id"])
 
     def _flatten(self, node_type="type"):
-        return [GramElement(self.edge, "edge"), GramElement(self.node, node_type)]
+        return [GramElement(self.edge, "edge"), GramElement(self.node, node_type, id=self.id)]
 
     @staticmethod
     def flatten(lst, node_type="type", edge_type="edge"):
@@ -29,12 +30,13 @@ class GramElement:
     Edges and Nodes are treated differently.  May even want a mechanism for comparing different
     types of objects
     """
-    def __init__(self, value, type_, extract=None):
+    def __init__(self, value, type_, extract=None, id=None):
         """
         """
         self.value = value
         self.type = type_
         self.extract = extract
+        self.id = id
 
     @property
     def label(self):
@@ -51,7 +53,13 @@ class GramElement:
         return None
 
     def __repr__(self):
-        return "GE({}.{})".format(self.label, self.type)
+        return "GE({}.{}.{})".format(self.label, self.type, (self.id or ""))
+
+    def __str__(self):
+        return repr(self)
+
+    def __hash__(self):
+        return hash(repr(self))
 
     def __eq__(self, o):
         if isinstance(o, GramElement):
@@ -113,7 +121,7 @@ def ngrams_from_node_trips(graph, root, role="ROOT", n=1):
     """
     recursively find all ngrams of length n starting from the node root
     """
-    anchor = GramPair(graph[root], role)
+    anchor = GramPair(graph[root], role, id=graph[root]["id"])
     if n == 1:
         return [[anchor]]
     elif not graph[root].get("roles", []):
@@ -121,12 +129,20 @@ def ngrams_from_node_trips(graph, root, role="ROOT", n=1):
     res = []
     for edge in graph[root]["roles"]:
         ptr = graph[root]["roles"][edge]
-        if ptr[0] != "#":
-            continue
-        for g in ngrams_from_node_trips(graph, ptr[1:], role=edge, n=n-1):
-            if graph[root]["id"] not in [x.node['id'] for x in g]: # prevent loops
-                # add to result
-                res.append([anchor]+g)
+        def _edgecomp(p):
+            if type(p) == dict:
+                p = p["target"]
+            if p[0] == "#":
+                for g in ngrams_from_node_trips(graph, p[1:], role=edge, n=n-1):
+                    if graph[root]["id"] not in [x.node['id'] for x in g]: # prevent loops
+                        # add to result
+                        res.append([anchor]+g)
+        if type(ptr) == list:
+            for x in ptr:
+                _edgecomp(x)
+        else:
+            _edgecomp(ptr)
+
     return res
 
 from pytrips.ontology import get_ontology
@@ -198,7 +214,7 @@ class NGramScorer:
             return sqrt((self.average(ngrams_1, ngrams_2) ** 2 +
                     self.average(ngrams_2, ngrams_1) ** 2)/2)
         elif method == "munkres":
-            self.munkres(ngrams_1, ngrams_2, aligned=aligned)
+            return self.munkres(ngrams_1, ngrams_2, aligned=aligned)
 
     def average(self, ngrams_1, ngrams_2, unbalanced=False):
         s1 = len(ngrams_1)
@@ -283,35 +299,12 @@ class NGramScorer:
         bp = math.exp(min(1 - len(ngrams_1)/len(ngrams_2), 0))
         return bp * math.exp(score)
 
-def compare_trips(f1, f2, max_ngrams=3, sim=None, coeff=None, gate=None, align="greedy"):
+def compare_trips(f1, f2, max_ngrams=3, sim=None, coeff=None, gate=None, strategy="greedy", aligned=False):
     """
     sim: "wup", "cosine", "eq"
     coeff:
     gate: "span", "lex"
     align: "greedy", "average", "max_average", "bidir_average", "hyp_average", "munkres"
     """
-    scorer = NGramScorer(node_sim(sim), coeff, gate, align)
-    f1 = json.load(open(f1))["parse"]
-    f2 = json.load(open(f2))
-    if f2.get("alternatives"):
-        f2 = f2["alternatives"][1]
-    else:
-        raise ValueError("Alternatives not found")
-        f2 = f2["parse"]
-    #pprint(scorer.bleu(f1, f2, n=3, aligned=True))
-
-    return scorer.bleu(f1, f2, n=max_ngrams, aligned=False)
-
-def compare_sentence(sentence, max_ngrams=3, sim=None, align="greedy"):
-    """
-    compare a parse against its first alternative
-    """
-    from tripscli.parse.web.parse import TripsParser
-    parser = TripsParser(url="http://trips.ihmc.us/parser/cgi/step", debug=False)
-    scorer = NGramScorer(sim=node_sim(sim), align=align)
-    parser.set_parameter("number-parses-desired", 2)
-    js = parser.query(sentence)
-    f1 = js["parse"]
-    f2 = js.get("alternatives")[0]
-    pprint([[y for y in x if y[0] != 1.0] for x in scorer.bleu(f1, f2, n=max_ngrams, aligned=True)])
-    return scorer.bleu(f1, f2, n=max_ngrams, aligned=False)
+    scorer = NGramScorer(node_sim(sim), coeff, gate, strategy)
+    return scorer.bleu(f1, f2, n=max_ngrams, aligned=aligned)
