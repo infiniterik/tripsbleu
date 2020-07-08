@@ -1,3 +1,16 @@
 #+TITLE: Todo
 
-* Re-write
+* rewrite
+** feature/use-networkx
+*** TODO TripsBleu operates on a pair of digraphs
+**** TODO Inputs [0/5]
+:LOGBOOK:
+CLOCK: [2020-07-07 Tue 15:20]
+:END:
+- [ ] Graph
+  Grab this from propbank code
+- [ ] attributes as keys
+- [ ] ngrams
+  Basically, a path of length n
+- [ ] scoring function
+- [ ] alignment function
