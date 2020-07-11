@@ -3,14 +3,14 @@
 * rewrite
 ** feature/use-networkx
 *** TODO TripsBleu operates on a pair of digraphs
-**** TODO Inputs [0/5]
-:LOGBOOK:
-CLOCK: [2020-07-07 Tue 15:20]
-:END:
-- [ ] Graph
+**** TODO Inputs [5/5]
+- [X] Graph
   Grab this from propbank code
-- [ ] attributes as keys
-- [ ] ngrams
+- [X] attributes as keys
+- [X] ngrams
   Basically, a path of length n
-- [ ] scoring function
-- [ ] alignment function
+- [X] scoring function
+- [X] alignment function
+**** TODO Test with basic graphs
+* Inbox
+** TODO Message Emily Anderson [510-684-4254] about housing
