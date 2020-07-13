@@ -40,13 +40,20 @@ def add_trips_node(G, node, clone=True):
         v = v[1:]
         G.add_edge(id, v, role=r)
     values = {r: v for r, v in node.get("roles", {}).items() if not v.startswith("#")}
-    for k, v in node:
+    for k, v in node.items():
         if k != "roles":
             G.nodes[id][k] = v
-    G.nodes[id]["values"] = {}
     for k, v in values.items():
-        G.nodes[id]["values"][k] = v
+        # Flattening the values dict
+        if k in G.nodes[id]:
+            raise KeyError("duplicate key %s when loading trips node %s" % (k, id))
+        G.nodes[id][k] = v
     return G
+
+
+def loads_stg(data, edge_indicator="->", key_prefix=":"):
+    data=data.split("\n")
+    return load_stg(data, edge_indicator, key_prefix)
 
 def load_stg(data, edge_indicator="->", key_prefix=":"):
     """
@@ -55,7 +62,6 @@ def load_stg(data, edge_indicator="->", key_prefix=":"):
     Edge:
     id -> id2 :key value :key2 value2
     """
-    data=data.split("\n")
     def process_keys(keys, i):
         if len(keys) % 2 == 1:
             raise ValueError("Line %d: Key-Value sequence has an odd number of elements" % i)
@@ -92,13 +98,24 @@ def load_stg(data, edge_indicator="->", key_prefix=":"):
     return G
 
 def dump_stg(G, edge_indicator="->", key_prefix=":"):
+    """
+    writes the graph to STG format. keys with None values are discarded
+    """
     res = ""
     res += "# Nodes\n"
     for n in G.nodes:
-        res += "%s %s\n" % (n, " ".join(["%s%s %s" % (key_prefix, k, v) for k, v in G.nodes[n].items()]))
+        keyvals = [(k, v) for k, v in G.nodes[n].items()]
+        for k, v in keyvals:
+            if v and type(v) not in [str, int, float, bool]:
+                raise TypeError("Label value in node %s is of type %s which is not atomic" % (n, type(v).__name__))
+        res += "%s %s\n" % (n, " ".join(["%s%s %s" % (key_prefix, k, v) for k, v in keyvals if v is not None]))
     res += "# Edges\n"
     for s, t in G.edges:
-        res += "%s %s %s %s\n" % (s, edge_indicator, t, " ".join(["%s%s %s" % (key_prefix, k, v) for k, v in G.edges[(s, t)].items()]))
+        keyvals = [(k, v) for k, v in G.edges[(s, t)].items()]
+        for k, v in keyvals:
+            if v and type(v) not in [str, int, float, bool]:
+                raise TypeError("Label value in edge %s->%s is of type %s which is not atomic" % (s, t, type(v).__name__))
+        res += "%s %s %s %s\n" % (s, edge_indicator, t, " ".join(["%s%s %s" % (key_prefix, k, v) for k, v in keyvals if v is not None]))
     return res
 
 def remove_node(G, id, clone=True):
@@ -119,7 +136,7 @@ def tripsnx(js, alt=None, version="alternatives"):
     roots = []
     G = nx.DiGraph()
     for subtree in parse:
-        roots.append(subtree.get("root", "")[:1])
+        roots.append(subtree.get("root", "")[1:])
         for x, v in subtree.items():
             if x == "root":
                 continue

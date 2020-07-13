@@ -12,5 +12,3 @@
 - [X] scoring function
 - [X] alignment function
 **** TODO Test with basic graphs
-* Inbox
-** TODO Message Emily Anderson [510-684-4254] about housing

@@ -16,7 +16,9 @@ def ngrams(G, n, edge_label="role", node_label="id"):
         G.add_edge("__NGRAM_SOURCE", d)
         G.add_edge(d, "__NGRAM_SINK")
 
-    ng = sorted([_return_values(G, p[1:-1], edge_label, node_label) for p in nx.all_simple_paths(G, "__NGRAM_SOURCE", "__NGRAM_SINK", cutoff=n+2)], key=lambda x: len(x))
+    ng = sorted([_return_values(G, p[1:-1], edge_label, node_label)
+                 for p in nx.all_simple_paths(G, "__NGRAM_SOURCE", "__NGRAM_SINK", cutoff=n+2)],
+                key=lambda x: len(x))
     # 2*i + 1 because we have edges as well
     return {i+1 : [x for x in ng if len(x) == (2*i + 1)] for i in range(n)}
 
@@ -61,9 +63,12 @@ def sembleu(reference, candidate, n=3, pk=set_intersection, weights=None, edge_l
     candidateng = ngrams(candidate, n, edge_label=edge_label)
     # What do you do when pk returns 0?
     # According to NLTK, if pk for ngrams of any order returns 0, the entire score is 0.
-    pks = [pk(referenceng[i+1], candidateng[i+1]) for i in range(n)]
+    # Here, I am not adding pk[i] if both ngram lists are empty. (There can't be 4-grams if there are no 2-grams)
+    # if either graph has any k-grams, the score is 0 instead, which is (currently) a fail
+    pks = [pk(referenceng[i+1], candidateng[i+1]) for i in range(n) if referenceng[i+1] or candidateng[i+1]]
     for i, v in enumerate(pks):
         if v == 0:
             raise ValueError("%d-grams have no overlap" % (i+1))
             return 0
+    n = len(pks)
     return BP * (math.e ** sum([weights[i] * math.log(pks[i]) for i in range(n)]))

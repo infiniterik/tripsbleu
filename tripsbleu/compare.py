@@ -20,6 +20,8 @@ def set_intersection(source, reference):
     """
     :returns: the number of elements of source that are in reference, divided by the size of reference
     """
+    if (not source) or (not reference):
+        return 0
     return len(set(source).intersection(set(reference)))/len(set(reference))
 
 def weighted_ngram_score(edge=kronecker, node=kronecker, edge_weight=1, node_weight=1):
