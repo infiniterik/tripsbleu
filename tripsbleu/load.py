@@ -145,3 +145,22 @@ def tripsnx(js, alt=None, version="alternatives"):
 
 
 
+
+import penman
+from penman.models.amr import model
+
+def load_amr(graph):
+    g = nx.DiGraph()
+    for s, l, t in graph.instances():
+        g.add_node(s)
+        g.nodes[s]["id"] = t
+    for s, l, t in graph.triples:
+        if l == ":instance":
+            continue
+        s,l,t = penman.models.amr.model.canonicalize((s,l,t))
+        l = penman.models.amr.model.canonicalize_role(l)
+        g.add_edge(u_of_edge=s, v_of_edge=t, label=l)
+    return g
+
+def load_amr_file(fname):
+    return [load_amr(x) for x in penman.load(source=fname)]

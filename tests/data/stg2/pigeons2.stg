@@ -2,13 +2,13 @@
 V41256 :id V41256 :indicator SPEECHACT :type SA_TELL :start 0 :end 32 :LEX LIKE
 V40989 :id V40989 :indicator F :type APPRECIATE :word LIKE :start 0 :end 32 :TENSE PRES :LEX LIKE :WNSENSE like%2:37:05::
 V40969 :id V40969 :indicator PRO :type PERSON :word I :start 0 :end 2 :PROFORM I :LEX I :WNSENSE person%1:03:00 :COREF USER
-V41001 :id V41001 :indicator INDEF-SET :type NONHUMAN-ANIMAL :word PIGEONS :start 7 :end 32 :LEX PIGEONS :WNSENSE pigeon%1:05:00
+V41001 :id V41001 :indicator INDEF-SET :type PIGEON :word PIGEONS :start 7 :end 32 :LEX PIGEONS :WNSENSE pigeon%1:05:00
 V41005 :id V41005 :indicator F :type ASSOC-WITH :word WITH :start 15 :end 32 :LEX WITH
 V41024 :id V41024 :indicator INDEF-SET :type NATURAL-OBJECT :word FEATHERS :start 20 :end 32 :LEX FEATHERS :WNSENSE natural_object%1:03:00
 V41017 :id V41017 :indicator F :type BLUE :word BLUE :start 20 :end 25 :SCALE BLUE-SCALE :LEX BLUE :WNSENSE blue%5:00:00:chromatic:00
 # Edges
 V41256 -> V40989 :role CONTENT
-V40989 -> V40969 :role AGENT
+V40989 -> V40969 :role EXPERIENCER
 V40989 -> V41001 :role NEUTRAL
 V41001 -> V41005 :role MOD
 V41005 -> V41024 :role GROUND

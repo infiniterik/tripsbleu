@@ -2,18 +2,7 @@ import networkx as nx
 import random
 from tripsbleu.score import sembleu, ngrams
 from tripsbleu.load import loads_stg, dump_stg
-
-def random_tree(i, edge_label="role", node_label="id"):
-    G = nx.DiGraph()
-    G.add_node(0)
-    for n in range(1, i):
-        G.add_edge(random.randrange(0,n), n)
-
-    for k in G.nodes:
-        G.nodes[k][node_label] = str(random.randrange(0,i))
-    for e in G.edges:
-        G.edges[e][edge_label] = str(random.randrange(0,i))
-    return G
+from tripsbleu.tools.generate import random_tree, ElementSpace
 
 def test_identity_trees():
     # generate some random trees
@@ -22,6 +11,24 @@ def test_identity_trees():
         for j in range(5):
             G = random_tree(i)
             assert sembleu(G, G) == 1
+
+def test_uniform_element_space():
+    """
+    This is a random test. It may fail occassionally
+    """
+    for i in range(1, 20):
+        e = ElementSpace([j for j in range(i)], probabilities=[1 for j in range(i)])
+        assert abs(sum(e.sample(100))/100 - (i-1)/2) < i/10
+
+def test_average_element_space():
+    for i in range(1, 20):
+        probs = [random.betavariate(3,2)  for j in range(i)]
+        j = sum(probs)
+        probs = [k/j for k in probs]
+        labels = [j for j in range(i)]
+        expectation = sum([a*b for a, b in enumerate(probs)])
+        e = ElementSpace(labels, probabilities=probs)
+        assert abs(sum(e.sample(100))/100 - expectation) < i/10
 
 def test_write_load():
     # generate some random trees

@@ -1,0 +1,1783 @@
+# ::id bolt12_64556_5627.1
+(u_11 / support-01
+	:ARG0 (u_7 / compose-01
+		:ARG0 (c / i)
+		:ARG1 (u_9 / poem
+			:ARG0-of (s / reply-01)))
+	:ARG1 (e / start-01
+		:ARG1 (u_10 / thread))
+	:manner (t / resolute))
+
+# ::id bolt12_64556_5627.2
+(b / pledge-01
+	:ARG2 (t / fight-01
+		:ARG0 (u_8 / die-01)
+		:ARG2 (u_6 / defend-01
+			:ARG1 (a / and
+				:op2 (c / island
+					:ARG1-of (e / relate-01))
+				:op1 (g3 / island
+					:name (n3 / name
+						:op1 "Diaoyu"
+						:op2 "Islands")
+					:wiki "Senkaku_Islands")))))
+
+# ::id bolt12_64556_5627.3
+(m / multi-sentence
+	:snt1 (u_69 / stir-01
+		:ARG0 (c / fleet
+			:ARG0-of (s / bump-01
+				:ARG1 (u_67 / boat
+					:mod (h / fish-01))))
+		:ARG1 (u_68 / ghost
+			:mod (u_65 / country
+				:name (n / name
+					:op1 "Japan")
+				:wiki "Japan")
+			:mod (u_70 / evil)
+			:mod (u_66 / little))
+		:manner (a / and
+			:op1 (u_71 / trouble)
+			:op2 (u_72 / unrest)))
+	:snt2 (l / show-01
+		:ARG0 (u_74 / they
+			:poss-of (w / appear-01
+				:mod (u_76 / wolfish)
+				:ARG1-of l))
+		:mod (u_61 / again)
+		:location (u_75 / heart
+			:part-of (u_73 / and
+				:op2 (u_63 / form
+					:mod (u_64 / arrogant))
+				:op1 (u_62 / thief)))))
+
+# ::id bolt12_64556_5627.4
+(m / multi-sentence
+	:snt2 (u_205 / shin-01
+		:ARG0 (u_202 / country
+			:name (u_204 / name
+				:op1 "China")
+			:wiki "China")
+		:ARG1 (u_201 / and
+			:op2 (u_194 / knife)
+			:op1 (u_192 / sword
+				:ARG1-of (u_197 / sharp-02))
+			:ARG1-of (u_193 / strong-02)))
+	:snt3 (u_196 / bury-01
+		:ARG1 (e / approach-01
+			:ARG1 (p / person
+				:ARG0-of (u_203 / have-rel-role-91
+					:ARG2 (w / enemy)))))
+	:snt1 (g / go-back-19
+		:ARG4 (c / appear-01
+			:time (u_200 / sign-02
+				:ARG1 (u_199 / treaty))
+			:ARG0-of (s / humiliate-01))
+		:direction (a / back)
+		:time (n / ever)
+		:time (u_198 / time
+			:mod (h / that))))
+
+# ::id bolt12_64556_5629.1
+(u_630 / wish-01
+	:ARG0 (u_629 / i)
+	:ARG1 (u_625 / bear-02
+		:ARG1 (a / and
+			:op3 (u_620 / extinguish-01
+				:ARG1 (p / person
+					:mod (c / country
+						:name (n / name
+							:op1 "China")
+						:wiki "China")
+					:quant "all"
+					:ARG0-of (h / have-rel-role-91
+						:ARG2 (w / enemy))
+					:ARG1-of (e / wrong-04)
+					:ARG0-of (s / spread-03
+						:ARG1 (u_618 / prestige
+							:mod (u_619 / dragon))))
+				:ARG1-of (u_617 / complete-02))
+			:op2 (u_622 / shed-01
+				:ARG1 (u_621 / blood))
+			:op1 (u_616 / lose-02
+				:ARG1 (u_615 / head)))
+		:mod (u_627 / passion
+			:mod (u_611 / that))
+		:topic (u_624 / and
+			:op2 (d / date-entity
+				:weekday 3
+				:ARG1-of (u_614 / long-03))
+			:op1 (u_623 / person
+				:name (u_628 / name
+					:op1 "Mao"
+					:op2 "Zedong")
+				:wiki "Mao_Zedong"
+				:ARG1-of (u_613 / upsurging-01))))
+	:mod (u_631 / much
+		:degree (q / very)))
+
+# ::id bolt12_6455_6561.3
+(u_263 / say-01
+	:ARG1 (p / person
+		:name (n / name
+			:op1 "Hello")
+		:wiki -)
+	:ARG2 (u_252 / contrast-01
+		:ARG1 (s / know-01
+			:ARG0 (u_260 / we
+				:quant (u_259 / all)
+				:beneficiary (u_249 / everyone))
+			:ARG1 (u_251 / incident
+				:time (u_261 / date-entity
+					:day 18)
+				:month 9))
+		:ARG2 (e / plan-01
+			:ARG1 (c / country
+				:name (u_265 / name
+					:op1 "Japan")
+				:wiki "Japan")
+			:mod (h / another)
+			:month 9
+			:time (d / date-entity
+				:day 18)
+			:location (b / sea)
+			:mod (u_254 / again)
+			:mod (u_255 / another)
+			:name (u_257 / name
+				:location (u_256 / sea)
+				:op1 "Lugou"
+				:op2 "Bridge")
+			:time (u_258 / now)
+			:wiki -
+			:ARG1-of (u_253 / premeditate-01))))
+
+# ::id bolt12_6455_6561.4
+(a / and
+	:op2 (u_27 / invade-01
+		:ARG0 (s / island
+			:name (n / name
+				:op1 "Diaoyu"
+				:op2 "Islands")
+			:wiki "Senkaku_Islands")
+		:ARG1 (w / territory
+			:poss (c / country)
+			:mod (h / sacred))
+		:ARG1-of (e / open-04))
+	:op1 (u_26 / defy-01
+		:ARG0 (u_25 / country
+			:name (u_32 / name
+				:op1 "Japan")
+			:wiki "Japan")
+		:ARG1 (u_29 / condemn-01
+			:ARG0 (u_28 / world
+				:mod (u_31 / whole))
+			:ARG1-of (u_30 / strong-02)
+			:ARG1-of (u_24 / surprise-01
+				:ARG0 u_26))))
+
+# ::id bolt12_6455_6561.5
+(u_117 / know-01
+	:ARG0 (c / we
+		:quant "all")
+	:ARG1 (s / belong-01
+		:ARG0 (p2 / island
+			:name (n2 / name
+				:op1 "Diaoyu"
+				:op2 "Islands")
+			:wiki "Senkaku_Islands")
+		:ARG1 (u_118 / country
+			:name (n / name
+				:op1 "China")
+			:wiki "China")
+		:time (u_109 / always)
+		:ARG1-of (u_114 / cause-01
+			:ARG0 (u_115 / reason
+				:mod (h / history)
+				:ARG0-of (u_111 / belong-01
+					:ARG1 (u_116 / become-01
+						:ARG1 (u_112 / we)
+						:ARG2 (u_110 / controversy))
+					:mod (u_113 / original))))))
+
+# ::id bolt12_6455_6561.6
+(m / multi-sentence
+	:snt2 (u_423 / need-01
+		:ARG0 (u_422 / negotiate-01)
+		:ARG1 (u_418 / want-01
+			:ARG0 (u_425 / country
+				:name (n / name
+					:op1 "Japan")
+				:wiki "Japan"
+				:ARG0-of (u_427 / create-01
+					:ARG1 (u_426 / fact
+						:mod-of (u_421 / occupy-01))
+					:ARG1-of (u_419 / cause-01
+						:ARG0 u_418)
+					:ARG1-of u_418))
+			:degree (u_431 / further
+				:mod (u_420 / even))))
+	:snt3 (e / possible-01
+		:ARG1 (s / allow-01
+			:ARG0 (u_428 / we)
+			:ARG1 (c / this))
+		:mode "interrogative"
+		:polarity (u_429 / -
+			:degree (q / absolute)))
+	:snt1 (u_432 / we
+		:domain (w / citizen
+			:poss (u_430 / we)
+			:mod (h / fellow))))
+
+# ::id bolt12_6455_6561.7
+(s / bring-01
+	:ARG0 (w / citizen
+		:poss (c / country
+			:name (n / name
+				:op1 "Japan")
+			:wiki "Japan")
+		:mod (h / fellow))
+	:ARG1 (u_13 / person
+		:topic (a / continent
+			:mod (u_14 / grave)
+			:name (u_15 / name
+				:op1 "Asia")
+			:wiki "Asia"))
+	:ARG2 (u_12 / militarism))
+
+# ::id bolt12_6455_6561.8
+(u_4 / suffer-01
+	:ARG0 (u_3 / country
+		:name (u_5 / name
+			:op1 "China")
+		:wiki "China")
+	:ARG1 (s / ravage-01
+		:ARG0 (c / country
+			:name (n / name
+				:op1 "Japan")
+			:wiki "Japan"))
+	:mod (h / especially)
+	:duration (a / long-03
+		:duration (u_16 / several
+			:op1 (t / temporal-quantity
+				:unit (m / decade)
+				:op1-of a))))
+
+# ::id bolt12_6455_6561.10
+(e / cite-01
+	:ARG1 (u_139 / citizen
+		:poss (u_145 / crime-02
+			:mod (h / heinous)
+			:ARG1-of (s / commit-02
+				:ARG0 (u_138 / country
+					:name (n / name
+						:op1 "Japan")
+					:wiki "Japan")
+				:location (u_136 / country
+					:name (u_137 / name
+						:op1 "China")
+					:wiki "China")))
+		:domain (c / instance
+			:quant (explicitanon0 / many
+				:degree (q / too)))
+		:mod (u_142 / fellow))
+	:concession (o / difficult
+		:domain (u_147 / record-01
+			:ARG1 (u_150 / exhaust-01
+				:ARG1 (u_149 / strip
+					:mod (u_151 / bamboo)
+					:quant (u_148 / all))
+				:polarity -))))
+
+# ::id bolt12_6455_6561.11
+(c / soul
+	:quant "1000000 quant 10"
+	:ARG1-of (e / decease-01)
+	:ARG0-of (l / lose-02
+		:ARG1 (w / life
+			:poss c))
+	:ARG0-of (s / wander-01
+		:ARG1 (f / ocean
+			:name (n2 / name
+				:op1 "Pacific"
+				:op2 "Ocean")
+			:wiki "Pacific_Ocean"))
+	:ARG0-of (u_163 / find-01
+		:ARG1 (u_165 / difficult
+			:domain (u_166 / rest
+				:ARG1 (u_164 / peace)))))
+
+# ::id bolt12_6455_6561.12
+(u_463 / obligate-01
+	:ARG2 (u_460 / remember-01
+		:ARG0 (c / person
+			:quant "all"
+			:ARG0-of (s / experience-01
+				:ARG1 (u_464 / era
+					:mod (h / that))))
+		:ARG1 (u_452 / and
+			:op2 (u_456 / cry-02
+				:ARG0 (u_455 / generation
+					:mod (g / young
+						:degree (m / more)))
+				:ARG1 (u_465 / tear
+					:ARG0-of (u_467 / stream-01
+						:ARG1 (u_454 / cheek)))
+				:mod (u_466 / also)
+				:mod (u_453 / even))
+			:op1 (u_458 / turn-14
+				:ARG1 (u_451 / page
+					:mod (u_459 / this))
+				:ARG2 (a / and
+					:op2 (u_457 / read-01)
+					:op1 (u_450 / history)))
+			:manner (t / indignation))
+		:mod (u_462 / still)
+		:manner (u_461 / vividly)))
+
+# ::id bolt12_6455_6561.13
+(u_45 / want-01
+	:ARG0 (c / country
+		:name (n / name
+			:op1 "Japan")
+		:wiki "Japan"
+		:ARG0-of (s / reverse-01
+			:ARG1 (u_47 / verdict
+				:time (a / history
+					:poss (u_44 / citizen
+						:mod (h / fellow)
+						:mod (u_39 / country
+							:name (u_48 / name
+								:op1 "China")
+							:mod (u_40 / fellow)
+							:wiki "China")
+						:mod (u_41 / aggression)
+						:location (u_42 / continent
+							:name (u_43 / name
+								:op1 "Asia")
+							:wiki "Asia"))))
+			:ARG1-of u_45))
+	:mod (u_46 / actual)
+	:time (u_49 / now)
+	:time (u_50 / wake-up-02))
+
+# ::id bolt12_6455_6561.14
+(u_160 / have-concession-91
+	:ARG1 (r / obligate-01
+		:ARG1 (a / and
+			:op3 (u_177 / choose-01
+				:ARG1 (u_176 / history))
+			:op2 (u_179 / let-01
+				:ARG1 (u_178 / create-01))
+			:op1 (e / resolve-01
+				:ARG1 (c / issue-02
+					:mod (h / history))
+				:polarity -)
+			:ARG1-of (s / go-02
+				:ARG2 (u_180 / face-01)
+				:ARG2-of r)))
+	:ARG2 (u_184 / pain-01
+		:ARG1 (u_183 / look-01
+			:ARG0 (u_182 / shame)
+			:ARG1 (t / temporal-quantity
+				:unit (m / year)
+				:quant 100)
+			:direction (u_159 / back)
+			:mod (u_185 / this))))
+
+# ::id bolt12_6455_6561.16
+(s / mean-01
+	:ARG1 (w / citizen
+		:poss (c / century
+			:ord (o / ordinal-entity
+				:value "twenty-first"))
+		:mod (h / fellow)
+		:beneficiary (u_236 / nation
+			:mod (u_235 / country
+				:name (n / name
+					:op1 "China")
+				:wiki "China")))
+	:ARG2 (a / and
+		:op2 (e / face-01
+			:ARG1 (t / thing
+				:quant (u_237 / many)
+				:ARG2-of (p / challenge-01)))
+		:op1 (u_234 / beset-01
+			:ARG1 (u_238 / difficulty
+				:location (u_233 / inside
+					:op1 (b / press-01
+						:ARG2 (u_232 / outside)))))))
+
+# ::id bolt12_6455_6561.17
+(u_231 / go-02
+	:ARG1 (u_228 / issue-02
+		:ARG0 (c / country
+			:name (n / name
+				:op1 "Taiwan")
+			:wiki "Taiwan")
+		:ARG1 (u_222 / province
+			:ARG0 (u_229 / force
+				:mod (h / foreign)
+				:mod (u_225 / aggressive
+					:topic (u_224 / country
+						:name (u_230 / name
+							:op1 "China")
+						:wiki "China")))
+			:ARG1 (s / issue-02
+				:ARG0 (u_226 / environment
+					:ARG1-of (e / surround-01))
+				:name (u_227 / name
+					:op1 "South"
+					:op2 "China"
+					:op3 "Sea")
+				:wiki "South_China_Sea")
+			:name (u_223 / name
+				:op1 "Tibet")
+			:wiki "Tibet"))
+	:ARG1-of (u_221 / recommend-01))
+
+# ::id bolt12_6455_6561.18
+(a / and
+	:op3 (u_215 / suppress-01
+		:ARG0 (u_210 / encircle-01
+			:mod (u_216 / crescent-shaped))
+		:ARG1 (u_214 / breathe-01))
+	:op4 (u_209 / covet-01
+		:ARG1 (u_208 / territory
+			:mod (u_212 / nation)))
+	:op2 (e / strangle-01
+		:ARG1 (u_211 / develop-02))
+	:op1 (s / look-01
+		:ARG0 (u_213 / citizen
+			:mod (h / fellow))
+		:ARG1 (w / map
+			:poss (c / world))
+		:polite +))
+
+# ::id bolt12_6455_6561.19
+(m / multi-sentence
+	:snt1 (u_94 / contrast-01
+		:ARG1 (u_92 / want-01
+			:ARG0 (u_101 / we
+				:ARG0-of (u_104 / make-01
+					:ARG1 (p / person
+						:ARG0-of (h / have-rel-role-91
+							:ARG2 (w / enemy)))
+					:ARG1-of u_92))
+			:polarity -)
+		:ARG2 (u_102 / fear-01
+			:ARG1 (u_93 / person
+				:ARG0-of (u_96 / have-rel-role-91
+					:ARG2 (u_95 / enemy)))
+			:time (u_103 / ever)))
+	:snt2 (u_99 / contrast-01
+		:ARG1 (s / want-01
+			:ARG0 (c / we)
+			:ARG1 (u_97 / war)
+			:polarity -)
+		:ARG2 (e / fear-01
+			:ARG1 (u_98 / war)
+			:time (n / ever))))
+
+# ::id bolt12_6455_6561.20
+(a / and
+	:op3 (u_34 / air)
+	:op2 (e / strengthen-01
+		:ARG1 (u_36 / force
+			:location (b / land)
+			:mod (h / military)
+			:quant "all")
+		:location (u_33 / sea))
+	:op1 (r / obligate-01
+		:ARG1 (c / we
+			:ARG0-of (s / arrange-01
+				:ARG1 (u_35 / arm)
+				:manner (t / urgent)
+				:ARG2-of r))))
+
+# ::id bolt12_6455_6561.21
+(s / flourish-01
+	:ARG0 (c / nation
+		:mod (u_55 / country
+			:name (n / name
+				:op1 "China")
+			:wiki "China"))
+	:frequency (o / several)
+	:time (w / before
+		:op1 (u_58 / ambition
+			:purpose (d / expand-01
+				:ARG1 (u_57 / outward
+					:mod (h / territory)))
+			:time (u_59 / ever)))
+	:quant (u_60 / over
+		:op1 (t / temporal-quantity
+			:unit (m / year)
+			:quant 1000)))
+
+# ::id bolt12_6455_6561.22
+(e / impose-01
+	:ARG1 (c / other
+		:ARG1-of (s / want-01
+			:ARG0 (u_82 / we)
+			:polarity -)
+		:ARG0-of (u_87 / follow-02
+			:ARG1 (u_88 / philosophy
+				:mod (h / strategy)
+				:mod (u_84 / secure-01
+					:mod (u_83 / foreign))
+				:ARG0-of (u_89 / apply-02
+					:ARG1 (a / and
+						:op2 (u_86 / virtue)
+						:op1 (u_85 / benevolence))))))
+	:polarity -)
+
+# ::id bolt12_6455_6561.23
+(u_173 / contrast-01
+	:ARG1 (u_170 / avoid-01
+		:ARG0 (a / and
+			:op2 (w / liberalness
+				:poss (u_171 / country))
+			:op1 (u_167 / tolerate-01)
+			:ARG1-of (u_172 / resemble-01
+				:ARG2 (u_168 / individual)))
+		:ARG1 (u_175 / hurt-01
+			:ARG0 (u_174 / other)))
+	:ARG2 (b / obligate-01
+		:ARG2 (s / insist-01
+			:ARG0 (c / hurt-01
+				:polarity -))))
+
+# ::id bolt12_6455_6561.24
+(a / and
+	:op2 (u_23 / obligate-01
+		:ARG1 (u_22 / sincerity)
+		:ARG2 (u_20 / cowardice)
+		:polarity -)
+	:op1 (s / fear-01
+		:ARG0 (c / tolerate-01)
+		:polarity -
+		:mod (h / certain)))
+
+# ::id bolt12_6455_6561.25
+(u_242 / exempt-01
+	:ARG0 (u_241 / country
+		:name (u_244 / name
+			:op1 "China")
+		:wiki "China")
+	:ARG1 (s / serve-01
+		:ARG0 (u_245 / peace)
+		:ARG1 (c / peace
+			:mod (h / benevolent)))
+	:ARG2 (u_247 / repair-01
+		:ARG0 (g3 / war
+			:name (n3 / name
+				:op1 "World"
+				:op2 "War"
+				:op3 "II")
+			:wiki "World_War_II")
+		:ARG1 (u_246 / country
+			:name (n / name
+				:op1 "Japan")
+			:wiki "Japan")
+		:mod (u_248 / war)))
+
+# ::id bolt12_6455_6561.26
+(u_52 / history
+	:poss (c / nation
+		:mod (u_51 / country
+			:name (n / name
+				:op1 "China")
+			:wiki "China"))
+	:domain (w / citizen
+		:poss (p2 / political-party
+			:name (n2 / name
+				:op1 "People"
+				:op2 "'s"
+				:op3 "Heroes"
+				:op4 "Monument")
+			:wiki -)
+		:mod (h / fellow))
+	:ARG1-of (e / condense-01)
+	:ARG0-of (s / strive-01
+		:ARG1 (u_53 / self-improvement
+			:ARG1-of (u_54 / continue-01))))
+
+# ::id bolt12_6455_6561.27
+(s / represent-01
+	:ARG0 (u_18 / posture
+		:mod (u_19 / magnificent)
+		:mod (u_17 / solemn))
+	:ARG1 (e / expect-01
+		:ARG1 (c / peace)
+		:mod (h / sacred)))
+
+# ::id bolt12_6455_6561.28
+(s / agitate-01
+	:ARG1 (u_285 / memory)
+	:ARG2 (u_283 / and
+		:op3 (c / scene
+			:mod (h / tragic)
+			:ARG4-of (u_281 / spring
+				:ARG1 (a / and
+					:op2 (u_282 / horse
+						:ARG1-of (e / armor-01))
+					:op1 (u_279 / spear)
+					:ARG1-of (u_280 / shin-01))
+				:manner (t / mind)))
+		:op2 (u_278 / stir-01)
+		:op1 (u_284 / hero
+			:quant "many")))
+
+# ::id bolt12_6455_6561.32
+(u_408 / and
+	:op3 (r / obligate-01
+		:ARG1 (b / capable-01
+			:ARG2 (a / and
+				:op2 (c / defend-01)
+				:op1 (u_406 / attack-01))
+			:ARG0-of (s / establish-01
+				:ARG1 (e / range-01
+					:ARG1 (u_407 / system
+						:mod (h / defend-01)
+						:mod (u_403 / nation))
+					:mod (u_404 / full))
+				:ARG2-of r)))
+	:op2 (u_410 / build-up-05
+		:ARG1 (g / facility
+			:name (n / name
+				:op1 "Great"
+				:op2 "Wall")
+			:wiki "Great_Wall_of_China")
+		:location (u_413 / heart
+			:part-of (u_402 / person
+				:quant 1300000000)))
+	:op1 (u_412 / obligate-01
+		:ARG1 (u_409 / we
+			:ARG0-of (t / focus-01
+				:ARG2 (u_401 / educate-01
+					:mod (u_411 / defend-01
+						:mod (u_400 / nation)))
+				:ARG2-of u_412))))
+
+# ::id bolt12_6455_6561.34
+(u_81 / sound
+	:ARG1 (u_80 / horn
+		:mod (h / battle-01))
+	:ARG2 (a / and
+		:op1 (e / equip-01
+			:degree (q / full)
+			:time (n / already)
+			:ARG1 (c / person
+				:ARG1-of (r / ready-02
+					:ARG2 (s / go-02
+						:ARG0 c)
+					:op2-of a)))))
+
+# ::id bolt12_6455_6561.35
+(m / multi-sentence
+	:snt1 (s / accomplish-01
+		:ARG0 (c / we)
+		:ARG1 (u_135 / nothing)
+		:polarity -
+		:ARG1-of (u_141 / support-01
+			:ARG0 (u_140 / person)))
+	:snt2 (u_144 / all-powerful
+		:domain (e / support-01
+			:ARG1 (u_143 / person))))
+
+# ::id bolt12_6455_6561.36
+(m / multi-sentence
+	:snt1 (w / citizen
+		:poss (c / we)
+		:mod (h / fellow)
+		:ARG0-of (s / say-01
+			:ARG1 (u_153 / other)))
+	:snt2 (u_152 / cause-01
+		:ARG1 (r / obligate-01
+			:ARG1 (u_154 / we
+				:ARG1-of (e / achieve-01
+					:ARG2-of r)))))
+
+# ::id bolt12_6455_6562.1
+(u_533 / establish-01
+	:ARG0 (u_531 / improve-01
+		:ARG1 (a / and
+			:op3 (u_520 / mechanism)
+			:op2 (c / professional
+				:mod (h / IT)
+				:quant (m / multiple
+					:op1 1000)
+				:quant (u_522 / multiple
+					:op1 100)
+				:ARG0-of (s / emigrate-01)
+				:ARG0-of (u_525 / recruit-01
+					:ARG1 (u_524 / country
+						:name (n / name
+							:op1 "China")
+						:wiki "China")
+					:direction (u_523 / back))
+				:ARG1-of (e / linger-01
+					:location (b / and
+						:op2 (a2 / around
+							:op1 (u_526 / world))
+						:op1 (u_527 / country
+							:name (u_528 / name
+								:op1 "United"
+								:op2 "States")
+							:wiki "United_States"))))
+			:op1 (u_529 / environment)
+			:ARG1-of (u_530 / work-01)))
+	:ARG1 (u_534 / guarantee-01
+		:ARG1 (u_532 / fund))
+	:li 1)
+
+# ::id bolt12_6455_6562.2
+(u_79 / create-01
+	:ARG1 (c / group
+		:mod (h / battle-01)
+		:mod (u_77 / aircraft)
+		:quant "few"
+		:consist-of (g / carrier)
+		:ARG1-of (e / power-01))
+	:li 2)
+
+# ::id bolt12_6455_6562.3
+(u_108 / manufacture-01
+	:ARG1 (c / aircraft
+		:mod (h / kind
+			:mod (u_105 / various))
+		:mod (u_106 / combat-01)
+		:quant 5000
+		:ARG1-of (e / advanced-02))
+	:li 3)
+
+# ::id bolt12_6455_6562.4
+(u_315 / accelerate-01
+	:ARG1 (u_313 / and
+		:op2 (u_312 / deploy-01
+			:ARG1 (c / missile
+				:mod (h / ballistic)
+				:mod (u_304 / intercontinental)
+				:mod (u_305 / speed)
+				:ARG0-of (u_309 / break-13
+					:ARG1 (a / and
+						:op2 (u_310 / range-01
+							:quant (s / more-than
+								:op1 (d / distance-quantity
+									:unit (m / mile)
+									:mod (u_311 / navigation))))
+						:op1 (u_307 / system
+							:mod (u_308 / defend-01
+								:mod (u_306 / missile))))
+					:ARG1-of (e / possible-01))))
+		:op1 (u_314 / research-01))
+	:li 4)
+
+# ::id bolt12_6455_6562.5
+(a / and
+	:op2 (e / establish-01
+		:ARG1 (c / force
+			:mod (h / military)))
+	:op1 (u_120 / resume-01
+		:ARG1 (u_119 / experiment-01
+			:mod (u_121 / nucleus)))
+	:li 5)
+
+# ::id bolt12_6455_6562.6
+(a / and
+	:op2 (u_366 / install-01
+		:ARG0 (u_356 / warhead
+			:mod (u_358 / nucleus))
+		:ARG1 (u_365 / missile
+			:mod (u_368 / short)
+			:quant (u_364 / all)
+			:ARG1-of (u_367 / middle-range-01))
+		:ARG1-of (u_357 / need-01))
+	:op1 (e / retain-01
+		:ARG1 (c / bomb
+			:mod (h / nucleus)
+			:quant 1000
+			:ARG1-of (s / equal-01
+				:ARG2 (p / product
+					:name (n / name
+						:op1 "TNT")
+					:quant (m / mass-quantity
+						:unit (k / ton)
+						:quant 100000000
+						:quant 10)
+					:wiki -)))
+		:li 6))
+
+# ::id bolt12_6455_6562.7
+(e / retain-01
+	:ARG1 (c / submarine
+		:mod (h / nucleus)
+		:mod (u_132 / strategy)
+		:quant 30
+		:ARG1-of (r / capable-01
+			:ARG2 (u_130 / inflict-01
+				:ARG1 (s / strike-01
+					:ARG0 (p / person
+						:ARG0-of (u_131 / have-rel-role-91
+							:ARG2 (w / enemy)))
+					:mod (u_129 / nucleus)
+					:quant 3
+					:ARG0-of (u_128 / devastate-01))
+				:ARG0 c)))
+	:li 7)
+
+# ::id bolt12_6455_6562.8
+(u_126 / abandon-01
+	:ARG1 (b / commit-01
+		:ARG2 (e / use-01
+			:ARG1 (c / weapon
+				:mod (h / nucleus))
+			:polarity -
+			:li (u_125 / first)))
+	:li 8)
+
+# ::id bolt12_6455_6562.9
+(m / multi-sentence
+	:snt1 (b / threaten-01
+		:ARG2 (c / security
+			:mod (h / nation)))
+	:snt2 (u_122 / retain-01
+		:ARG1 (e / right-05
+			:ARG1 (u_123 / strike-01
+				:mod (u_124 / pre-emptive))))
+	:li 9)
+
+# ::id bolt12_6455_6562.10
+(u_1162 / multi-sentence
+	:snt2 (s / unify-01
+		:ARG0 (p / person
+			:name (n / name
+				:op1 "Qin"
+				:op2 "Shi"
+				:op3 "Huang")
+			:wiki -)
+		:ARG1 (u_1160 / country
+			:name (u_1150 / name
+				:op1 "China")
+			:wiki "China"))
+	:snt3 (r / obligate-01
+		:ARG1 (u_1145 / responsible-03
+			:ARG0 (u_1154 / recover-02
+				:ARG0 (u_1153 / person
+					:name (u_1152 / name
+						:op1 "Zheng"
+						:op2 "Chenggong")
+					:wiki -)
+				:ARG1 (u_1151 / country
+					:name (u_1144 / name
+						:op1 "Taiwan")
+					:wiki "Taiwan"))
+			:ARG0-of (u_1147 / carry-on-02
+				:ARG1 (u_1159 / and
+					:op3 (u_1146 / predecessor)
+					:op2 (u_1142 / insight)
+					:op1 (u_1143 / farsightedness)
+					:ARG1-of (u_1161 / strong-02))
+				:ARG2-of r)))
+	:snt1 (u_1158 / strive-01
+		:ARG0 (w / citizen
+			:poss (c / we)
+			:mod (h / only)
+			:mod (u_1157 / fellow)
+			:ARG0-of (m / have-03
+				:ARG1 (a / and
+					:op2 (u_1155 / self-improvement)
+					:op1 (u_1156 / self-confidence))
+				:condition-of u_1158)
+			:ARG1-of (e / strong-02
+				:ARG1-of u_1158))))
+
+# ::id bolt12_6455_6562.11
+(u_837 / tremble-01
+	:ARG0 (u_836 / piece
+		:mod (u_838 / land))
+	:condition (u_827 / embrace-01
+		:ARG1 (u_828 / motherland)
+		:ARG0 (u_833 / and
+			:op3 (u_832 / call-03
+				:ARG1 (s / carry-on-02
+					:ARG0 (u_834 / citizen
+						:mod (h / fellow))
+					:ARG1 (u_829 / wish-01
+						:ARG1-of (e / unfulfilled-01))
+					:ARG0-of (u_830 / have-org-role-91
+						:ARG2 (p2 / general
+							:time (n / previous)))
+					:ARG1-of (u_831 / move-01
+						:manner (t / courageously
+							:direction (a / forward)))))
+			:op2 (u_835 / moaning)
+			:op1 (c / shake-01)
+			:ARG1-of u_837))
+	:mod (u_826 / far)
+	:time (u_839 / now))
+
+# ::id bolt12_6455_6562.13
+(s / compose-01
+	:purpose (u_290 / voice
+		:ARG1 (u_289 / aspire-01
+			:mod (u_291 / heart))
+		:ARG0 (c / i
+			:ARG1-of s))
+	:ARG2 (u_292 / poem
+		:mod (h / form
+			:mod (u_286 / classics)))
+	:location (b / here))
+
+# ::id bolt12_6455_6562.17
+(e / possible-01
+	:ARG1 (s / allow-01
+		:ARG0 (u_187 / we)
+		:ARG1 (u_186 / fall-01
+			:ARG1 (w / island
+				:name (n2 / name
+					:op1 "Diaoyu"
+					:op2 "Islands")
+				:wiki "Senkaku_Islands")
+			:ARG4 (c / country
+				:mod (h / other))))
+	:manner (t / amr-unknown))
+
+# ::id bolt12_6455_6565.4
+(u_296 / recommend-01
+	:ARG1 (u_295 / tell-01
+		:ARG0 (u_294 / country
+			:name (n / name
+				:op1 "China")
+			:wiki "China")
+		:ARG1 (u_293 / world
+			:mod (h / whole))
+		:ARG2 (e / possible-01
+			:ARG1 (s / bully-01
+				:ARG0 (c / other))
+			:polarity -)))
+
+# ::id bolt12_6455_6566.1
+(s / show-01
+	:ARG0 (w / strength
+		:poss (u_271 / we))
+	:ARG1 (e / calm-03
+		:ARG1 (c / country
+			:name (n / name
+				:op1 "China")
+			:wiki "China")
+		:ARG1-of (u_270 / long-03
+			:degree (q / too))))
+
+# ::id bolt12_6455_6566.2
+(m / multi-sentence
+	:snt1 (u_269 / carefree
+		:domain (u_267 / life
+			:poss (w / citizen
+				:poss (c / we)))
+		:degree (u_268 / too)
+		:degree (u_266 / all)
+		:time (n / current))
+	:snt2 (s / extravagant
+		:domain (p / person
+			:ARG0-of (h / have-org-role-91
+				:ARG2 (e / official)))
+		:degree (q / too)))
+
+# ::id bolt12_6455_6566.3
+(m / multi-sentence
+	:snt1 (u_389 / have-03
+		:ARG0 (u_379 / we)
+		:ARG1 (u_388 / cohesion
+			:polarity -)
+		:time (u_390 / already)
+		:time (u_378 / now))
+	:snt2 (u_385 / need-01
+		:ARG0 (c / country
+			:name (n / name
+				:op1 "China")
+			:wiki "China"
+			:ARG0-of (s / start-01
+				:ARG1 (u_386 / war-01)
+				:ARG1-of (e / slap-01
+					:time (u_382 / face-01
+						:ARG1 (u_383 / country
+							:ARG0-of (u_384 / follow-02
+								:ARG1 (w / rear
+									:poss (u_381 / country
+										:name (u_387 / name
+											:op1 "United"
+											:op2 "States")
+										:wiki "United_States")))))
+					:ARG1-of (u_380 / harsh-02))
+				:ARG1-of u_385))))
+
+# ::id bolt12_91455_5310.1
+(u_299 / contrast-01
+	:ARG1 (s / need-01
+		:ARG0 (c / we)
+		:ARG1 (u_301 / show-01
+			:range (g / life)))
+	:ARG2 (u_298 / "p."
+		:domain (e / show-01
+			:ARG1 (u_303 / embrace-01
+				:ARG0 (u_302 / someone)))
+		:mod (h / really)))
+
+# ::id bolt12_91455_5312.1
+(s / resemble-01
+	:ARG1 (u_239 / society
+		:mod (h / whole))
+	:ARG2 (e / mention-01
+		:ARG1 (c / star)
+		:polarity -))
+
+# ::id bolt12_91455_5315.1
+(m / multi-sentence
+	:snt1 (u_274 / agree-01
+		:ARG1 (u_275 / entertainer
+			:ARG1-of (u_276 / cheap-02
+				:mod (u_277 / just))))
+	:snt2 (e / sense-02
+		:ARG1 (w / reputation
+			:poss (c / country
+				:name (n / name
+					:op1 "China")
+				:mod (h / feudal)
+				:wiki "China"))))
+
+# ::id bolt12_91455_5320.1
+(e / normal-02
+	:ARG1 (u_317 / case
+		:domain (a / and
+			:op2 (d / unrighteous-01
+				:polarity -
+				:ARG0 (p / person
+					:ARG0-of (r / perform-01)))
+			:op1 (s / heart
+				:domain (c / whore-01)))
+		:time (n / always)))
+
+# ::id bolt12_91455_5322.1
+(u_644 / or
+	:op2 (u_645 / frame-06
+		:mod (h / even))
+	:op1 (b / force-01
+		:ARG2 (a / or
+			:op2 (u_636 / contrast-01
+				:ARG1 (u_640 / look-01
+					:ARG0 (u_639 / wolf)
+					:ARG1 (c / glass
+						:ARG1-of (s / near-02
+							:ARG2 (u_638 / fan))))
+				:ARG2 (u_642 / know-01
+					:ARG0 (u_641 / you)
+					:ARG1 (e / have-03
+						:ARG1 (p / person
+							:ARG0-of (r / act-01))
+						:polarity -)))
+			:op1 (u_643 / drink-01))))
+
+# ::id bolt12_91455_5324.1
+(u_297 / okay-04
+	:ARG1 (e / eat-01
+		:ARG1 (c / loveliness)))
+
+# ::id bolt12_91455_5325.1
+(m / multi-sentence
+	:snt2 (u_371 / resemble-01
+		:ARG1 (u_370 / life)
+		:ARG2 (u_359 / show-04))
+	:snt3 (b / obligate-01
+		:ARG2 (s / look-01
+			:ARG0 (u_369 / script)
+			:ARG1 (u_373 / know-01
+				:ARG1 (u_372 / perform-02))))
+	:snt1 (e / easy-05
+		:ARG1 (c / no-one)))
+
+# ::id bolt12_91455_5327.1
+(s / score-01
+	:ARG0 (a / and
+		:op2 (u_662 / endeavor-01)
+		:op1 (c / effort)
+		:location (t / behind
+			:op1 (u_661 / scorer
+				:location (w / world-region
+					:name (n / name
+						:op1 "Imperial"
+						:op2 "Examination")
+					:wiki -)
+				:mod (h / top)))
+		:time (u_667 / humiliate-01
+			:ARG1 (u_665 / word)
+			:ARG0 (u_666 / vermicelli
+				:mod (u_668 / bean))))
+	:accompanier (p / political-party
+		:name (u_672 / name
+			:op1 "Imperial"
+			:op2 "Examination")
+		:wiki -)
+	:mod (u_671 / top)
+	:time (u_669 / walk-01
+		:ARG0 (u_670 / life)
+		:quant (explicitanon0 / 360
+			:quant (u_659 / all))))
+
+# ::id bolt12_91455_5334.1
+(u_334 / and
+	:op3 (c / scum)
+	:op2 (u_335 / man
+		:quant "all"
+		:consist-of (a / and
+			:op2 (u_333 / beast)
+			:op1 (u_332 / bird)))
+	:op1 (e / dirty-02
+		:ARG1 (u_336 / circle
+			:mod (h / entertain-01))))
+
+# ::id bolt12_91455_5335.1
+(u_324 / contrast-01
+	:ARG1 (s / pity
+		:ARG0 (u_328 / they))
+	:ARG2 (u_327 / blame-01
+		:ARG1 (c / star
+			:mod (h / female)
+			:mod (u_325 / that)
+			:ARG1-of (e / easy-05
+				:polarity -))
+		:mode (u_326 / interrogative)))
+
+# ::id bolt12_91455_5336.1
+(m / multi-sentence
+	:snt1 (s / do-02
+		:ARG0 (c / everybody)
+		:ARG1 (u_343 / this))
+	:snt2 (e / possible-01
+		:ARG1 (u_345 / make-01
+			:ARG0 (u_344 / you)
+			:ARG1 (u_340 / money)
+			:condition (d / do-02
+				:ARG1 (u_341 / this)
+				:polarity -))
+		:manner (t / amr-unknown)))
+
+# ::id bolt12_91455_5337.1
+(u_321 / contrast-01
+	:ARG1 (s / woman
+		:domain (u_323 / she)
+		:location (u_318 / front
+			:op1 (u_320 / other))
+		:ARG0-of (u_319 / pride-01))
+	:ARG2 (c / mood
+		:mod (h / melancholy)
+		:location (b / stay-01
+			:mod (u_322 / alone))))
+
+# ::id bolt12_91455_5338.1
+(m / multi-sentence
+	:snt2 (u_723 / person
+		:time (n / now)
+		:ARG0-of (r / prostitute-01)
+		:ARG1-of (u_721 / fame-01))
+	:snt3 (u_719 / recommend-01
+		:ARG1 (u_717 / normal-02
+			:ARG1 (c / drink-01
+				:time (d / or
+					:op1 (p / person
+						:quant "some"
+						:ARG0-of (h / have-org-role-91
+							:ARG2 (e / official))
+						:ARG1-of (u_713 / high-02))
+					:op2 (u_716 / sleep-01
+						:mod (u_715 / even))))
+			:mod (u_718 / just)))
+	:snt1 (u_710 / star
+		:ARG1 (u_720 / prostitute-01
+			:mod (u_722 / popular
+				:mod (u_708 / just))
+			:mod (u_709 / ancient))
+		:manner (t / plainly)
+		:time (u_711 / nowadays)
+		:ARG1-of (u_707 / put-01)))
+
+# ::id bolt12_91455_5340.1
+(u_398 / recommend-01
+	:ARG1 (u_397 / do-02
+		:ARG0 (u_396 / we)
+		:ARG1 (r / ability
+			:ARG1 (s / face-01
+				:ARG0 (c / we)
+				:ARG1 (t / thing
+					:ARG1-of (a / choose-01)
+					:ARG1-of (e / hard-02
+						:mod (h / such)))
+				:degree (q / too)
+				:ARG0-of (u_391 / suffice-01
+					:ARG1 (u_394 / become-01
+						:ARG1 s
+						:ARG2 (u_393 / succeed-01))
+					:polarity -
+					:ARG2-of r))
+			:mod (u_392 / alone)
+			:mode (u_395 / interrogative))
+		:time (n / future)))
+
+# ::id bolt12_91455_5341.1
+(u_331 / fact
+	:domain (s / disguise-01
+		:ARG0 (c / suffer-01
+			:quant "more")
+		:ARG1 (u_329 / look
+			:mod (h / glorious)))
+	:ARG1-of (j / dispute-01
+		:ARG1-of (p / possible-01
+			:polarity -)))
+
+# ::id bolt12_91455_5342.1
+(e / bad-07
+	:ARG1 (s / play-11
+		:ARG0 (u_354 / they)
+		:ARG1 (c / see-01)
+		:location (b / circle)
+		:mod (h / just)
+		:mod (u_355 / mind))
+	:degree (q / so)
+	:polarity -)
+
+# ::id bolt12_91455_5342.2
+(m / multi-sentence
+	:snt2 (u_1020 / have-to-do-with-04
+		:ARG1 (e / wreck
+			:ARG1 (c / person
+				:location (b / country
+					:mod (u_1019 / whole)))))
+	:snt3 (s / make-02
+		:ARG0 (u_1022 / he)
+		:ARG1 (u_1015 / series
+			:mod (h / TV)))
+	:snt1 (u_1010 / resemble-01
+		:ARG1 (u_1005 / contrast-01
+			:ARG1 (u_1018 / behave-01
+				:ARG0 (p / person
+					:name (n / name
+						:op1 "Zhang"
+						:op2 "Jizhong")
+					:wiki -)
+				:ARG1 (u_1016 / hooligan
+					:location (u_1021 / circle))
+				:mod (u_1017 / only)
+				:polarity -)
+			:ARG2 (u_1023 / think-01
+				:ARG1 (u_1004 / virtuous
+					:manner (t / talent
+						:mod (u_1001 / any)
+						:polarity -))
+				:mod (u_1006 / also)))
+		:ARG2 (u_1009 / guy
+			:mod (u_1011 / old))
+		:polarity -))
+
+# ::id bolt12_91455_5344.1
+(u_339 / possible-01
+	:ARG1 (s / have-03
+		:ARG0 (c / country
+			:name (n / name
+				:op1 "China")
+			:wiki "China")
+		:ARG1 (u_338 / girl
+			:ARG1-of (e / innocent-01)
+			:ARG1-of (u_337 / pure-02)))
+	:mode "interrogative")
+
+# ::id bolt12_9145_5531.2
+(u_351 / contrast-01
+	:ARG1 (s / encounter-01
+		:ARG0 (u_348 / star
+			:mod (u_350 / super)
+			:ARG1-of (u_349 / envy-01
+				:quant (u_347 / much)))
+		:ARG1 (a / or
+			:op2 (u_353 / circumstance
+				:ARG1-of (e / welcome-01
+					:polarity -))
+			:op1 (u_346 / engagement
+				:mod (h / social)))
+		:frequency (o / often))
+	:ARG2 (b / obligate-01
+		:ARG2 (c / join-in-05)))
+
+# ::id bolt12_9145_5531.3
+(s / decide-01
+	:ARG0 (u_486 / thing
+		:quant (u_485 / many)
+		:ARG1-of (e / possible-01
+			:polarity -))
+	:ARG1 (u_484 / obligate-01
+		:ARG2 (a / and
+			:op2 (b / interest
+				:ARG2 (c / person
+					:quant "many"))
+			:op1 (u_483 / aspect
+				:quant (u_482 / many))))
+	:mod (h / after-all))
+
+# ::id bolt12_9145_5531.4
+(e / simple-02
+	:time (s / imagine-01
+		:ARG1 (c / person
+			:mod (h / ordinary)
+			:ARG1-of e))
+	:compared-to (p / star)
+	:mod (u_377 / dinner
+		:frequency (o / sometimes)
+		:ARG1-of (u_376 / seem-01)
+		:ARG1-of (u_375 / normal-02
+			:degree (q / very)))
+	:ARG1-of (u_374 / possible-01
+		:polarity -))
+
+# ::id bolt12_9145_5531.5
+(m / multi-sentence
+	:snt1 (u_1169 / have-03
+		:ARG0 (u_1176 / star)
+		:ARG1 (u_1175 / and
+			:op2 (s / roll-01
+				:condition (u_1178 / tackle-01
+					:mod (u_1177 / good)
+					:ARG0 (t3 / thing
+						:ARG0-of (t / source-01
+							:ARG1 (u_1170 / money))
+						:ARG0-of s)))
+			:op1 (u_1168 / contract-02
+				:quant (u_1174 / lot))))
+	:snt2 (e / come-01
+		:condition (p / tack-01
+			:polarity -
+			:ARG0 (a / or
+				:op2 (c / frame-up
+					:mod (h / even))
+				:op1 (u_1172 / out)
+				:ARG1-of e))
+		:time (w / after
+			:op1 (u_1171 / force-01
+				:ARG1 (u_1173 / heel)))))
+
+# ::id bolt12_9145_5531.6
+(m / multi-sentence
+	:snt1 (u_509 / star
+		:mod (u_511 / female)
+		:mod (u_503 / kind
+			:quant 2)
+		:ARG1-of (u_510 / smart-06))
+	:snt2 (a / and
+		:op1 (u_505 / hold-01
+			:ARG1 (u_504 / integrity
+				:ARG1-of (e / high-02
+					:degree (q / very)))
+			:time (n / always)
+			:ARG0 (c / kind
+				:ord (o / ordinal-entity
+					:value 1)
+				:ARG0-of (s / reject-01
+					:ARG1 (u_507 / invitation
+						:mod (h / such)
+						:quant (u_506 / all))
+					:manner (t / sternly)
+					:op2-of a)))))
+
+# ::id bolt12_9145_5531.7
+(u_472 / good
+	:ARG1 (c / kind
+		:ord (o / ordinal-entity
+			:value 2))
+	:ARG2 (a / and
+		:op2 (u_471 / make-02
+			:ARG1 (u_470 / objective
+				:ARG0-of (s / achieve-01
+					:ARG1 (u_469 / money
+						:mod (h / seed)))))
+		:op1 (e / play-01
+			:ARG1 (u_480 / trick))))
+
+# ::id bolt12_9145_5531.8
+(e / rumor-01
+	:ARG1 (s / win-01
+		:ARG0 (c / star
+			:mod (h / female)
+			:mod (u_414 / super)
+			:quant "some"
+			:mod (u_415 / even))
+		:ARG1 (u_417 / role
+			:ord (o / ordinal-entity
+				:value 1))))
+
+# ::id bolt12_9145_5531.9
+(u_858 / and
+	:op3 (u_845 / endurance)
+	:op2 (u_859 / attitude
+		:ARG1-of (u_860 / adopt-01
+			:ARG0 (u_844 / star
+				:mod (u_861 / female))
+			:degree (q / most)))
+	:op1 (u_852 / possible-01
+		:ARG1 (u_851 / chance-02
+			:ARG1 (a / or
+				:op3 (u_847 / kiss-01
+					:ARG1 (u_846 / cheek))
+				:op2 (u_850 / feel-02
+					:ARG1 (u_849 / chin))
+				:op1 (e / lie-08
+					:ARG1 (u_848 / shoulder
+						:part-of (c / star
+							:mod (h / female))))))
+		:time (w / after
+			:op1 (u_855 / drink-01
+				:ARG0 (u_854 / alcohol
+					:quant "some")
+				:ARG1 (u_856 / or
+					:op2 (s / sponsor-01
+						:ARG0 (u_853 / show-04))
+					:op1 (u_857 / advertiser))))))
+
+# ::id bolt12_9145_5533.1
+(u_446 / pretend-01
+	:ARG0 (c / star
+		:mod (h / that))
+	:ARG1 (s / live-01
+		:ARG0 (u_448 / they)
+		:ARG1 (u_445 / life
+			:mod (g / good
+				:degree (m / more))
+			:mod (u_449 / damn-01
+				:degree (q / much)))
+		:mod (u_444 / actual)
+		:quant "all")
+	:mod (u_447 / just))
+
+# ::id bolt12_9145_5534.1
+(m / multi-sentence
+	:snt1 (u_436 / agree-01
+		:ARG1 (u_437 / entertainer
+			:ARG1-of (u_438 / cheap-02
+				:mod (u_439 / just))))
+	:snt2 (e / sense-02
+		:ARG1 (w / reputation
+			:poss (c / country
+				:name (n / name
+					:op1 "China")
+				:mod (h / feudal)
+				:wiki "China"))))
+
+# ::id bolt12_9145_5536.1
+(e / easy-05
+	:ARG1 (p / person
+		:ARG0-of (r / act-01))
+	:polarity -
+	:mod (h / well)
+	:mod (u_433 / ah))
+
+# ::id bolt12_9145_5539.1
+(u_476 / and
+	:op2 (b / bad-04
+		:ARG1 (u_475 / man)
+		:ARG2 (a / and
+			:op2 (u_474 / beast)
+			:op1 (u_479 / bird))
+		:degree (m / more))
+	:op1 (o / and
+		:op1 (u_478 / bird)
+		:op2 (u_477 / beast)
+		:domain (c / woman)))
+
+# ::id wb.eng_0003.4
+(u_492 / open-01
+	:ARG1 (c / highway
+		:li 288
+		:ARG1-of (e / run-04
+			:location (t / around
+				:op1 (h / quadrant
+					:mod (u_490 / west
+						:location (b / south))
+					:part-of (o / organization
+						:name (n / name
+							:op1 "Richmond"
+							:op2 "New"
+							:op3 "Urban"
+							:op4 "Region")
+						:wiki -))))
+		:ARG1-of (u_491 / circumferential-01))
+	:time (w / late
+		:op1 (d2 / date-entity
+			:year 2004)))
+
+# ::id wb.eng_0003.5
+(a / and
+	:op2 (u_496 / cause-01
+		:ARG1 (c / congest-01
+			:location (t / around
+				:op1 (u_495 / exit))
+			:mod (h / traffic)
+			:ARG1-of (e / localize-01)))
+	:op1 (u_499 / change-01
+		:ARG1 (u_497 / pattern-01
+			:mod (u_500 / develop-02)
+			:ARG1-of (u_498 / bad-05
+				:degree (m / more)))
+		:time (n / already)))
+
+# ::id wb.eng_0003.6
+(u_513 / tell-01
+	:ARG0 (g3 / government-organization
+		:name (n3 / name
+			:op1 "Richmond"
+			:op2 "Times")
+		:wiki -)
+	:ARG1 (c / tale)
+	:ARG2 (s / impact-01
+		:ARG0 (w / world-region
+			:name (n2 / name
+				:op1 "Huguenot"
+				:op2 "Trail")
+			:wiki -)
+		:location (u_512 / world-region
+			:name (n / name
+				:op1 "Powhatan"
+				:op2 "County")
+			:wiki -))
+	:time (u_514 / today))
+
+# ::id wb.eng_0003.7
+(e / double-01
+	:ARG1 (c / traffic)
+	:location (b / section
+		:name (n / name
+			:op1 "Huguenot"
+			:op2 "Trail")
+		:quant 1
+		:wiki -)
+	:time (w / since
+		:op1 (d / date-entity
+			:day 288))
+	:ARG0-of (s / report-01
+		:ARG1 (p / person
+			:name (u_494 / name
+				:op1 "Will"
+				:op2 "Jones")
+			:wiki -)))
+
+# ::id wb.eng_0003.9
+(e / report-01
+	:ARG1 (c / accident
+		:quant 17)
+	:ARG1-of (u_516 / near-02
+		:ARG2 (s / intersect-01
+			:ARG1 (u_519 / company
+				:name (n / name
+					:op1 "Winterfield"
+					:op2 "Road")
+				:wiki -)
+			:ARG2 (d2 / date-entity
+				:year 2004)
+			:time (w / so-far
+				:op1 (u_515 / year
+					:mod (h / this)))
+			:compared-to (p3 / percentage-entity
+				:value 12))))
+
+# ::id wb.eng_0003.10
+(n / unparseable)
+
+# ::id wb.eng_0003.11
+(s / have-03
+	:ARG0 (c / vdot)
+	:ARG1 (u_489 / money
+		:mod (i / construct-01
+			:ARG1 (u_487 / road)
+			:location (b / city
+				:name (n / name
+					:op1 "Richmond")
+				:wiki "Richmond,_Virginia"))
+		:quant "more polarity -")
+	:mod (h / of-course))
+
+# ::id wb.eng_0003.12
+(u_559 / reason
+	:ARG0 (s / spend-02
+		:ARG0 (a / and
+			:op2 (u_554 / booster)
+			:op1 (u_556 / politician
+				:ARG1-of (e / local-02)))
+		:ARG1 (c / money
+			:mod (h / frigginAsinglequoteA)
+			:quant "all")
+		:ord (o / ordinal-entity
+			:value 288))
+	:ARG1 (u_558 / vdot)
+	:quant 1)
+
+# ::id wb.eng_0003.14
+(s / "d'oh"
+	:domain (c / this)
+	:ARG1-of (e / major-02))
+
+# ::id wb.eng_0003.15
+(u_581 / predict-01
+	:ARG0 (c / we)
+	:ARG1 (u_579 / generate-01
+		:ARG0 (u_582 / route
+			:quant 288)
+		:ARG1 (u_577 / develop-02
+			:ARG1 (u_580 / area
+				:location (t / around
+					:op1 (u_573 / exit))
+				:ARG1-of (e / populate-01
+					:degree (q / scarcely))
+				:ARG0-of (s / overtax-01
+					:ARG1 (u_575 / road
+						:mod (h / country)
+						:ARG1-of (u_576 / local-02))))
+			:mod (u_578 / residence))))
+
+# ::id wb.eng_0003.16
+(u_688 / provide-01
+	:ARG0 (c / highway
+		:ARG1-of (e / access-01
+			:ARG1-of (u_694 / limit-01)))
+	:ARG1 (t / choose-01
+		:ARG0 (u_695 / person
+			:mod (h / other))
+		:ARG2 (a / and
+			:op2 (u_690 / work-01)
+			:op1 (u_691 / live-01)))
+	:ARG2 (u_683 / relieve-01
+		:ARG0 (u_687 / person
+			:ARG0-of (s / drive-01
+				:direction (u_692 / back)))
+		:ARG1 (u_693 / traffic
+			:ARG1-of (u_696 / limit-01))
+		:direction (a3 / and
+			:op2 (u_686 / county
+				:name (n / name
+					:op1 "Goochland")
+				:wiki -)
+			:op1 (u_684 / city
+				:name (u_685 / name
+					:op1 "Chesterfield")
+				:wiki -)))
+	:ARG1-of (u_689 / possible-01))
+
+# ::id wb.eng_0003.17
+(a / and
+	:op2 (s / create-01
+		:ARG0 (c / they)
+		:ARG1 (u_502 / congest-01
+			:mod (h / traffic)
+			:location (b / place
+				:mod (u_501 / new)))))
+
+# ::id wb.eng_0003.18
+(c / thing
+	:mod (h / only)
+	:manner (t / rapid
+		:degree (q / so))
+	:ARG0-of (s / surprise-01))
+
+# ::id wb.eng_0003.19
+(s / think-01
+	:ARG0 (c / i)
+	:ARG1 (u_538 / possible-01
+		:ARG1 (e / lag-01
+			:ARG1 (a / or
+				:op2 (u_537 / temporal-quantity
+					:unit (m / year)
+					:quant 4)
+				:op1 (t / temporal-quantity
+					:quant 3)))))
+
+# ::id wb.eng_0003.20
+(u_879 / think-01
+	:ARG0 (u_883 / liability
+		:ARG0-of (u_884 / create-01
+			:ARG1 (u_878 / exit
+				:quant (u_882 / all))))
+	:ARG1 (s / create-01
+		:ARG0 (c / 288)
+		:ARG1 (e / construct-01
+			:ARG1 (u_881 / road)
+			:mod (h / just)
+			:mod (m / monetary-quantity
+				:unit (u_880 / dollar)
+				:quant 13000000))
+		:time (n / already)))
+
+# ::id wb.eng_0003.22
+(u_600 / soar-01
+	:ARG1 (u_599 / need-01
+		:ARG1 (e / improve-01
+			:ARG1 (c / road
+				:mod (h / new))))
+	:time (w / after
+		:op1 (a / and
+			:op2 (u_601 / approve-01
+				:ARG1 (u_607 / project
+					:location (b / intersection
+						:quant 288
+						:ARG1-of (u_608 / major-02))
+					:mod (u_609 / mega-commercial)))
+			:op1 (u_604 / develop-02
+				:ARG1 (u_603 / subdivision)
+				:mod (u_605 / scatter-01)
+				:quant (s / few
+					:op1 (t / temporal-quantity
+						:unit (m / year)
+						:quant (u_602 / more)))))))
+
+# ::id wb.eng_0003.23
+(s / see-01
+	:ARG0 (u_646 / we)
+	:ARG1 (c / liability
+		:mod (h / unfunded))
+	:mod (u_647 / well)
+	:time (w / past
+		:op1 (m2 / monetary-quantity
+			:unit (d / dollar)
+			:mod (u_648 / original)))
+	:time (u_653 / before
+		:op1 (u_652 / end-01
+			:ARG1 (t / temporal-quantity
+				:unit (m / decade))))
+	:ARG0-of (u_650 / take-01
+		:ARG1 (e / build-01
+			:ARG1 (u_649 / highway
+				:mod (u_651 / original)))))
+
+# ::id wb.eng_0003.24
+(c / idea
+	:mod (h / great)
+	:mod (u_539 / such)
+	:quant 288
+	:ARG0-of (s / think-01
+		:ARG1 (u_540 / brainiac)))
+
+# ::id wb.eng_0003.26
+(u_542 / think-01
+	:ARG0 (u_541 / i)
+	:ARG1 (e / possible-01
+		:ARG1 (s / spend-01
+			:ARG0 (m2 / monetary-quantity
+				:unit (d / dollar))
+			:ARG1 (c / location
+				:mod (g / good
+					:degree (m / more))))))
+
+# ::id wb.eng_0003.27
+(u_547 / think-01
+	:ARG0 (c / i)
+	:ARG1 (u_546 / possible-01
+		:ARG1 (s / blame-01
+			:ARG0 (e / create-01
+				:ARG1 (u_548 / person
+					:mod (h / that)))
+			:ARG1 288))
+	:polarity -)
+

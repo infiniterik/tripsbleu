@@ -1,3 +1,11 @@
+from collections import defaultdict, Counter
+from pytrips.ontology import get_ontology as ont
+import Levenshtein
+
+
+def levenshtein(x, y):
+    return 1 - Levenshtein.distance(x, y)/max(len(x), len(y))
+
 def kronecker(x, y):
     """
     :returns: 1 if x == y, 0 otherwise
@@ -24,14 +32,27 @@ def set_intersection(source, reference):
         return 0
     return len(set(source).intersection(set(reference)))/len(set(reference))
 
-def weighted_ngram_score(edge=kronecker, node=kronecker, edge_weight=1, node_weight=1):
+def trips_wup(a, b):
+    """
+    Returns the wup score for a and b in trips
+    if a or b are not trips elements, returns kronecker instead
+    """
+    a1 = ont()[a]
+    b1 = ont()[b]
+    if a1 and b1 and a1.parent and b1.parent:
+        return a1.wup(b1)
+    return kronecker(a, b)
+
+def weighted_ngram_score(edge=kronecker, node=kronecker, edge_weight=1, node_weight=1, strictness=-1):
     """
     An ngram is a list of n node-labels interspersed with n-1 edge labels.
     This function returns a function to score a pair of ngrams
     :param edge: a function to score the agreement of edge labels
     :param node: a function to score the agreement of node labels
     :param edge_weight: How much the edge score counts towards the total
-    :param node_weight: how much the node score counts towards the total
+    :param node_weight: How much the node score counts towards the total
+    :param strictness: if strictness >= 0, ngrams with an element having similarity <= strictness are assigned a score of 0
+                       This behavior should better mimic sembleu when strictness approaches 1
     :returns: An ngram_comparison function
     """
     def _ng_comp(source, reference):
@@ -46,13 +67,23 @@ def weighted_ngram_score(edge=kronecker, node=kronecker, edge_weight=1, node_wei
         score = 0
         for i in range(len(comp)):
             if i % 2 == 0:
-                score += node(*comp[i]) * node_weight
+                ns = node(*comp[i])
+                if ns < strictness or (strictness == 0 == ns):
+                    return 0
+                score += ns * node_weight
             else:
-                score += edge(*comp[i]) * edge_weight
+                es = edge(*comp[i])
+                if es < strictness or (strictness == 0 == es):
+                    return 0
+                score += es * edge_weight
         edges = len(source)//2
         nodes = len(source) - edges
         return score / (nodes * node_weight + edges * edge_weight)
     return _ng_comp
+
+
+def trips_ngram_score(edge=kronecker, edge_weight=1, node_weight=1, strictness=0):
+    return weighted_ngram_score(edge=edge, node=trips_wup, edge_weight=edge_weight, node_weight=1, strictness=strictness)
 
 def greedy(score=weighted_ngram_score(), align=False):
     """
@@ -61,6 +92,15 @@ def greedy(score=weighted_ngram_score(), align=False):
     :returns: a function that computes the greedy scoring between two lists of ngrams
     """
     def _greedy(reference, candidate):
+        """
+        :param reference: A list of n-grams
+        :param candidate: A list of n-grams
+        :returns: A score or alignment between the two lists
+        """
+        if len(reference) == 0 == len(candidate):
+            return 1
+        if len(candidate) == 0:
+            return 0
         scored = []
         for i, x in enumerate(reference):
             for j, y in enumerate(candidate):
@@ -70,12 +110,25 @@ def greedy(score=weighted_ngram_score(), align=False):
         res = 0
         while scored:
             i, j, s = max(scored, key=lambda x: x[2])
-            alignments.append((reference[i], candidate[j], i, j, s))
+            alignments.append((reference[i], candidate[j], s))
+            #print("%.3f: %s -> %s" % (s, reference[i], candidate[j]))
             res += s
             taken_x.add(i)
             taken_y.add(j)
             scored = [(i, j, s) for i, j, s in scored if i not in taken_x and j not in taken_y]
         if align:
-            return res/len(candidate), aligned
+            return res/len(candidate), alignments
         return res/len(candidate)
     return _greedy
+
+def ngram_to_node_alignments(alignments):
+    """
+    Given a list of ngram-to-ngram alignments, return the estimated node-to-node alignments
+    naive implementation: count the number of times a pair of nodes are aligned
+    for each node in the reference, choose the most-aligned node in the candidate
+    """
+    res = defaultdict(Counter)
+    for c1, c2, _s in alignments:
+        for n1, n2 in zip(c1[::2], c2[::2]):
+            res[n1][n2] += 1
+    return {r: candidates.most_common()[0][0] for r, candidates in res.items()}

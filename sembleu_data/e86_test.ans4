@@ -1,0 +1,200 @@
+(m5 / multi-sentence :snt2 (c7 / compose-01 :ARG0 (i / i :ARG0-of (s1 / support-01 :manner (r0 / resolute) :ARG1 (p3 / person :ARG0-of (s4 / start-01 :ARG1 (t2 / thread))))) :ARG1 (p8 / poem :ARG2-of (r9 / reply-01))))
+
+(a10 / and :op1 (i6 / island :ARG1-of (d5 / defend-01 :ARG0 (p0 / publication :name (n1 / name :op1 "Pledge") :ARG0-of (f3 / fight-01 :ARG2 (d4 / die-01)) :wiki "Pledge_to_America")) :name (n7 / name :op1 "Diaoyu" :op2 "Islands") :wiki "Senkaku_Islands") :op2 (i12 / island :ARG1-of (r11 / relate-01)))
+
+(a24 / appear-02 :ARG1-of (s22 / show-01 :mod (a21 / again) :ARG0 (they / they) :ARG0 (g9 / ghost :mod (c6 / country :name (n7 / name :op1 "Japan") :wiki "Japan") :ARG0-of (s10 / stir-up-04 :ARG1 t11) :ARG1-of (t11 / trouble-01 :op1-of (a12 / and :op2 (u13 / unrest))) :mod (e5 / evil :degree (l4 / little))) :ARG2 (h14 / heart :quant-of (a17 / and :op1 (p15 / person :ARG0-of (s16 / steal-01)) :op2 (f19 / form :mod (a18 / arrogant)))) :ARG0 (f0 / fleet :ARG0-of (b1 / bump-02 :ARG1 (b3 / boat :mod (f2 / fish-01))))) :mod (w23 / wolfish))
+
+(a6 / appear-02 :ARG0-of (h5 / humiliate-01) :ARG1 (w4 / we :ARG1-of (g1 / go-back-19 :time (e0 / ever) :ARG2 (t3 / time :mod (t2 / that)) :mode expressive) :ARG0-of (s7 / sign-02 :ARG1 (t8 / treaty) :ARG0 (c9 / country :name (n10 / name :op1 "China") :ARG1-of (s12 / strong-02) :ARG1-of (h21 / have-rel-role-91 :ARG2 (e22 / enemy :ARG1-of (b19 / bury-01 :ARG0 (w18 / we)) :ARG1-of (a20 / approach-02)) :ARG1 (s13 / sword :ARG1-of (s14 / sharp-02 :op1-of (a15 / and :op2 (k16 / knife :ARG1-of (s17 / shine-01)))))) :wiki "China"))))
+
+(w3 / wish-01 :degree (m2 / much :degree (v1 / very)) :ARG0 (i / i :poss-of (b21 / blood :poss (p11 / person :name (n12 / name :op1 "Mao" :op2 "Zedong") :wiki "Mao_Zedong") :ARG1-of s20 :poss (p8 / person :name (u9 / ups-01 :ARG1 (t10 / time)))) :ARG1-of b5 :ARG0-of (l17 / lose-02 :op3-of (a7 / and :op1 b5 :op2 "March" :op1 (p6 / passionate)) :ARG1 h18 :op1-of (a19 / and :op2 s20 :op3 (e23 / extinguish-01 :ARG1-of (c22 / complete-02) :ARG1 (e26 / enemy :ARG2-of h25 :quant (a24 / all))) :op1 "Long")) :part (h18 / head) :ARG0-of (s20 / shed-01) :ARG1-of (h25 / have-rel-role-91 :ARG1 (c28 / country :ARG1-of (w27 / wrong-04) :name (n29 / name :op1 "China") :ARG0-of (s31 / spread-03 :ARG1 (p34 / prestige)) :wiki "China") :ARG1 (w32 / we :poss-of (d33 / dragon)))) :ARG1 (b5 / bear-02))
+
+(c10 / contrast-01 :ARG1 (k5 / know-01 :ARG0 (w3 / we :quant (a4 / all)) :ARG1 (i9 / incident :time (d7 / date-entity :month 9 :day 18 :time-of (p17 / plan-01 :mod (a15 / again) :ARG1-of (p16 / premeditate-01) :ARG0 (c12 / country :name (n13 / name :op1 "Japan") :wiki "Japan") :time (d20 / date-entity :month 9 :day 18 :mod (a18 / another)) :time (n11 / now) :ARG1 (n24 / name :op1 "Lugou" :op2 "Bridge" :mod (a23 / another) :location (s27 / sea)) :ARG1 (s22 / sea))))) :mod (h0 / hello :mod-of (e1 / everyone :mod (e2 / expressive))))
+
+(s3 / surprise-01 :manner-of (d4 / defy-01 :ARG0 (c0 / country :poss-of (t14 / territory :ARG1-of i10 :poss (c12 / country :poss (w11 / we)) :mod (s13 / sacred)) :name (n1 / name :op1 "Japan") :ARG0-of (i10 / invade-01 :ARG1-of (o9 / open-01) :ARG1 (i15 / island :name (n16 / name :op1 "Diaoyu" :op2 "Islands") :wiki "Senkaku_Islands")) :wiki "Japan") :ARG1 (c6 / condemn-01 :ARG1-of (s5 / strong-02) :ARG1 (w8 / world :mod (w7 / whole)))))
+
+(c12 / cause-01 :ARG0 (r14 / reason :mod (h13 / history)) :ARG1 (b17 / belong-01 :time (o16 / original) :ARG0 (a15 / amr-unknown) :ARG1 (b19 / become-01 :ARG1 (w18 / we) :ARG2 (c20 / controversial)) :ARG0 (i3 / island :name (n4 / name :op1 "Diaoyu" :op2 "Islands") :ARG0-of (b8 / belong-01 :time (a7 / always) :ARG1 (c9 / country :name (n10 / name :op1 "China") :wiki "China")) :ARG1-of (k2 / know-01 :ARG0 (w0 / we :mod (a1 / all))) :wiki "Senkaku_Islands")))
+
+(c11 / cause-01 :ARG1 (g12 / go-02 :ARG1 (c8 / country :name (n9 / name :op1 "Japan") :ARG0-of (w15 / want-01 :mod (e13 / even) :mod (f14 / further) :ARG1 c16 :polarity -) :ARG0-of (c16 / create-01 :ARG1 (f17 / fact)) :ARG0-of (o18 / occupy-01) :wiki "Japan")) :ARG0 (n5 / need-01 :ARG0 (a4 / amr-unknown :ARG2-of (n7 / negotiate-01 :ARG0 (c1 / citizen :mod (f0 / fellow) :poss (w2 / we :domain-of (w3 / we))))) :location (t6 / there) :mod (a25 / absolute :domain (n24 / no))) :ARG1 (p19 / possible-01 :ARG1 (a21 / allow-01 :ARG0 (w20 / we) :ARG1 (t22 / this)) :mode interrogative))
+
+(b6 / bring-01 :ARG0 (m5 / militarism :poss (c2 / country :name (n3 / name :op1 "Japan") :wiki "Japan")) :ARG1 (p7 / person :location (c8 / continent :name (n9 / name :op1 "Asia") :wiki "Asia")) :ARG1 (d12 / disaster) :ARG1 (g11 / grave) :ARG0 (c1 / citizen :mod (f0 / fellow)))
+
+(s4 / suffer-01 :mod (e0 / especially) :ARG0 (c1 / country :name (n2 / name :op1 "China") :wiki "China") :ARG1 (r5 / ravages :part-of (c6 / country :name (n7 / name :op1 "Japan") :wiki "Japan")) :condition (a9 / as-long-as) :duration (s10 / several :op1 (t12 / temporal-quantity :quant 1)))
+
+(d16 / difficult :domain (r17 / record-01 :manner (e18 / exhaust-01 :ARG0 (s21 / strip :quant (a19 / all) :mod (b20 / bamboo)) :ARG0 (c2 / citizen :poss (i / i) :mod (f1 / fellow) :poss (c4 / crime-02 :mod (h3 / heinous) :ARG1-of (c5 / commit-02 :ARG0 (c6 / country :name (n7 / name :op1 "Japan") :wiki "Japan") :location (c9 / country :name (n10 / name :op1 "China") :wiki "China"))))) :ARG1 (i14 / instance :quant (m13 / many :degree (t12 / too)) :ARG0-of (c15 / cite-01))))
+
+(f15 / find-01 :ARG0 (p6 / person :ARG0-of (l7 / lose-02 :ARG0 (s5 / soul :mod (t2 / that) :poss-of l8 :quant 10000000 :ARG1-of (d4 / decease-01)) :ARG1 w9) :ARG0-of (w9 / wander-01 :location (o10 / over :op1 (o11 / ocean :name (n12 / name :op1 "Pacific" :op2 "Ocean") :wiki "Pacific_Ocean"))) :poss-of (l8 / life)) :ARG1 (d17 / difficult :domain (r18 / rest-01 :manner (p19 / peace))) :ARG1 (it / it :mod (j1 / just)))
+
+(o4 / obligate-01 :ARG2 (r6 / remember-01 :mod (s5 / still) :manner (v7 / vivid) :ARG0 (p1 / person :ARG0-of (e2 / experience-01 :ARG1 (e3 / era)) :quant (a0 / all) :poss-of (b21 / blood :mod-of (b22 / boil :op2-of (a19 / and :op1 (s15 / stream-03 :manner-of (c13 / cry-02 :mod (a12 / also) :ARG0 (g11 / generation :mod (e8 / even) :mod (y10 / young) :poss (w9 / we)) :ARG1 t14) :ARG1 (t14 / tear) :direction (d16 / down :op1 (c18 / cheek :part-of (w17 / we)))) :time (t25 / turn-02 :ARG0 (w24 / we :ARG0-of (r30 / read-01 :op2-of a29)) :op1-of (a29 / and) :ARG1 (p27 / page :mod (t26 / this) :part-of (h28 / history)))) :poss (w20 / we) :prep-with (i23 / indignation))))))
+
+(w19 / wake-up-02 :condition (w5 / want-01 :time (n0 / now) :mod (a4 / all) :ARG0 (c1 / country :poss-of (c11 / citizen :mod (f10 / fellow :mod (a9 / aggression)) :poss-of (h8 / history)) :name (n2 / name :op1 "Japan") :ARG0-of r6 :wiki "Japan") :ARG1 (r6 / reverse-01 :ARG1 (v7 / verdict))) :ARG1 (f12 / fellow :mod (c13 / country :name (n14 / name :op1 "China") :location (c16 / continent :name (n17 / name :op1 "Asia") :wiki "Asia") :wiki "China")))
+
+(h0 / have-concession-91 :ARG2 (p2 / pain-01 :ARG0 (it / it) :condition-of o11 :ARG0 (l3 / look-01 :ARG1 (s9 / shame :mod (t5 / this :mod-of (t7 / temporal-quantity :unit (y8 / year) :quant 100))) :direction (b4 / back))) :ARG1 (o11 / obligate-01 :ARG1 (w10 / we :ARG0-of g12 :ARG0-of (f13 / face-01 :ARG1-of g12 :ARG1 (a21 / and :ARG1-of (l18 / let-01 :ARG0-of (i15 / issue-02 :mod (h14 / history) :ARG1-of (r17 / resolve-01 :polarity -))) :op1 (c20 / create-01 :ARG0 (w19 / we :ARG0-of c22) :ARG1 (h23 / history :ARG1-of c22)) :op2 (c22 / choose-01)))) :ARG2 (g12 / go-02)))
+
+(c16 / contrast-01 :ARG2 (a19 / and :op2 (f21 / face-01 :ARG0 (w20 / we) :ARG1 (t23 / thing :quant (m22 / many) :ARG2-of (c24 / challenge-01))) :ARG2-of (m10 / mean-01 :ARG1 (a6 / advent :poss 20 :ord (o9 / ordinal-entity :value 1)) :ARG2 (t11 / time :time (b13 / beset-01 :ARG1 (w12 / we) :ARG2 (d14 / difficulty :location (i15 / inside)))) :concession (c1 / citizen :mod (f0 / fellow) :poss (n5 / nation :mod (c2 / country :name (n3 / name :op1 "China") :wiki "China")))) :op1 (p17 / press-01 :ARG2 (o18 / outside))))
+
+(r24 / recommend-01 :ARG1 (g26 / go-02 :ARG0 (w25 / we) :ARG1 (c20 / country :name (n21 / name :op1 "China") :wiki "China")) :manner (w23 / way) :ARG0 (f18 / force :mod (f17 / foreign) :mod (a19 / aggressive) :op2-of (a16 / and :op5 (e15 / environment :ARG1-of (s14 / surround-01)) :op1 (i3 / issue-02 :ARG0 (c0 / country :name (n1 / name :op1 "Taiwan") :wiki "Taiwan")) :op2 (i7 / issue-02 :ARG0 (p4 / province :name (n5 / name :op1 "Tibet") :ARG0-of (i13 / issue-02 :ARG0 (s8 / sea :name (n9 / name :op1 "South" :op2 "China" :op3 "Sea") :wiki "South_China_Sea")) :wiki "Tibet")))))
+
+(l6 / look-01 :polite (+5 / +) :ARG1 (m7 / map :poss (w8 / world)) :ARG0 ? :ARG0 (c3 / citizen :mod (f2 / fellow) :ARG0-of (d1 / do-02 :ARG1 (a0 / amr-unknown))) :ARG1 (a18 / and :op1 (s12 / suppress-01 :ARG0 (e11 / encircle-01 :ARG1-of (s10 / shape-01 :ARG2 (c9 / crescent)))) :op2 (s15 / strangle-01 :ARG1 (d17 / develop-02 :ARG1 (w16 / we))) :op3 (c19 / covet-01 :ARG1 (t22 / territory :poss (w20 / we) :mod (n21 / nation))) :op1 (b14 / breathe-01 :ARG0 (w13 / we))))
+
+(c6 / contrast-01 :ARG1 (w2 / want-01 :ARG0 (w0 / we :ARG0-of m3 :ARG1-of (h4 / have-rel-role-91 :ARG2 (e5 / enemy)) :ARG0-of f8 :ARG1-of (h9 / have-rel-role-91 :ARG2 (e10 / enemy)) :ARG0-of (f17 / fear-01 :ARG2-of (c15 / contrast-01 :ARG1 (w13 / want-01 :ARG0 w11 :ARG1 (w14 / war) :polarity -)) :time (e16 / ever) :ARG0 (w11 / we) :ARG1 (w18 / war-01))) :ARG1 (m3 / make-02) :polarity -) :ARG2 (f8 / fear-01 :time (e7 / ever)))
+
+(o1 / obligate-01 :ARG1 (w0 / we :ARG0-of a3 :ARG0-of (s5 / strengthen-01 :ARG1 (f8 / force :quant (a6 / all) :mod (m7 / military) :location (l9 / land) :location (s10 / sea)) :op2-of (a11 / and :location (a12 / air)))) :ARG2 (a3 / arrange-01 :manner (u2 / urgent) :ARG1 (a4 / arms)))
+
+(h11 / have-concession-91 :ARG1 (f8 / flourish-01 :ARG0 (n7 / nation :mod (c4 / country :name (n5 / name :op1 "China") :wiki "China") :poss-of (t18 / territory :ARG1-of e17) :ARG0-of h15 :ARG0-of (e17 / expand-01 :manner (a16 / ambition :ARG1-of h15) :ARG2 (o19 / outward))) :concession-of (h15 / have-03 :op1-of (b12 / before :quant (o0 / over :op1 (t2 / temporal-quantity :unit (y3 / year)) :quant-of (11 / 1000))) :time (e14 / ever) :ARG0 (it / it)) :frequency (s9 / several :op1 t10) :frequency (t10 / time)))
+
+(i1 / impose-01 :ARG1 (o2 / other) :polarity - :ARG1-of (w5 / want-01 :ARG0 (w3 / we) :ARG1 (p11 / philosophy :domain (w6 / we :ARG0-of f7) :ARG1-of (f7 / follow-01) :mod (s10 / strategic :mod (s9 / security :mod (f8 / foreign))) :ARG0-of (a12 / apply-02 :ARG1 (a14 / and :op1 (b13 / benevolence) :op2 (v15 / virtue)))) :polarity -))
+
+(c11 / contrast-01 :ARG2 (o12 / obligate-01 :ARG2 (i13 / insist-01 :ARG1 (h15 / hurt-01 :polarity - :ARG1 (a1 / and :op1 (t0 / tolerate-01) :op2 (l2 / liberal-02 :ARG1 (c3 / country)) :ARG1-of (r4 / resemble-01))))) :ARG1 (a8 / avoid-01 :ARG0 (w7 / we) :ARG1 (h9 / hurt-01 :ARG0 (i6 / individual :ARG2-of (i5 / include-91)) :ARG1 (o10 / other))))
+
+(f3 / fear-01 :manner (c1 / certain) :ARG0 (t0 / tolerance) :op1-of (a4 / and :op2 (o7 / obligate-01 :ARG1 (s5 / sincerity :domain-of c8) :ARG2 (c8 / cowardice) :polarity -)) :polarity -)
+
+(r8 / ration-01 :ARG2-of (e3 / exempt-01 :ARG0 (c0 / country :name (n1 / name :op1 "China") :ARG0-of (s14 / service-05 :ARG1 (p17 / peace :mod (b16 / benevolent)) :mod (p15 / peace)) :wiki "China") :ARG1 (c4 / country :name (n5 / name :op1 "Japan") :wiki "Japan") :time (w9 / war :name (n10 / name :op1 "World" :op2 "War" :op3 "II") :wiki "World_War_II")) :mod (w7 / war))
+
+(s13 / strive-01 :ARG0 (n12 / nation :mod (c9 / country :name (n10 / name :op1 "China") :wiki "China") :poss-of (h8 / history :domain (c2 / country :name (n3 / name :op1 "People's" :op2 "Heroes" :op3 "Monument") :poss-of (c1 / citizen :mod (f0 / fellow)) :wiki -) :ARG1-of (c7 / condense-01))) :ARG1 (i15 / improve-01 :ARG1-of (c14 / continue-01)))
+
+(e6 / expect-01 :ARG1-of (r4 / represent-01 :ARG0 (p3 / posture :mod (m2 / magnificent)) :ARG0 (a1 / and :op1 (s0 / solemn))) :mod (s5 / sacred) :ARG1 (p7 / peace))
+
+(t0 / think-01 :ARG1 (s1 / string :ARG1-of (a4 / agitate-01 :ARG0 (a10 / and :op1 (h8 / heroic) :op2 (s9 / stir-01) :op3 (s12 / scene :mod (t11 / tragic) :topic (a15 / and :op1 (s14 / spear :ARG1-of (s13 / shine-01)) :op2 (s18 / spring-up-02 :location (m19 / mind)) :op2 (h17 / horse :ARG1-of (a16 / armor-01)))) :quant (m7 / many) :time (t6 / time)) :ARG0 (t5 / time)) :poss (m3 / memory :poss (m2 / my))))
+
+(o1 / obligate-01 :ARG1 (w0 / we :ARG0-of f2 :ARG0-of (b6 / build-up-05 :ARG1 (f7 / facility :name (n8 / name :op1 "Great" :op2 "Wall") :wiki "Great_Wall_of_China") :op2-of a14 :beneficiary (h11 / heart :part-of (p13 / person :quant 1300000000))) :ARG1-of (o15 / obligate-01 :ARG2 e16) :ARG0-of (e16 / establish-01 :ARG1 (r18 / range-01 :ARG2 (f17 / full) :ARG1 (s21 / system :mod (n19 / nation) :mod (d20 / diverse) :ARG0-of (h22 / have-03 :ARG1 c23) :ARG1-of (c23 / capable-01 :ARG2 (a26 / and :op2 d27) :ARG2 (a25 / attack-01 :mod (b24 / both))) :ARG1-of (d27 / defend-01))))) :ARG2 (f2 / focus-01 :ARG2 (e5 / educate-01 :ARG2-of (d4 / defend-01) :mod (n3 / nation))) :op1-of (a14 / and))
+
+(s2 / sound-01 :ARG1 (h1 / horn) :ARG2 (a7 / and :op1 (e6 / equip-01 :time (a4 / already) :degree (f5 / full) :ARG1 (p3 / person :ARG0-of (g9 / go-02 :ARG2-of r8) :ARG1-of r8)) :op2 (r8 / ready-02)) :ARG1 (b0 / battle))
+
+(m5 / multi-sentence :snt1 (a3 / accomplish-01 :ARG0 (w2 / we :ARG0-of (s1 / support-01 :ARG0 (p0 / person))) :ARG1 (n4 / nothing)) :snt2 (p10 / powerful-02 :mod (a9 / all :quant-of w8) :ARG1 (w8 / we :ARG0-of (s6 / support-01 :ARG0 (p7 / person)))))
+
+(c8 / cause-01 :ARG1 (o10 / obligate-01 :ARG1 (w9 / we :ARG0-of a11) :ARG2 (a11 / achieve-01)) :ARG1 (t3 / time :time-of (s5 / say-01 :ARG0 (w4 / we) :polarity - :ARG1 (o7 / other)) :ARG0-of (h2 / hit-01 :ARG0 (c1 / citizen :mod (f0 / fellow)))))
+
+(e1 / establish-01 :li (10 / 1 :li-of (r9 / recruit-01 :ARG2 (c11 / country :name (n12 / name :op1 "China") :quant (m14 / multiple :quant-of (p17 / professional :ARG0-of (e19 / emigrate-01 :ARG1 (p18 / person) :op1-of (a20 / and :op2 (l21 / linger-01 :ARG2 (c22 / country :name (n23 / name :op1 "United" :op2 "States") :op1-of (a26 / and :op2 (a27 / around :op1 (w28 / world))) :wiki "United_States")))) :mod (it / it)) :op1 1000) :wiki "China") :mod (b10 / back) :ARG1 (a7 / and :ARG1-of (i4 / improve-01) :op1 (e6 / environment :mod (w5 / work-01)) :op2 (m8 / mechanism)))) :ARG1 (f3 / fund :ARG1-of (g2 / guarantee-01)))
+
+(c1 / create-01 :li (20 / 2) :ARG1 (g8 / group :quant (f2 / few) :ARG0-of (b7 / battle-01 :ARG1 (a5 / aircraft :mod-of (c6 / carrier) :ARG1-of (p4 / power-01 :ARG0 (n3 / nucleus))))))
+
+(a3 / advance-01 :ARG1 (a5 / aircraft :ARG1-of (m1 / manufacture-01 :li 3) :mod (c4 / combat-01) :quant 5000 :mod (k7 / kind :mod (v6 / various))))
+
+(p10 / possible-01 :ARG1 (b11 / break-01 :ARG0 (m9 / missile :ARG1-of (r2 / research-01 :op1-of (a3 / and :ARG1-of (a1 / accelerate-01 :li (40 / 4)) :op2 d4)) :ARG1-of (d4 / deploy-01) :mod (s6 / speed :ARG1-of (h5 / high-02)) :mod (i7 / intercontinental) :mod (b8 / ballistic) :ARG1-of (r16 / range-01 :ARG4 (d20 / distance-quantity :op1-of (m17 / more-than :quant-of m21) :unit (m21 / mile :mod (n19 / nautical)) :quant 10000))) :ARG1 (s14 / system :ARG0-of (d13 / defend-01 :ARG2 (m12 / missile))) :op1-of (a15 / and)))
+
+(r1 / resume-01 :ARG1 (e3 / experiment-01 :mod (n2 / nucleus)) :op1-of (a4 / and :op3 (e5 / establish-01 :ARG1 (f7 / force :mod (m6 / military)) :location (s8 / space))) :li (50 / 5))
+
+(r1 / retain-01 :ARG1 (b4 / bomb :mod (n3 / nucleus) :ARG1-of (e5 / equal-01 :ARG2 (m7 / mass-quantity :quant-of (t9 / tnt) :unit (t8 / ton) :quant 10000000)) :quant 1000 :ARG1-of (n11 / need-01)) :op1-of (a10 / and :op2 (i12 / install-01 :ARG1 (w14 / warhead :mod (n13 / nucleus)) :location (a17 / and :op2 (m20 / missile :quant (a15 / all) :ARG1-of (r19 / range-01 :ARG2 (m18 / middle)) :mod (i16 / in-short)))) :op1 (60 / 6)))
+
+(i7 / inflict-01 :ARG2-of (c6 / capable-01 :ARG1 s5) :ARG0 (s5 / submarine :ARG1-of (r1 / retain-01 :op2-of (70 / 7)) :mod (s3 / strategy) :mod (n4 / nucleus) :quant 30) :ARG1 (s11 / strike-01 :ARG1-of (d9 / devastate-01) :mod (n10 / nucleus) :quant 3 :ARG1-of (h12 / have-rel-role-91 :ARG2 (e13 / enemy))))
+
+(a2 / abandon-01 :li (d1 / date-entity :year 2002) :ARG1 (c3 / commit-02 :ARG2 (u5 / use-01 :ARG1 (w7 / weapon :mod (n6 / nucleus)) :time (f8 / first) :polarity -)))
+
+(t9 / threaten-01 :time-of (r2 / retain-01 :li (d1 / date-entity :month 3) :ARG1 (r3 / right-05 :ARG1 (s6 / strike-01 :time (b4 / before :op1 (e5 / empathize-01))))) :ARG2 (s8 / security :poss (n7 / nation)))
+
+(o34 / obligate-01 :ARG1 (w33 / we :ARG0-of c35 :ARG0-of (r32 / responsible-03 :ARG0 (w30 / we) :ARG1 (t31 / thing))) :ARG2 (c35 / carry-on-02 :ARG1 (a38 / and :op1 (f36 / farsightedness) :op2 (i37 / insight) :op3 (w40 / will :ARG1-of (s39 / strong-02) :poss (p42 / predecessor :poss (w41 / we))))) :ARG1 (p22 / person :name (n23 / name :op1 "Zheng" :op2 "Chenggong") :ARG0-of (r26 / recover-01 :ARG1 (c27 / country :name (n28 / name :op1 "Taiwan") :wiki "Taiwan")) :poss-of (c1 / citizen :mod (f0 / fellow) :poss (w3 / we :ARG0-of (h4 / have-03 :ARG1 (a7 / and :op1 (c6 / confident-01 :ARG1 (s5 / self)) :op2 i8) :condition-of (p9 / possible-01 :ARG1 (s11 / strive-01 :ARG0 (w10 / we :ARG1-of s12) :ARG1 (s12 / strong-02))) :mod (o2 / only)) :ARG1-of (i8 / improve-01)) :poss (p13 / person :name (n14 / name :op1 "Qin" :op2 "Shi" :op3 "Wen-Huang") :ARG0-of (u18 / unify-01 :ARG1 (c19 / country :name (n20 / name :op1 "China") :wiki "China")) :wiki -)) :wiki -))
+
+(c11 / call-01 :op3-of (a10 / and :time (n0 / now) :op1 (s8 / shake-01) :op2 (m9 / moan-01) :op3 (l14 / let-01 :ARG1 (c16 / carry-01 :ARG0 (w15 / we :ARG0-of w19 :ARG1-of (m23 / move-01 :direction (f24 / forward) :manner (a25 / age-01))) :ARG1 (w19 / wish-01 :mod (u18 / unfulfilled) :ARG0 (g22 / general :ARG2-of (h21 / have-org-role-91) :mod (p20 / previous))) :direction (f17 / forward)))) :ARG1 (c13 / citizen :mod (f12 / fellow)) :ARG1 (p1 / piece :ARG1-of (t3 / tremble-01 :ARG1 (l2 / land) :manner (a5 / away :op1 (e6 / embrace-01 :ARG0 (m7 / motherland))) :manner (f4 / far))))
+
+(c2 / compose-01 :location (h0 / here) :ARG0 (i / i :part (h10 / heart :ARG0-of (a9 / aspire-01 :ARG1 (t8 / thing :ARG1-of (v7 / voice))))) :ARG1 (p3 / poem) :location (f6 / form :mod (c4 / classical) :mod (c5 / ci)))
+
+(p1 / possible-01 :ARG1 (a3 / allow-01 :ARG0 (w2 / we) :ARG1 (f8 / fall-01 :ARG1 (i4 / island :name (n5 / name :op1 "Diaoyu" :op2 "Islands") :wiki "Senkaku_Islands") :ARG3 (c10 / country :mod (o9 / other)))) :manner (a0 / amr-unknown))
+
+(r1 / recommend-01 :ARG1 (t2 / tell-01 :ARG0 (w0 / we) :ARG2 (w4 / world :mod (w3 / whole)) :ARG1 (p8 / possible-01 :ARG1 (b10 / bully-01 :ARG1 (c5 / country :name (n6 / name :op1 "China") :wiki "China") :ARG0 (o11 / other)) :polarity -)))
+
+(s2 / show-01 :ARG1 (s4 / strength :poss (w3 / we)) :ARG0 (t1 / time :domain (it / it :ARG1-of (l10 / long-03 :degree (t9 / too) :ARG1 (c5 / country :name (n6 / name :op1 "China") :ARG1-of (c8 / calm-03) :wiki "China")))))
+
+(e10 / extravagant :degree (t9 / too) :domain (o8 / official :ARG2-of (h7 / have-org-role-91 :ARG1 (w1 / we :poss-of (c2 / citizen :poss-of (l3 / life :domain-of (c6 / carefree :time (c0 / current) :degree (t5 / too)) :quant (a4 / all)))))))
+
+(h3 / have-03 :time (n0 / now :time-of (n9 / need-01 :ARG0 (c6 / country :name (n7 / name :op1 "China") :ARG0-of s10 :wiki "China") :ARG1 (s10 / start-01 :ARG1 (w11 / war-01))) :time-of (s13 / slap-01 :ARG1-of (h12 / harsh-02) :ARG1-of (f16 / follow-01 :ARG0 (c15 / country :part (f14 / face)) :ARG1 (r21 / rear :poss (c17 / country :name (n18 / name :op1 "United" :op2 "States") :wiki "United_States"))))) :time (a2 / already) :ARG0 (w1 / we) :ARG1 (c5 / cohere-01) :polarity - :mode expressive)
+
+(h4 / have-concession-91 :ARG2 (n1 / need-01 :ARG0 (w0 / we) :ARG1 (s2 / show-01 :domain-of (p6 / p. :mod (r5 / really) :ARG0-of (s7 / show-01 :ARG2 (you / you)) :ARG0-of (e10 / embrace-01 :ARG0 (s9 / someone))) :time (l3 / life))))
+
+(m5 / mention-01 :ARG0 (s1 / society :mod (w0 / whole) :ARG1-of (r2 / resemble-01 :ARG2 (t3 / this))) :ARG1 (s6 / star) :polarity -)
+
+(m4 / multi-sentence :snt1 (a0 / agree-01) :poss-of (r5 / reputation :ARG1-of (s11 / sense-02) :poss (e3 / entertainer :ARG1-of (c2 / cheap-02 :degree (j1 / just))) :location (c7 / country :part (f6 / feudal) :name (n8 / name :op1 "China") :wiki "China") :degree (s10 / somewhat)))
+
+(w5 / whore-01 :ARG1-of (c4 / case-04 :time (a3 / always) :ARG1 (a7 / and :op1 (h6 / heartless) :op2 (r11 / righteous-07 :ARG1 (p8 / person :ARG0-of (p9 / perform-01)) :polarity -)) :ARG2 (it / it) :ARG1-of (n1 / normal-02 :ARG1 (t0 / that))))
+
+(k9 / know-01 :ARG0 (you / you :ARG0-of (l0 / look-01 :ARG1 (w1 / wolf :prep-with (g2 / glass) :ARG1-of (n3 / near-02 :ARG2 (p4 / person :name (n5 / name :op1 "Ms." :op2 "Fan") :wiki -))))) :ARG1 (o15 / obligate-01) :ARG1 (o18 / or :op1 (d16 / drink-01 :ARG1 (he / he) :ARG0 (p10 / person :ARG0-of (a11 / act-02) :ARG0-of (c14 / choose-01 :ARG1 (t13 / thing) :polarity -))) :op2 (o22 / or :op2 (f24 / frame-06 :mod (e23 / even)) :op1 (f20 / force-01 :ARG1 (she / she) :ARG2 (o21 / out)))))
+
+(o1 / okay-04 :ARG1 (it / it) :condition (a2 / as-long-as) :ARG1 (e4 / eat-01 :domain-of (s3 / something) :ARG1 (l5 / loveliness)))
+
+(i6 / infer-01 :ARG1 (l7 / look-01 :ARG0 (you / you) :ARG1 (s8 / script) :ARG1 (k9 / know-01 :ARG1 (p11 / perform-02 :manner (t10 / thing)))) :ARG1-of (s4 / show-01 :ARG2-of (r3 / resemble-01 :ARG1 (l2 / life))) :ARG1-of (e1 / easy-05 :ARG1 (n0 / no-one)))
+
+(m10 / multi-sentence :snt2 (h23 / humiliate-01 :snt1-of (m21 / multi-sentence :snt1 (c1 / core-02 :mode expressive :mod (t0 / top) :ARG0-of (w7 / walk-01 :quant (a5 / all) :ARG1 (l8 / life) :quant 360) :ARG1 (n2 / name :op1 "Imperial" :op2 "Examination" :time-of (e13 / endeavor-01 :op2-of (a12 / and :op1 e11 :location (b14 / behind :op1 (p16 / person :ARG0-of (c17 / core-02) :mod (t15 / top)))))))) :ARG0 (t22 / this) :ARG1 (w24 / word :mod (v26 / vermicelli :mod (b25 / bean)))) :mod-of (e11 / effort))
+
+(h6 / hit-01 :ARG0 (a10 / and :op3 (s11 / scum) :domain (c1 / circle :mod (e0 / entertain-01) :domain-of (o3 / one :ARG1-of (d2 / dirty-02)) :domain-of (m5 / man :quant (a4 / all))) :op1 (b7 / bird :op1-of (a8 / and :op2 (b9 / beast)))))
+
+(c2 / contrast-01 :ARG1 (p0 / pity-01 :ARG1 (they / they) :ARG0 (t5 / that :mod-of (s7 / star :mod (f6 / female) :ARG1-of (e9 / easy-05 :polarity -)))) :ARG2 (b3 / blame-01 :mode interrogative))
+
+(p4 / possible-01 :manner (a3 / amr-unknown) :ARG1 (m6 / make-02 :ARG0 (you / you :ARG0-of (d10 / do-02 :ARG1 (t11 / this) :polarity -)) :ARG1 (m7 / money) :ARG0 (e0 / everybody :ARG0-of (d1 / do-02 :ARG1 (t2 / this)))))
+
+(c5 / contrast-01 :ARG1 (p1 / pride-01 :ARG1 (w2 / woman :domain (she / she :ARG1-of (s8 / stay-01 :ARG3 (a9 / alone))) :location (f3 / front :op1 (o4 / other)))) :ARG2 (m7 / mood :mod (m6 / melancholy)))
+
+(m14 / multi-sentence :snt1 (s3 / star-01 :manner (p2 / plain) :snt1-of (m11 / multi-sentence) :time (n4 / nowadays) :ARG1 (it / it :ARG1-of (p0 / put-01)) :ARG1 (p7 / prostitute-01 :ARG1-of (p6 / popular-02 :mod (j5 / just)) :time (a8 / ancient :mod-of t9) :time (t9 / time))) :snt2 (r15 / recommend-01 :ARG1 (n17 / normal-02 :mod (j16 / just) :ARG1 (d18 / drink-01 :op1-of (o23 / or :op2 (s25 / sleep-01 :mod (e24 / even) :ARG1 (they / they) :ARG0 (s19 / some :ARG1-of (h21 / have-org-role-91 :ARG2 (o22 / official :ARG1-of (h20 / high-02)))))))) :time (n10 / now :time-of (p13 / prostitute-01 :ARG1-of (f12 / fame-01)))))
+
+(r1 / recommend-01 :ARG1 (d3 / do-02 :ARG1 (a0 / amr-unknown) :ARG0 (w2 / we) :time (f4 / future) :ARG1 (a5 / ability :mod (a6 / alone) :ARG1-of (b9 / become-01 :ARG2 s10) :ARG1-of (s10 / succeed-01) :quant (e8 / enough :polarity -))) :ARG1 (g12 / goin :domain (f13 / face-01 :ARG0 (w11 / we) :ARG1 (t16 / thing :ARG1-of (c17 / choose-01 :ARG1-of (h15 / hard-02 :degree (s14 / such)))) :mod (t18 / too))))
+
+(p6 / possible-01 :ARG1 (f7 / fact :mod-of (t5 / ti :domain (s1 / suffer-01 :degree (m0 / more) :ARG1-of (d2 / disguise-01 :ARG1 (l4 / look :mod (g3 / glorious)))))))
+
+(s8 / sight-01 :ARG1 (they / they :ARG0-of (p6 / play-01 :mod (j5 / just) :ARG0 (it / it :ARG1-of (b3 / bad-07 :degree (s2 / so) :polarity -)) :ARG1 (c7 / circle)) :ARG1-of (o9 / out-06 :ARG2 (m10 / mind))))
+
+(c14 / contrast-01 :ARG2 (t16 / think-01 :ARG0 (p4 / person :name (n5 / name :op1 "Zhang" :op2 "Jizhong") :ARG0-of (b10 / behave-01 :mod (o9 / only) :ARG0 g3 :polarity -) :ARG0-of (h23 / have-03 :time-of (m20 / make-02 :ARG0 (he / he) :ARG1 (s22 / series :mod (t21 / tv) :ARG0-of d25) :manner (t18 / talent :mod (a17 / any))) :ARG1 (d25 / do-02 :ARG2 (w26 / wreck-01 :ARG1 (p27 / person :mod (c29 / country :mod (w28 / whole))))) :ARG1 (n24 / nothing)) :wiki -) :mod (a15 / also) :ARG0 (g3 / guy :mod (o2 / old) :poss-of (c13 / circle :location-of (h12 / hooligan :ARG1-of (r11 / resemble-01))))) :ARG1 (r1 / resemble-01 :polarity -))
+
+(p0 / possible-01 :ARG1 (h4 / have-03 :ARG0 (c1 / country :name (n2 / name :op1 "China") :wiki "China") :ARG1 (g7 / girl :ARG1-of (p5 / pure-02) :mod (i6 / innocent))))
+
+(h13 / have-concession-91 :ARG1 (o14 / obligate-01 :ARG2 (j15 / join-in-05)) :ARG1 (e5 / encounter-01 :frequency (o4 / often) :ARG0 (s3 / star :ARG1-of (v1 / vie-01 :degree (m0 / much)) :mod (s2 / super) :ARG1-of (w12 / welcome-01 :ARG1 (they / they) :polarity -)) :ARG1 (o8 / or :op1 (e7 / engagement-02 :mod (s6 / social)) :op2 (c9 / circumstance))))
+
+(c7 / cause-01 :ARG1-of (d6 / decide-01 :ARG1-of (p4 / possible-01 :mod (a0 / after-all) :polarity -) :ARG0 (they / they) :ARG1 (t2 / thing :quant (m1 / many))) :ARG1 (o8 / obligate-01 :ARG2 (d9 / do-02 :ARG2 (a12 / and :op1 (a11 / aspect :quant (m10 / many)) :op2 (i13 / interest :poss (p15 / person :quant (m14 / many)))))))
+
+(i14 / imagine-01 :ARG0 (w13 / we) :ARG1 (s11 / simple-02 :ARG1-of (p9 / possible-01 :polarity - :ARG1-of (n5 / normal-02 :ARG1-of (s3 / seem-01) :degree (v4 / very) :ARG1 (p2 / party :mod (d1 / dinner) :time (s0 / sometimes)))) :ARG1 (p8 / person :mod (o7 / ordinary) :mod-of (w6 / we))) :compared-to-of (s12 / star))
+
+(r7 / roll-01 :ARG0 (s0 / star :ARG0-of (h1 / have-03 :ARG1 (c3 / contract :quant (l2 / lot)) :op1-of (a4 / and :op2 (s5 / source :mod (m6 / money)))) :ARG1-of (t8 / tackle-01 :manner (g9 / good) :ARG1 (o18 / or :op1 (f17 / force-01 :ARG2 (u21 / up :mod-of (f20 / frame :mod (e19 / even))) :ARG1 (h16 / heel) :op1-of (a15 / after :time-of (c14 / come-01 :ARG1 (a13 / amr-unknown) :condition (t11 / tack-01 :manner (w12 / well) :polarity -))))))))
+
+(s2 / smart-06 :ARG1 (s4 / star :mod (k1 / kind :quant 2) :mod (f3 / female) :mod (t5 / that :ARG0-of (h10 / hold-01 :time (a9 / always) :ARG0 (k8 / kind :ord (o7 / ordinal-entity :value 1)) :ARG1 (i13 / integrity :ARG1-of (h12 / high-02 :degree (v11 / very))) :op1-of (a14 / and :op2 (r16 / reject-01 :manner (s15 / sternly) :ARG1 (i19 / invite-01 :mod (s18 / such) :quant (a17 / all))))))))
+
+(a6 / and :op1 (p4 / play-01 :ARG1 (t5 / trick)) :op2 (m7 / make-02 :ARG0 (k2 / kind :ord (o1 / ordinal-entity :value 2) :domain-of (g3 / good)) :ARG1 (o8 / objective :ARG1-of (a9 / achieve-01 :ARG2 (m11 / money :mod (s10 / seed))))))
+
+(w7 / win-01 :ARG1-of (r1 / rumor-01 :ARG0 (it / it)) :ARG0 (s6 / star :mod (e2 / even) :mod (s3 / some) :mod (s4 / super) :mod (f5 / female) :poss-of r10) :ARG1 (r10 / role :ord (o9 / ordinal-entity :value 1)) :instrument (w12 / way :mod (t11 / this)))
+
+(f15 / feel-01 :op2-of (a20 / and :op3 (e21 / end-01 :ARG0 (a22 / attitude :ARG1-of (a24 / adopt-01 :degree (m23 / most) :ARG0 (s26 / star :mod (f25 / female)))))) :op2-of (o17 / or :op2 (k18 / kiss-01 :ARG1 (c19 / cheek)) :op1 (c16 / chin)) :ARG0 (o6 / or :op1 (p4 / person :ARG0-of (a5 / advertise-01)) :ARG0-of (c10 / chance-02 :ARG1-of (p9 / possible-01) :ARG1 (l11 / lie-08 :ARG1 (s14 / shoulder :part-of (s13 / star :mod (f12 / female))))) :ARG1-of (d1 / drink-01 :op1-of (a0 / after) :ARG1 (a3 / alcohol :quant (s2 / some))) :op2 (s7 / show-01 :ARG1 (p8 / poor))))
+
+(l7 / live-01 :mod (a6 / all) :ARG0 (they / they :quant (a5 / all)) :ARG1 (l11 / life :compared-to (t12 / this :compared-to-of (m10 / more :mod (d9 / damn :quant (m8 / much))))) :ARG0 (s1 / star :mod (t0 / that) :ARG0-of (p3 / pretend-01 :mod (j2 / just))))
+
+(m4 / multi-sentence :snt1 (a0 / agree-01) :poss-of (r5 / reputation :ARG1-of (s11 / sense-02) :poss (e3 / entertainer :ARG1-of (c2 / cheap-02 :degree (j1 / just))) :location (c7 / country :part (f6 / feudal) :name (n8 / name :op1 "China") :wiki "China") :degree (s10 / somewhat)))
+
+(e4 / easy-05 :mod (w1 / well :mod (a0 / ah)) :ARG1 (p5 / person :ARG0-of (a6 / act-02)) :polarity - :ARG1 (it / it))
+
+(a8 / and :compared-to-of (m6 / more :op2-of (a4 / and :op1 (a2 / and :op1 (b1 / bird) :op2 (b3 / beast) :domain (w0 / woman))) :ARG1 (m5 / man)) :op1 (b7 / bird) :op2 (b9 / beast))
+
+(c4 / cum-01 :ARG1 (h5 / highway :ARG0-of (r6 / run-01 :path (a7 / around :op1 (q10 / quadrant :part-of (c11 / country-region :part (w9 / west :part (s8 / south)) :name (n12 / name :op1 "Richmond" :op2 "New" :op3 "Urban" :op4 "Region") :wiki -)))) :ARG1-of (o17 / open-01 :location (l0 / location :name (n1 / name :op1 "Route" :op2 288) :wiki -) :time (l18 / late :op1 (d20 / date-entity :year 2004)))))
+
+(c7 / cause-01 :op2-of (a6 / and :op1 (c2 / change-01 :time (a0 / already) :ARG0 it :ARG1 (p4 / pattern-01 :mod (d3 / develop-02))) :op1 (m5 / more)) :ARG0 (it / it :ARG0-of (e12 / exit-01 :op1-of (a11 / around))) :ARG1 (c10 / congest-01 :ARG1-of (l8 / localize-01) :ARG1 (t9 / traffic)))
+
+(t4 / tell-01 :ARG0 (n0 / newspaper :name (n1 / name :op1 "Richmond" :op2 "Times-dispatch") :wiki -) :ARG2 (t5 / tale :topic (i7 / impact-01 :ARG1 (f8 / facility :name (n9 / name :op1 "Huguenot" :op2 "Trail") :location (c12 / county :name (n13 / name :op1 "Powhatan" :op2 "County") :wiki -) :wiki -))) :time (t6 / today))
+
+(r12 / report-01 :ARG0 (t0 / traffic :ARG1-of (d2 / double-01 :degree (m1 / more-than) :location (s4 / section :part-of (s5 / state :name (n6 / name :op1 "Huguenot" :op2 "Trail") :wiki -) :quant 1) :time (s9 / since :op1 (o11 / open-01 :ARG0 288)))) :ARG1 (n13 / name :op1 "Jones"))
+
+(r2 / report-01 :ARG1 (a1 / accident :ARG1-of (n3 / near-02 :ARG2 (i4 / intersect-01 :ARG0 (r5 / road :name (n6 / name :op1 "Winterfield" :op2 "Road") :wiki -) :time (s9 / so-far :op1 (y11 / year :mod (t10 / this :mod (a13 / all :mod-of (d15 / date-entity :day 12 :year 2004))))))) :quant 17))
+
+(n12 / note-01 :ARG0 (p0 / person :name (n1 / name :op1 "Dale" :op2 "Totten") :ARG0-of (r4 / reside-01 :ARG1 (g6 / government-organization :ARG1-of (e5 / engineer-01) :name (n7 / name :op1 "Virginia" :op2 "Department" :op3 "of" :op4 "Transportation") :wiki -)) :wiki -) :ARG1 (l17 / lane-01 :ARG0 (c13 / company :name (n14 / name :op1 "Vdot") :ARG0-of (h23 / have-03 :ARG1 (m25 / money :degree (m24 / more))) :quant 4 :wiki -) :ARG1 (r18 / road) :ARG2 (a19 / about :op1 (m20 / monetary-quantity :unit (d21 / dollar) :quant 13000000))))
+
+(h4 / have-03 :mod (o0 / of-course) :ARG0 (g1 / government-organization :name (n2 / name :op1 "Vdot") :wiki -) :ARG1 (m7 / money :degree (m6 / more) :purpose (c9 / construct-01 :ARG1 (r8 / road) :location (r13 / region :mod (c10 / country-region :name (n11 / name :op1 "Richmond") :wiki "Richmond,_Virginia")))) :polarity -)
+
+(a8 / and :ARG0-of (r5 / retest-01) :op1 (p7 / politician :ARG1-of (l6 / local-02)) :op2 (b9 / booster) :poss-of (m13 / money :poss (g2 / government-organization :name (n3 / name :op1 "Vdot") :ARG0-of s10 :wiki -) :ARG1-of (s10 / spend-01 :ARG1-of (c1 / cause :quant 1) :time (d15 / date-entity :year 288)) :quant (a11 / all) :mod (f12 / friggin)))
+
+(m3 / moment :mod (d2 / d'oh :domain (t0 / this) :ARG1-of (m1 / major-02)))
+
+(p1 / predict-01 :ARG0 (w0 / we) :location (l2 / location :name (n3 / name :op1 "Route" :op2 288) :ARG0-of (g6 / generate-01 :ARG1 (d8 / develop-02 :ARG1 (r7 / residential))) :ARG0-of (e14 / exit-01 :op1-of (a13 / around :mod (a12 / all) :location-of (a11 / area :ARG1-of (p10 / populate-01 :mod (s9 / scarce))))) :ARG0-of (o15 / overtax-01 :ARG1 (r18 / road :poss (c17 / country :ARG1-of (l16 / local-02)))) :wiki -))
+
+(c0 / contrast-01 :ARG2 (p4 / possible-01 :ARG1 (p5 / provide-01 :ARG0 (h3 / highway :ARG1-of (a2 / access-01 :ARG1-of (l1 / limit-01))) :ARG1 (r8 / relieve-01 :mod (l6 / limit-01) :ARG1 (t7 / traffic) :ARG1 (d10 / drive-01 :ARG0 (p9 / person) :op1-of (a12 / and :op1 (b11 / back) :op2 (f13 / forth)) :ARG0 (a17 / and :op1 (c14 / county :name (n15 / name :op1 "Chesterfield") :wiki -) :op2 (c18 / county :name (n19 / name :op1 "Goochland" :op2 "Counties") :wiki -)))))) :ARG1 (c24 / choose-01 :ARG0 (p23 / person :ARG0-of (l25 / live-01 :op1-of a26) :mod (o22 / other)) :ARG1 (a26 / and :op2 (w27 / work-01))))
+
+(a0 / and :op2 (c2 / create-01 :ARG0 (they / they) :ARG1 (c4 / congest-01 :ARG1 (t3 / traffic)) :location (p6 / place :mod (n5 / now))))
+
+(s3 / surprise-01 :domain-of (t1 / thing :mod (o0 / only) :domain t2) :ARG0 (t2 / thing) :ARG1 (i / i) :ARG0 (e8 / event :manner (r6 / rapid :degree (s5 / so)) :mod (t7 / this)))
+
+(t2 / think-01 :ARG0 (i / i) :ARG1 (p3 / possible-01 :ARG1 (l4 / lag-01 :duration (o6 / or :op2 (t8 / temporal-quantity :unit (y9 / year) :quant 3 :quant 4)))) :mod (e0 / even))
+
+(t15 / think-01 :ARG1 (l16 / liability :ARG0-of (c17 / create-01 :ARG0 (l0 / location :name (n1 / name :op1 "Route") :ARG0-of (c5 / create-01 :time (a4 / already) :ARG1 (c10 / construct-01 :ARG1 (r9 / road) :ARG1 (m6 / monetary-quantity :unit (d7 / dollar) :quant 13000000))) :quant 288 :ARG1-of (e14 / exist-01 :mod (j11 / just) :ARG1 (o13 / one :mod (t12 / this))) :wiki -)) :ARG0-of (e19 / exit-01 :mod (a18 / all))))
+
+(n17 / need-01 :ARG1 (i20 / improve-01 :mod (n18 / now) :ARG1 (r19 / road)) :ARG1-of (s21 / soar-01 :time (a0 / after :op1 (a9 / and :op1 (d8 / develop-02 :duration (f2 / few :op1 (t4 / temporal-quantity :unit (y5 / year) :quant 1 :mod (m3 / more))) :ARG1 (s7 / subdivision :ARG1-of (s6 / scatter-01))) :op2 (a10 / approve-01 :ARG1 (p13 / project :mod (c12 / commerce :mod (m11 / mega)) :location (i16 / intersection :ARG1-of (m14 / major-02) :quant 288)))))))
+
+(p6 / possible-01 :time (b0 / before :op1 (e1 / end-01 :ARG1 (t4 / temporal-quantity :quant 1) :ARG1 (they / they))) :ARG1 (s8 / see-01 :degree (w7 / well) :ARG0 (w5 / we :ARG0-of (b19 / build-01 :ARG0-of (t18 / take-01 :ARG0 (z11 / zoom-01 :ARG1 (l10 / liability :mod (u9 / unfunded)) :mod (w12 / well :mod-of (p13 / past))) :ARG1 (m15 / monetary-quantity :unit (d16 / dollar) :quant 400000000 :mod (o14 / original))) :ARG1 (h21 / highway :mod (o20 / original))))))
+
+(t1 / think-01 :ARG0 (b0 / brainiac :domain-of i8) :ARG2 (l2 / location :name (n3 / name :op1 "Route" :op2 288) :wiki -) :domain-of (i8 / idea :mod (s6 / such :degree-of g7) :mod (g7 / great)))
+
+(t1 / think-01 :ARG0 (i / i) :ARG1 (p3 / possible-01 :ARG1 (s4 / spend-01 :ARG0 (w2 / we) :ARG3 (m5 / monetary-quantity :unit (d6 / dollar) :quant 400000000) :ARG1 (e9 / elsewhere :mod (g8 / good)))))
+
+(t2 / think-01 :ARG0 (i / i) :ARG1 (p4 / possible-01 :ARG1 (b5 / blame-01 :ARG0 (you / you) :ARG2 (c7 / create-01 :ARG1 (p9 / person :mod (t8 / this))) :quant 288)) :polarity -)
+

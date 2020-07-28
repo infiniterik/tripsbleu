@@ -1,0 +1,113 @@
+#+TITLE: Perturbation
+
+* The Experiment :noexport:
+
+** A structural similarity metric is intended to determine the distance between a pair of semantic parses.
+** The typical structure of comparing system output to human judgements is difficult in the case of structural similarity metrics.
+** Judgements as to the correctness of a single structure are already difficult - requiring knowledgable annotators to fully understand the parse of a sentence.
+** A minimum requirement of a structural similarity metric is that as a structure is modified more and more, we expect it to become more and more different from its original form...
+* Perturbation analysis :noexport:
+For the perturbation analysis, we create a random digraph structure and repeatedly apply incremental changes to the graph while monitoring its similarity to the original.
+** Perturbations
+We define 5 perturbations:
+- =ELABEL= / =NLABEL= : relabel an edge or node
+- =EADD=: add an edge between two existing nodes avoiding self-loops
+- =NADD=: add an edge and node to an existing node
+- =CADD=: Like =NADD= but the added node label must be with /threshold/ of some existing node label.
+For node
+
+We do not implement edge/node removal as a perturbation operation. We can simulate removal by repeatedly perturbing a graph and then choosing an arbitrary iteration and working backwards.
+We define an /Element Space/ as a set of labels with a similarity metric associated with it. We create an element space for nodes and a similar element space for edges.
+For relabelling operations, we also provide a margin which indicates the maximum distance between the new and old label.
+A full graph generator consists of a node space, an edge space, and a distribution to draw perturbation operations from.
+** Tests
+*** Uniform
+Taking a uniform distribution over the four perturbation operations, we repeatedly perturb a randomly generated graph for 50 iterations. In the process, we observe the decay in similarity.
+- The similarity decreases monotonically for both SemBleu and TripsBleu
+- The average jump (over 100 trials, n=25, k=13) is 0.117 for TripsBleu and 0.237 for SemBleu
+- Average drop to 0 over 100 trials: 4 for TripsBleu, 48 for SemBleu
+|              | TripsBleu | SemBleu |
+|--------------+-----------+---------|
+| average-zero |           |         |
+| num zeros    |         4 |      48 |
+| max-jump     |     0.117 |   0.237 |
+*** Relabel
+What is the decay in similarity over n random relabels
+|              | TripsBleu | SemBleu |
+|--------------+-----------+---------|
+| average-zero |     0.376 |    0.33 |
+| num zeros    |        22 |      99 |
+| max-jump     |      0.19 |    0.33 |
+*** Adding
+What is the decay in similarity over n random adds
+|              | TripsBleu | SemBleu |
+|--------------+-----------+---------|
+| average-zero | -         | -       |
+| num zeros    | -         | -       |
+| max-jump     | 0.102     | 0.102   |
+Divergence here would have implied that the graphs got stuck in local minima. Instead, the same match held throughout, no matter how many nodes or edges were added.
+*** Triangle
+Perform n random perturbations to two copies of the same graph. What is the expected difference between them.
+
+* Perturbation Analysis
+We test the robustness of the three parse-level similarity metrics -- TripsBLEU, SemBLEU, and Smatch -- by generating random graphs and observing the change in similarity
+score over a sequence of perturbations. A perturbation represents a minimal unit of change between two parses:
+# - either modifying a label or adding an edge or node. Table \ref{table:perturbation-descriptions} lays out the 4 perturbation operations
+- =NLABEL=: A changed node label
+- =ELABEL=: A changed edge label
+- =EADD=: An added edge
+- =NADD=: An added node, implicitly with an added edge.
+
+Labels are drawn from an /element space/ defined by a closed set of labels and a similarity metric. We perform two types of label selection:
+- =random=: Labels are selected uniformly randomly from the space.
+- =modify(reference, threshold)=: We provide a reference label and threshold, \theta, to select a label that is similar to the reference label.
+Figure \ref{fig:random-modify} demonstrates the possible labels drawn using each method in a simple label space. Note that =modify(reference, 1)
+
+#+CAPTION: A simple /element space/ consisting of 5 integers and normalized difference as similarity metric. Using =modify(3, 0.2)=, we select a random label from the set ={2,3,4}= instead.
+#+LABEL: fig:random-modify
+| Element Space | selection      | options     |
+|---------------+----------------+-------------|
+| {1,2,3,4,5}   | random         | {1,2,3,4,5} |
+| {1,2,3,4,5}   | modify(3, 0.2) | {2,3,4}     |
+
+** Experimental Setup
+
+A random graph generator is a tuple $\mathbf{Gr}(N, E, P)$ consisting of two element spaces, /N/ for nodes and /E/ for edges, and a probability distribution, /P/, over possible perturbations. We start the process by generating a random
+directed tree with /k/-nodes. We then draw /n/ random perturbations from /P/ and apply them to the graph. In order to apply a label-change operation (=NLABEL= or =ELABEL=) we first select a random
+source node or edge from the graph and use the =modify= operation to select a new label. The addition operations (=NADD= and =EADD=) are performed by selecting random source and target nodes and generating a random edge label from /E/.
+For =NADD=, the target is a a random node is generated from /N/ instead.
+
+The =modify= operation is essentially irrelevant to SemBLEU and Smatch since they both use exact-match to determine if two labels are are the same.
+A variant of the =NADD= operation, =CADD=, selects the label for the generated node using the =modify= operation applied to another randomly selected node from the graph.
+The purpose of =CADD= is to introduce more potential errors for TripsBLEU.
+
+We use 3 different distributions of perturbations:
+- =uniform=: All four basic perturbation operations are equally likely
+- =relabel=: Use only the =NLABEL= and =ELABEL= operations. The structure of the graph does not change.
+- =adding=: Use only =NADD= (or =CADD=) and =EADD= operations
+
+** Results
+For each distribution, we generate 50 unique random graphs and apply 25 perturbations to each. We compute (1) the largest single change in similarity from a perturbation and (2) the number of perturbations before a resulting graph scores below a cutoff, \zeta, to the original.
+
+#+CAPTION: This table shows results from the perturbation analysis
+#+LABEL: table:perturbation-analysis
+|--------------+-------------+----------+--------------------|
+| \theta = 0.8 | \zeta = 0.2 |          |                    |
+|--------------+-------------+----------+--------------------|
+| metric       | P           | max-jump | steps-to-threshold |
+|--------------+-------------+----------+--------------------|
+| SemBLEU      |             |          |                    |
+| TripsBLEU    | uniform     |          |                    |
+| SMatch       |             |          |                    |
+|--------------+-------------+----------+--------------------|
+| SemBLEU      |             |          |                    |
+| TripsBLEU    | relabel     |          |                    |
+| SMatch       |             |          |                    |
+|--------------+-------------+----------+--------------------|
+| SemBLEU      |             |          |                    |
+| TripsBLEU    | adding      |          |                    |
+| SMatch       |             |          |                    |
+|--------------+-------------+----------+--------------------|
+
+** Discussion
+Unlike TripsBLEU and SemBLEU, Smatch is unable to handle duplicate edges. This
