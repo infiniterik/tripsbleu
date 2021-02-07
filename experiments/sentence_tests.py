@@ -7,11 +7,14 @@ import pandas as pd
 
 
 edge = compare.kronecker
-node = compare.kronecker
-greedy = compare.greedy(compare.weighted_ngram_score(edge=edge, node=node, edge_weight=1, node_weight=1, strictness=1))
+node = compare.jaro
+greedy = compare.greedy(compare.weighted_ngram_score(edge=edge, node=node, edge_weight=1, node_weight=1, strictness=0.8))
 
-sbl = lambda a, b: score.sembleu(candidate=a, reference=b, n=3, node_label="id", edge_label="label", pk=compare.set_intersection)
-tbl = lambda a, b: score.sembleu(candidate=a, reference=b, n=3, node_label="id", edge_label="label", pk=greedy)
+ngram_size=5
+weights=[0.1,0.4,0.3,0.1,0.1]
+
+sbl = lambda a, b: score.sembleu(candidate=a, reference=b, weights=weights, n=ngram_size, node_label="id", edge_label="label", pk=compare.set_intersection)
+tbl = lambda a, b: score.sembleu(candidate=a, reference=b, weights=weights, n=ngram_size, node_label="id", edge_label="label", pk=greedy)
 smt = lambda a, b: smatch(a=b, b=a, edge_label="label")
 
 graphs = [load_amr_file("sembleu_data/e86_test.ans%d"%(i+1)) for i in range(0,4)]

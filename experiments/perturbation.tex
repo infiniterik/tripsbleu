@@ -1,0 +1,155 @@
+% Created 2020-07-28 Tue 14:46
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\author{Rik Bose}
+\date{\today}
+\title{Perturbation}
+\hypersetup{
+ pdfauthor={Rik Bose},
+ pdftitle={Perturbation},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.0.91 (Org mode 9.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{Perturbation Analysis}
+\label{sec:org345e84c}
+We test the robustness of the three parse-level similarity metrics -- TripsBLEU, SemBLEU, and Smatch -- by generating random graphs and observing the change in similarity
+score over a sequence of perturbations. A perturbation represents a minimal unit of change between two parses:
+
+\begin{itemize}
+\item \texttt{NLABEL}: A changed node label
+\item \texttt{ELABEL}: A changed edge label
+\item \texttt{EADD}: An added edge
+\item \texttt{NADD}: An added node, implicitly with an added edge.
+\end{itemize}
+
+Labels are drawn from an \emph{element space} defined by a closed set of labels and a similarity metric. We perform two types of label selection:
+\begin{itemize}
+\item \texttt{random}: Labels are selected uniformly randomly from the space.
+\item \texttt{modify(reference, threshold)}: We provide a reference label and threshold, \(\theta\), to select a label that is similar to the reference label.
+\end{itemize}
+Figure \ref{fig:random-modify} demonstrates the possible labels drawn using each method in a simple label space. Note that =modify(reference, 1)
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lll}
+Element Space & selection & options\\
+\hline
+\{1,2,3,4,5\} & random & \{1,2,3,4,5\}\\
+\{1,2,3,4,5\} & modify(3, 0.2) & \{2,3,4\}\\
+\end{tabular}
+\caption{\label{fig:random-modify}A simple \emph{element space} consisting of 5 integers and normalized difference as similarity metric. Using \texttt{modify(3, 0.2)}, we select a random label from the set \texttt{\{2,3,4\}} instead.}
+
+\end{table}
+
+\subsection{Experimental Setup}
+\label{sec:org71a7d98}
+
+A random graph generator is a tuple \(\mathbf{Gr}(N, E, P)\) consisting of two element spaces, \emph{N} for nodes and \emph{E} for edges, and a probability distribution, \emph{P}, over possible perturbations. We start the process by generating a random
+directed tree with \emph{k}-nodes. We then draw \emph{n} random perturbations from \emph{P} and apply them to the graph. In order to apply a label-change operation (\texttt{NLABEL} or \texttt{ELABEL}) we first select a random
+source node or edge from the graph and use the \texttt{modify} operation to select a new label. The addition operations (\texttt{NADD} and \texttt{EADD}) are performed by selecting random source and target nodes and generating a random edge label from \emph{E}.
+For \texttt{NADD}, the target is a a random node is generated from \emph{N} instead.
+
+The \texttt{modify} operation is essentially irrelevant to SemBLEU and Smatch since they both use exact-match to determine if two labels are are the same.
+A variant of the \texttt{NADD} operation, \texttt{CADD}, selects the label for the generated node using the \texttt{modify} operation applied to another randomly selected node from the graph.
+The purpose of \texttt{CADD} is to introduce more potential errors for TripsBLEU.
+
+We use 3 different distributions of perturbations:
+\begin{itemize}
+\item \texttt{uniform}: All four basic perturbation operations are equally likely
+\item \texttt{relabel}: Use only the \texttt{NLABEL} and \texttt{ELABEL} operations. The structure of the graph does not change.
+\item \texttt{adding}: Use only \texttt{NADD} (or \texttt{CADD}) and \texttt{EADD} operations
+\end{itemize}
+
+\subsection{Results}
+\label{sec:org048fccf}
+For each distribution, we generate 50 unique random graphs and apply 25 perturbations to each. We compute (1) \texttt{max-jump} - the largest single change in similarity from a perturbation and (2) \texttt{cut} the number of perturbations before a resulting graph's score against the original by more than a cutoff, \(\zeta\). That is, \({cut}_{\zeta} = {min}_i |{sim}(p_{i-1}, p_0) - {sim}(p_i, p_0)| > \zeta\)
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{llrrr}
+\hline
+\(\theta\) = 0.8 & \(\zeta\) = 0.2 &  &  & \\
+\hline
+metric & P & max-jump & \(cut_{\zeta}\) & \# Cuts\\
+\hline
+SemBLEU &  & 0.193 & 4.58 & 31\\
+TripsBLEU & uniform & 0.109 & 4.0 & 3\\
+SMatch\textdagger &  & 0.137 & 4.5 & 59\\
+\hline
+SemBLEU &  & 0.268 & 0 & 0\\
+TripsBLEU & relabel & 0.159 & 0 & 0\\
+SMatch\textdagger &  & 0.163 & 6.17 & 68\\
+\hline
+SemBLEU &  & 0.10 & 1.01 & 99\\
+TripsBLEU & adding & 0.10 & 0.10 & 99\\
+SMatch\textdagger &  & 0.119 & 0.19 & 100\\
+\hline
+SemBLEU &  & 0.097 & 1 & 100\\
+TripsBLEU & cadd & 0.097 & 1 & 100\\
+SMatch\textdagger &  & 0.119 & 1.28 & 100\\
+\hline
+\end{tabular}
+\caption{\label{table:perturbation-analysis}This table shows results from the perturbation analysis}
+
+\end{table}
+
+\subsection{Discussion}
+\label{sec:orgcec793a}
+Unlike TripsBLEU and SemBLEU, Smatch is unable to handle situations where a triple is duplicated. Since this is a corner case and the AMR specification does not allow for duplicated triples, we discard any duplicates.
+
+\section{Sentence-level Experiment}
+\label{sec:org40c193e}
+\cite{sembleu} performs a sentence level experiment to test the ability of structural similarity metrics to recreate human judgements.
+For each of 200 pairs of AMR parses, 3 human annotations are acquired to determine which of each pair of parses is most correct. The sentence-level experiment uses a structural similarity metric to compare each candidate parse against its respective gold parse. The metric is deemed correct if agrees with the most common human annotation.
+
+\subsection{Naive AMR label similarity}
+\label{sec:orgffb3f05}
+In order to adapt TripsBLEU's benefits to AMR, we use a simple similarity metric. Leveraging the naming convention of Propbank types
+we use Jaro-Winkler string similarity (\cite{cohen2003comparison}) to compare node labels. Jaro-Winkler similarity (extending Jaro similarity) was originally devised to identify misspellings in surnames. Observing that misspellings in surnames tend to occur towards the end of short strings, Jaro-Winkler places more weight on the longest prefix match of two strings. Hence, diffeerent senses of the same word will be scored as more similar than senses of different words. We apply a threshold of 0.8 to the similarity metric.
+
+\subsection{Results}
+\label{sec:orgcff71cf}
+Table \ref{table:sembleu-sentence} shows the results of the sentence level experiments. We observe a small improvement using a flexible matching for Propbank labels. This can be attributed to retaining partial edge-matches in situations where incorrect types were assigned but the argument structure was still correct. For example, if a node is assigned \texttt{make-01} where \texttt{make-02} is expected, SemBLEU would give a score of 0 to all ngrams containing \texttt{make-01}. Instead, TripsBLEU retains a partial match, preferring the correct type of \texttt{make-02} but still rewarding \texttt{make-01}.
+
+This is similar in nature to the way Smatch's underlying alignment allows it to score structural similarity through a maximal alignment
+even when the node labels don't match.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lr}
+\hline
+metric & score\\
+\hline
+smatch & 0.765\\
+sembleu (n=3) & 0.815\\
+TripsBLEU (n=3) & 0.830\\
+\hline
+\end{tabular}
+\caption{\label{table:sembleu-sentence}This table shows the results of the Sentence level experiments over 200 parse pairs}
+
+\end{table}
+\subsection{Future Work}
+\label{sec:orga96c5a3}
+There is much more work to be done in determining semantic similarity between Propbank types. In particular, the Jaro-Winkler similarity only really measures whether a node is attached to the correct parse-level predicate. It is, for example, unable to determine whether \texttt{make-01} is more similar to \texttt{make-02} or \texttt{make-03}. Future similarity metrics should take into account the argument structure and the expected types of elements filling the arguments.
+\end{document}

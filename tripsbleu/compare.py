@@ -6,6 +6,16 @@ import Levenshtein
 def levenshtein(x, y):
     return 1 - Levenshtein.distance(x, y)/max(len(x), len(y))
 
+def jaro(x,y):
+    # differ mostly in suffix
+    return Levenshtein.jaro_winkler(x, y)
+
+def stepenshtein(x, y):
+    # Differ by like 1-2 characters
+    if Levenshtein.distance(x, y) < 2:
+        return 0.9
+    return 0
+
 def kronecker(x, y):
     """
     :returns: 1 if x == y, 0 otherwise
@@ -65,20 +75,21 @@ def weighted_ngram_score(edge=kronecker, node=kronecker, edge_weight=1, node_wei
             raise ValueError("Got ngram of length %d, expected odd length" % len(source))
         comp = [_ for _ in zip(source, reference)]
         score = 0
+        norm = 0
         for i in range(len(comp)):
             if i % 2 == 0:
                 ns = node(*comp[i])
                 if ns < strictness or (strictness == 0 == ns):
                     return 0
                 score += ns * node_weight
+                norm += node_weight
             else:
                 es = edge(*comp[i])
                 if es < strictness or (strictness == 0 == es):
                     return 0
                 score += es * edge_weight
-        edges = len(source)//2
-        nodes = len(source) - edges
-        return score / (nodes * node_weight + edges * edge_weight)
+                norm += edge_weight
+        return score / norm #(nodes * node_weight + edges * edge_weight)
     return _ng_comp
 
 
@@ -91,34 +102,32 @@ def greedy(score=weighted_ngram_score(), align=False):
     :param align: whether or not the actual alignment should be returned
     :returns: a function that computes the greedy scoring between two lists of ngrams
     """
-    def _greedy(reference, candidate):
+    def _greedy(source, reference):
         """
+        :param source: A list of n-grams
         :param reference: A list of n-grams
-        :param candidate: A list of n-grams
         :returns: A score or alignment between the two lists
         """
-        if len(reference) == 0 == len(candidate):
-            return 1
-        if len(candidate) == 0:
+        if (not source) or (not reference):
             return 0
         scored = []
-        for i, x in enumerate(reference):
-            for j, y in enumerate(candidate):
+        for i, x in enumerate(source):
+            for j, y in enumerate(reference):
                 scored.append((i, j, score(x, y)))
         taken_x, taken_y = set(), set()
         alignments = []
         res = 0
         while scored:
             i, j, s = max(scored, key=lambda x: x[2])
-            alignments.append((reference[i], candidate[j], s))
-            #print("%.3f: %s -> %s" % (s, reference[i], candidate[j]))
+            alignments.append((source[i], reference[j], s))
+            #print("%.3f: %s -> %s" % (s, source[i], reference[j]))
             res += s
             taken_x.add(i)
             taken_y.add(j)
             scored = [(i, j, s) for i, j, s in scored if i not in taken_x and j not in taken_y]
         if align:
-            return res/len(candidate), alignments
-        return res/len(candidate)
+            return res/len(reference), alignments
+        return res/len(reference)
     return _greedy
 
 def ngram_to_node_alignments(alignments):

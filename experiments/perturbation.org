@@ -87,27 +87,63 @@ We use 3 different distributions of perturbations:
 - =adding=: Use only =NADD= (or =CADD=) and =EADD= operations
 
 ** Results
-For each distribution, we generate 50 unique random graphs and apply 25 perturbations to each. We compute (1) the largest single change in similarity from a perturbation and (2) the number of perturbations before a resulting graph scores below a cutoff, \zeta, to the original.
+For each distribution, we generate 50 unique random graphs and apply 25 perturbations to each. We compute (1) =max-jump= - the largest single change in similarity from a perturbation and (2) =cut= the number of perturbations before a resulting graph's score against the original by more than a cutoff, \zeta. That is, ${cut}_{\zeta} = {min}_i |{sim}(p_{i-1}, p_0) - {sim}(p_i, p_0)| > \zeta$
 
-#+CAPTION: This table shows results from the perturbation analysis
+#+CAPTION: This table shows results from the perturbation analysis. We note that Smatch fails to provide similarity in a great many cases because the algorithm is fine-tuned to AMR parses which explicitly forbids duplicate triple. In the general case of semantic representations, there is no rule against duplicate triples existing in a parse. In some cases, the failure occurs after finding the first cut, which explains why the sum of the last two columns is greater than 100 in some cases.
 #+LABEL: table:perturbation-analysis
-|--------------+-------------+----------+--------------------|
-| \theta = 0.8 | \zeta = 0.2 |          |                    |
-|--------------+-------------+----------+--------------------|
-| metric       | P           | max-jump | steps-to-threshold |
-|--------------+-------------+----------+--------------------|
-| SemBLEU      |             |          |                    |
-| TripsBLEU    | uniform     |          |                    |
-| SMatch       |             |          |                    |
-|--------------+-------------+----------+--------------------|
-| SemBLEU      |             |          |                    |
-| TripsBLEU    | relabel     |          |                    |
-| SMatch       |             |          |                    |
-|--------------+-------------+----------+--------------------|
-| SemBLEU      |             |          |                    |
-| TripsBLEU    | adding      |          |                    |
-| SMatch       |             |          |                    |
-|--------------+-------------+----------+--------------------|
+|-------------------+-------------+----------+---------------+--------+--------|
+| \theta = 0.8      | \zeta = 0.2 |          |               |        |        |
+|-------------------+-------------+----------+---------------+--------+--------|
+| metric            | P           | max-jump | $cut_{\zeta}$ | # Cuts | failed |
+|-------------------+-------------+----------+---------------+--------+--------|
+| SemBLEU           |             |    0.193 |          4.58 |     31 | -      |
+| TripsBLEU         | uniform     |    0.109 |           4.0 |      3 | -      |
+| SMatch\textdagger |             |    0.137 |             7 |      1 | 67     |
+|-------------------+-------------+----------+---------------+--------+--------|
+| SemBLEU           |             |    0.268 |          3.92 |     58 | -      |
+| TripsBLEU         | relabel     |    0.159 |          8.38 |     13 | -      |
+| SMatch\textdagger |             |    0.163 |           9.0 |      1 | 96     |
+|-------------------+-------------+----------+---------------+--------+--------|
+| SemBLEU           |             |     0.10 |          1.01 |     99 | -      |
+| TripsBLEU         | adding      |     0.10 |          1.01 |     99 | -      |
+| SMatch\textdagger |             |    0.119 |          1.18 |     34 | 70     |
+|-------------------+-------------+----------+---------------+--------+--------|
+| SemBLEU           |             |    0.097 |             1 |    100 | -      |
+| TripsBLEU         | cadd        |    0.097 |             1 |    100 | -      |
+| SMatch\textdagger |             |    0.119 |          1.12 |     25 | 78     |
+|-------------------+-------------+----------+---------------+--------+--------|
 
-** Discussion
-Unlike TripsBLEU and SemBLEU, Smatch is unable to handle duplicate edges. This
+In table \label{table:perturbastion-analysis} we see an indication of the behaviors of the different metrics.
+We expect the =max-jump= to remain low because the perturbations being applied are intentionally kept small.
+While this is true in Smatch, we recall that relabelling all the nodes in a graph would still return a score of 0.5 with the original since half the Smatch score is the result of structural similarity only. Comparing the max-jump is further convounded by the
+fact that SMatch is designed specifically for AMR and has undefined behavior elsewhere. Specifically, finding more than two
+triples (node-edge-node sequences) with the same sequence of labels results in a error in Smatch.
+
+SemBLEU and TripsBLEU show slightly more stability under the addition operations than Smatch. Under addition, the original graph remains as a subgraph of the result, meaning there shouldn't be a large shift in similarity between each iteration.
+The biggest improvement in behavior between SemBleu and TripsBLEU comes in the relabelling task. TripsBLEU shows a much smaller perturbation over the label changes.
+
+* Sentence-level Experiment
+cite:sembleu performs a sentence level experiment to test the ability of structural similarity metrics to recreate human judgements.
+For each of 200 pairs of AMR parses, 3 human annotations are acquired to determine which of each pair of parses is most correct. The sentence-level experiment uses a structural similarity metric to compare each candidate parse against its respective gold parse. The metric is deemed correct if agrees with the most common human annotation.
+
+** Naive AMR label similarity
+In order to adapt TripsBLEU's benefits to AMR, we use a simple similarity metric. Leveraging the naming convention of Propbank types
+we use Jaro-Winkler string similarity (cite:cohen2003comparison) to compare node labels. Jaro-Winkler similarity (extending Jaro similarity) was originally devised to identify misspellings in surnames. Observing that misspellings in surnames tend to occur towards the end of short strings, Jaro-Winkler places more weight on the longest prefix match of two strings. Hence, diffeerent senses of the same word will be scored as more similar than senses of different words. We apply a threshold of 0.8 to the similarity metric.
+
+** Results
+Table \ref{table:sembleu-sentence} shows the results of the sentence level experiments. We observe a small improvement using a flexible matching for Propbank labels. This can be attributed to retaining partial edge-matches in situations where incorrect types were assigned but the argument structure was still correct. For example, if a node is assigned =make-01= where =make-02= is expected, SemBLEU would give a score of 0 to all ngrams containing =make-01=. Instead, TripsBLEU retains a partial match, preferring the correct type of =make-02= but still rewarding =make-01=.
+
+This is similar in nature to the way Smatch's underlying alignment allows it to score structural similarity through a maximal alignment
+even when the node labels don't match.
+
+#+CAPTION: This table shows the results of the Sentence level experiments over 200 parse pairs
+#+LABEL: table:sembleu-sentence
+|-----------------+-------|
+| metric          | score |
+|-----------------+-------|
+| smatch          | 0.765 |
+| sembleu (n=3)   | 0.815 |
+| TripsBLEU (n=3) | 0.830 |
+|-----------------+-------|
+** Future Work
+There is much more work to be done in determining semantic similarity between Propbank types. In particular, the Jaro-Winkler similarity only really measures whether a node is attached to the correct parse-level predicate. It is, for example, unable to determine whether =make-01= is more similar to =make-02= or =make-03=. Future similarity metrics should take into account the argument structure and the expected types of elements filling the arguments.

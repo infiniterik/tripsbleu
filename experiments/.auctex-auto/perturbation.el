@@ -33,11 +33,16 @@
     "hyperref"
     "minted")
    (LaTeX-add-labels
-    "sec:org8d1e2f5"
+    "sec:org345e84c"
     "fig:random-modify"
-    "sec:orga295188"
-    "sec:orgc3fc919"
+    "sec:org71a7d98"
+    "sec:org048fccf"
     "table:perturbation-analysis"
-    "sec:org739dee3"))
+    "sec:orgcec793a"
+    "sec:org40c193e"
+    "sec:orgffb3f05"
+    "sec:orgcff71cf"
+    "table:sembleu-sentence"
+    "sec:orga96c5a3"))
  :latex)
 
