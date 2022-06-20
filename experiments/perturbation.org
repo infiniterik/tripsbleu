@@ -1,0 +1,149 @@
+#+TITLE: Perturbation
+
+* The Experiment :noexport:
+
+** A structural similarity metric is intended to determine the distance between a pair of semantic parses.
+** The typical structure of comparing system output to human judgements is difficult in the case of structural similarity metrics.
+** Judgements as to the correctness of a single structure are already difficult - requiring knowledgable annotators to fully understand the parse of a sentence.
+** A minimum requirement of a structural similarity metric is that as a structure is modified more and more, we expect it to become more and more different from its original form...
+* Perturbation analysis :noexport:
+For the perturbation analysis, we create a random digraph structure and repeatedly apply incremental changes to the graph while monitoring its similarity to the original.
+** Perturbations
+We define 5 perturbations:
+- =ELABEL= / =NLABEL= : relabel an edge or node
+- =EADD=: add an edge between two existing nodes avoiding self-loops
+- =NADD=: add an edge and node to an existing node
+- =CADD=: Like =NADD= but the added node label must be with /threshold/ of some existing node label.
+For node
+
+We do not implement edge/node removal as a perturbation operation. We can simulate removal by repeatedly perturbing a graph and then choosing an arbitrary iteration and working backwards.
+We define an /Element Space/ as a set of labels with a similarity metric associated with it. We create an element space for nodes and a similar element space for edges.
+For relabelling operations, we also provide a margin which indicates the maximum distance between the new and old label.
+A full graph generator consists of a node space, an edge space, and a distribution to draw perturbation operations from.
+** Tests
+*** Uniform
+Taking a uniform distribution over the four perturbation operations, we repeatedly perturb a randomly generated graph for 50 iterations. In the process, we observe the decay in similarity.
+- The similarity decreases monotonically for both SemBleu and TripsBleu
+- The average jump (over 100 trials, n=25, k=13) is 0.117 for TripsBleu and 0.237 for SemBleu
+- Average drop to 0 over 100 trials: 4 for TripsBleu, 48 for SemBleu
+|              | TripsBleu | SemBleu |
+|--------------+-----------+---------|
+| average-zero |           |         |
+| num zeros    |         4 |      48 |
+| max-jump     |     0.117 |   0.237 |
+*** Relabel
+What is the decay in similarity over n random relabels
+|              | TripsBleu | SemBleu |
+|--------------+-----------+---------|
+| average-zero |     0.376 |    0.33 |
+| num zeros    |        22 |      99 |
+| max-jump     |      0.19 |    0.33 |
+*** Adding
+What is the decay in similarity over n random adds
+|              | TripsBleu | SemBleu |
+|--------------+-----------+---------|
+| average-zero | -         | -       |
+| num zeros    | -         | -       |
+| max-jump     | 0.102     | 0.102   |
+Divergence here would have implied that the graphs got stuck in local minima. Instead, the same match held throughout, no matter how many nodes or edges were added.
+*** Triangle
+Perform n random perturbations to two copies of the same graph. What is the expected difference between them.
+
+* Perturbation Analysis
+We test the robustness of the three parse-level similarity metrics -- TripsBLEU, SemBLEU, and Smatch -- by generating random graphs and observing the change in similarity
+score over a sequence of perturbations. A perturbation represents a minimal unit of change between two parses:
+# - either modifying a label or adding an edge or node. Table \ref{table:perturbation-descriptions} lays out the 4 perturbation operations
+- =NLABEL=: A changed node label
+- =ELABEL=: A changed edge label
+- =EADD=: An added edge
+- =NADD=: An added node, implicitly with an added edge.
+
+Labels are drawn from an /element space/ defined by a closed set of labels and a similarity metric. We perform two types of label selection:
+- =random=: Labels are selected uniformly randomly from the space.
+- =modify(reference, threshold)=: We provide a reference label and threshold, \theta, to select a label that is similar to the reference label.
+Figure \ref{fig:random-modify} demonstrates the possible labels drawn using each method in a simple label space. Note that =modify(reference, 1)
+
+#+CAPTION: A simple /element space/ consisting of 5 integers and normalized difference as similarity metric. Using =modify(3, 0.2)=, we select a random label from the set ={2,3,4}= instead.
+#+LABEL: fig:random-modify
+| Element Space | selection      | options     |
+|---------------+----------------+-------------|
+| {1,2,3,4,5}   | random         | {1,2,3,4,5} |
+| {1,2,3,4,5}   | modify(3, 0.2) | {2,3,4}     |
+
+** Experimental Setup
+
+A random graph generator is a tuple $\mathbf{Gr}(N, E, P)$ consisting of two element spaces, /N/ for nodes and /E/ for edges, and a probability distribution, /P/, over possible perturbations. We start the process by generating a random
+directed tree with /k/-nodes. We then draw /n/ random perturbations from /P/ and apply them to the graph. In order to apply a label-change operation (=NLABEL= or =ELABEL=) we first select a random
+source node or edge from the graph and use the =modify= operation to select a new label. The addition operations (=NADD= and =EADD=) are performed by selecting random source and target nodes and generating a random edge label from /E/.
+For =NADD=, the target is a a random node is generated from /N/ instead.
+
+The =modify= operation is essentially irrelevant to SemBLEU and Smatch since they both use exact-match to determine if two labels are are the same.
+A variant of the =NADD= operation, =CADD=, selects the label for the generated node using the =modify= operation applied to another randomly selected node from the graph.
+The purpose of =CADD= is to introduce more potential errors for TripsBLEU.
+
+We use 3 different distributions of perturbations:
+- =uniform=: All four basic perturbation operations are equally likely
+- =relabel=: Use only the =NLABEL= and =ELABEL= operations. The structure of the graph does not change.
+- =adding=: Use only =NADD= (or =CADD=) and =EADD= operations
+
+** Results
+For each distribution, we generate 50 unique random graphs and apply 25 perturbations to each. We compute (1) =max-jump= - the largest single change in similarity from a perturbation and (2) =cut= the number of perturbations before a resulting graph's score against the original by more than a cutoff, \zeta. That is, ${cut}_{\zeta} = {min}_i |{sim}(p_{i-1}, p_0) - {sim}(p_i, p_0)| > \zeta$
+
+#+CAPTION: This table shows results from the perturbation analysis. We note that Smatch fails to provide similarity in a great many cases because the algorithm is fine-tuned to AMR parses which explicitly forbids duplicate triple. In the general case of semantic representations, there is no rule against duplicate triples existing in a parse. In some cases, the failure occurs after finding the first cut, which explains why the sum of the last two columns is greater than 100 in some cases.
+#+LABEL: table:perturbation-analysis
+|-------------------+-------------+----------+---------------+--------+--------|
+| \theta = 0.8      | \zeta = 0.2 |          |               |        |        |
+|-------------------+-------------+----------+---------------+--------+--------|
+| metric            | P           | max-jump | $cut_{\zeta}$ | # Cuts | failed |
+|-------------------+-------------+----------+---------------+--------+--------|
+| SemBLEU           |             |    0.193 |          4.58 |     31 | -      |
+| TripsBLEU         | uniform     |    0.109 |           4.0 |      3 | -      |
+| SMatch\textdagger |             |    0.137 |             7 |      1 | 67     |
+|-------------------+-------------+----------+---------------+--------+--------|
+| SemBLEU           |             |    0.268 |          3.92 |     58 | -      |
+| TripsBLEU         | relabel     |    0.159 |          8.38 |     13 | -      |
+| SMatch\textdagger |             |    0.163 |           9.0 |      1 | 96     |
+|-------------------+-------------+----------+---------------+--------+--------|
+| SemBLEU           |             |     0.10 |          1.01 |     99 | -      |
+| TripsBLEU         | adding      |     0.10 |          1.01 |     99 | -      |
+| SMatch\textdagger |             |    0.119 |          1.18 |     34 | 70     |
+|-------------------+-------------+----------+---------------+--------+--------|
+| SemBLEU           |             |    0.097 |             1 |    100 | -      |
+| TripsBLEU         | cadd        |    0.097 |             1 |    100 | -      |
+| SMatch\textdagger |             |    0.119 |          1.12 |     25 | 78     |
+|-------------------+-------------+----------+---------------+--------+--------|
+
+In table \label{table:perturbastion-analysis} we see an indication of the behaviors of the different metrics.
+We expect the =max-jump= to remain low because the perturbations being applied are intentionally kept small.
+While this is true in Smatch, we recall that relabelling all the nodes in a graph would still return a score of 0.5 with the original since half the Smatch score is the result of structural similarity only. Comparing the max-jump is further convounded by the
+fact that SMatch is designed specifically for AMR and has undefined behavior elsewhere. Specifically, finding more than two
+triples (node-edge-node sequences) with the same sequence of labels results in a error in Smatch.
+
+SemBLEU and TripsBLEU show slightly more stability under the addition operations than Smatch. Under addition, the original graph remains as a subgraph of the result, meaning there shouldn't be a large shift in similarity between each iteration.
+The biggest improvement in behavior between SemBleu and TripsBLEU comes in the relabelling task. TripsBLEU shows a much smaller perturbation over the label changes.
+
+* Sentence-level Experiment
+cite:sembleu performs a sentence level experiment to test the ability of structural similarity metrics to recreate human judgements.
+For each of 200 pairs of AMR parses, 3 human annotations are acquired to determine which of each pair of parses is most correct. The sentence-level experiment uses a structural similarity metric to compare each candidate parse against its respective gold parse. The metric is deemed correct if agrees with the most common human annotation.
+
+** Naive AMR label similarity
+In order to adapt TripsBLEU's benefits to AMR, we use a simple similarity metric. Leveraging the naming convention of Propbank types
+we use Jaro-Winkler string similarity (cite:cohen2003comparison) to compare node labels. Jaro-Winkler similarity (extending Jaro similarity) was originally devised to identify misspellings in surnames. Observing that misspellings in surnames tend to occur towards the end of short strings, Jaro-Winkler places more weight on the longest prefix match of two strings. Hence, diffeerent senses of the same word will be scored as more similar than senses of different words. We apply a threshold of 0.8 to the similarity metric.
+
+** Results
+Table \ref{table:sembleu-sentence} shows the results of the sentence level experiments. We observe a small improvement using a flexible matching for Propbank labels. This can be attributed to retaining partial edge-matches in situations where incorrect types were assigned but the argument structure was still correct. For example, if a node is assigned =make-01= where =make-02= is expected, SemBLEU would give a score of 0 to all ngrams containing =make-01=. Instead, TripsBLEU retains a partial match, preferring the correct type of =make-02= but still rewarding =make-01=.
+
+This is similar in nature to the way Smatch's underlying alignment allows it to score structural similarity through a maximal alignment
+even when the node labels don't match.
+
+#+CAPTION: This table shows the results of the Sentence level experiments over 200 parse pairs
+#+LABEL: table:sembleu-sentence
+|-----------------+-------|
+| metric          | score |
+|-----------------+-------|
+| smatch          | 0.765 |
+| sembleu (n=3)   | 0.815 |
+| TripsBLEU (n=3) | 0.830 |
+|-----------------+-------|
+** Future Work
+There is much more work to be done in determining semantic similarity between Propbank types. In particular, the Jaro-Winkler similarity only really measures whether a node is attached to the correct parse-level predicate. It is, for example, unable to determine whether =make-01= is more similar to =make-02= or =make-03=. Future similarity metrics should take into account the argument structure and the expected types of elements filling the arguments.

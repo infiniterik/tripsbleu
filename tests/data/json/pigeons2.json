@@ -1,0 +1,104 @@
+{
+  "parse": [
+    {
+      "V41256": {
+        "id": "V41256",
+        "indicator": "SPEECHACT",
+        "type": "SA_TELL",
+        "word": null,
+        "roles": {
+          "CONTENT": "#V40989",
+          "LEX": "LIKE"
+        },
+        "start": 0,
+        "end": 32
+      },
+      "V40989": {
+        "id": "V40989",
+        "indicator": "F",
+        "type": "APPRECIATE",
+        "word": "LIKE",
+        "roles": {
+          "EXPERIENCER": "#V40969",
+          "NEUTRAL": "#V41001",
+          "TENSE": "PRES",
+          "LEX": "LIKE",
+          "WNSENSE": "like%2:37:05::"
+        },
+        "start": 0,
+        "end": 32
+      },
+      "V40969": {
+        "id": "V40969",
+        "indicator": "PRO",
+        "type": "PERSON",
+        "word": "I",
+        "roles": {
+          "PROFORM": "I",
+          "LEX": "I",
+          "WNSENSE": "person%1:03:00",
+          "COREF": "USER"
+        },
+        "start": 0,
+        "end": 2
+      },
+      "V41001": {
+        "id": "V41001",
+        "indicator": "INDEF-SET",
+        "type": "PIGEON",
+        "word": "PIGEONS",
+        "roles": {
+          "MOD": "#V41005",
+          "LEX": "PIGEONS",
+          "WNSENSE": "pigeon%1:05:00"
+        },
+        "start": 7,
+        "end": 32
+      },
+      "V41005": {
+        "id": "V41005",
+        "indicator": "F",
+        "type": "ASSOC-WITH",
+        "word": "WITH",
+        "roles": {
+          "GROUND": "#V41024",
+          "FIGURE": "#V41001",
+          "LEX": "WITH"
+        },
+        "start": 15,
+        "end": 32
+      },
+      "V41024": {
+        "id": "V41024",
+        "indicator": "INDEF-SET",
+        "type": "NATURAL-OBJECT",
+        "word": "FEATHERS",
+        "roles": {
+          "MOD": "#V41017",
+          "LEX": "FEATHERS",
+          "WNSENSE": "natural_object%1:03:00"
+        },
+        "start": 20,
+        "end": 32
+      },
+      "V41017": {
+        "id": "V41017",
+        "indicator": "F",
+        "type": "BLUE",
+        "word": "BLUE",
+        "roles": {
+          "FIGURE": "#V41024",
+          "SCALE": "BLUE-SCALE",
+          "LEX": "BLUE",
+          "WNSENSE": "blue%5:00:00:chromatic:00"
+        },
+        "start": 20,
+        "end": 25
+      },
+      "root": "#V41256"
+    }
+  ],
+  "alternatives": [],
+  "sentence": "I like pigeons with blue feathers",
+  "time": "2020-07-13 10:31:28.130605"
+}

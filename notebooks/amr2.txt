@@ -1,0 +1,13 @@
+(V1 / John
+	:ARG0
+		(V2 / COMPLEX
+			:INSTANCE
+				(V3 / go)
+			:ARG0
+				(V4 / ADV-A
+					:ARG0
+						(V5 / to
+							:ARG0
+								(V6 / N+PREDS
+									:ARG0
+										(V7 / school))))))

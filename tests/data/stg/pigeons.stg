@@ -1,0 +1,9 @@
+# Nodes
+V40715 :id V40715 :indicator SPEECHACT :type SA_TELL :start 0 :end 13 :LEX LIKE
+V40647 :id V40647 :indicator F :type APPRECIATE :word LIKE :start 0 :end 13 :TENSE PRES :LEX LIKE :WNSENSE like%2:37:05::
+V40627 :id V40627 :indicator PRO :type PERSON :word I :start 0 :end 2 :PROFORM I :LEX I :WNSENSE person%1:03:00 :COREF USER
+V40659 :id V40659 :indicator INDEF-SET :type PIGEON :word PIGEONS :start 7 :end 13 :LEX PIGEONS :WNSENSE pigeon%1:05:00
+# Edges
+V40715 -> V40647 :role CONTENT
+V40647 -> V40627 :role EXPERIENCER
+V40647 -> V40659 :role NEUTRAL

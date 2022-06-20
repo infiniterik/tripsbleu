@@ -1,0 +1,1968 @@
+# ::id bolt12_64556_5627.1
+# ::tok Resolutely support the thread starter ! I compose a poem in reply :
+(m / multi-sentence
+      :snt1 (s / support-01 :mode imperative
+            :ARG0 (y / you)
+            :ARG1 (p / person
+                  :ARG0-of (s2 / start-01
+                        :ARG1 (t / thread)))
+            :manner (r / resolute))
+      :snt2 (r2 / reply-01
+            :ARG0 (i / i)
+            :ARG2 (c / compose-02
+                  :ARG0 i
+                  :ARG1 (p2 / poem))))
+
+# ::id bolt12_64556_5627.2
+# ::tok Pledge to fight to the death defending the Diaoyu Islands and the related islands
+(p / pledge-01 :mode imperative
+      :ARG0 (y / you)
+      :ARG2 (f / fight-01
+            :ARG0 y
+            :ARG2 (d2 / defend-01
+                  :ARG0 y
+                  :ARG1 (a / and
+                        :op1 (i / island :wiki "Senkaku_Islands" :name (n / name :op1 "Diaoyu" :op2 "Islands"))
+                        :op2 (i2 / island
+                              :ARG1-of (r / relate-01
+                                    :ARG2 i))))
+            :manner (d / die-01
+                  :ARG1 y)))
+
+# ::id bolt12_64556_5627.3
+# ::tok Fleets bumping fishing boats . Little evil Japanese ghosts stirring up trouble and unrest . With hearts of thieves and arrogant form , they again show their wolfish appearance
+(m / multi-sentence
+      :snt1 (b / bump-01
+            :ARG1 (b2 / boat
+                  :purpose (f / fish-01))
+            :ARG2 (f2 / fleet))
+      :snt2 (s / stir-up-04
+            :ARG0 (g / ghost
+                  :mod (c / country :wiki "Japan" :name (n / name :op1 "Japan"))
+                  :mod (l / little)
+                  :mod (e / evil))
+            :ARG1 (a / and
+                  :op1 (t / trouble)
+                  :op2 (u / unrest)))
+      :snt3 (s2 / show-01
+            :ARG0 (t2 / they)
+            :ARG1 (a3 / appearance
+                  :poss t2
+                  :mod (w / wolfish))
+            :mod (a2 / again)
+            :prep-with (a4 / and
+                  :op1 (h / heart
+                        :mod (p / person
+                              :ARG0-of (s3 / steal-01)))
+                  :op2 (f3 / form
+                        :mod (a5 / arrogance)))))
+
+# ::id bolt12_64556_5627.4
+# ::tok Never go back to that time , our humiliating appearance when signing the treaties . China be strong , swords be sharp and knives be shining , let 's bury the approaching enemies !
+(m / multi-sentence
+      :snt1 (g / go-back-19 :mode imperative :polarity -
+            :ARG1 (y / you)
+            :ARG2 (t2 / time
+                  :mod (t3 / that)
+                  :time-of (a / appear-01
+                        :ARG1 (w / we)
+                        :ARG0-of (h / humiliate-01)
+                        :time (s / sign-02
+                              :ARG0 w
+                              :ARG1 (t / treaty))))
+            :time (e / ever)
+            :direction (b / back))
+      :snt2 (s2 / strong-02 :mode imperative
+            :ARG1 (c / country :wiki "China" :name (n / name :op1 "China")))
+      :snt3 (a2 / and
+            :op1 (s3 / sharp-02 :mode imperative
+                  :ARG1 (s4 / sword))
+            :op2 (s5 / shine-01 :mode imperative
+                  :ARG0 (k / knife)))
+      :snt4 (b3 / bury-01 :mode imperative
+            :ARG0 (w2 / we)
+            :ARG1 (e2 / enemy
+                  :ARG1-of (a4 / approach-01))))
+
+# ::id bolt12_64556_5629.1
+# ::tok I very much wish I had been born in those passionate and upsurging times of Mao Zedong , the Long March , losing my head and shedding my blood , completely extinguishing all the enemies that wrong China , spreading our dragon prestige !
+(w / wish-01
+      :ARG0 (i / i)
+      :ARG1 (b / bear-02
+            :ARG1 i
+            :time (e / event :wiki "Long_March" :name (n2 / name :op1 "Long" :op2 "March")
+                  :mod (p2 / passionate)
+                  :ARG1-of (u / upsurge-00)
+                  :mod (t3 / that)
+                  :poss (p / person :wiki "Mao_Zedong" :name (n / name :op1 "Mao" :op2 "Zedong")))
+            :purpose (a / and
+                  :op1 (l / lose-02
+                        :ARG0 i
+                        :ARG1 (h / head
+                              :part-of i))
+                  :op2 (s / shed-00
+                        :ARG0 i
+                        :ARG1 (b2 / blood
+                              :part-of i))
+                  :op3 (e2 / extinguish-01
+                        :ARG0 i
+                        :ARG1 (p4 / person
+                              :quant (a3 / all)
+                              :ARG0-of (w2 / wrong-01
+                                    :ARG1 (c2 / country :wiki "China" :name (n3 / name :op1 "China")))
+                              :ARG0-of (h2 / have-rel-role-91
+                                    :ARG1 c2
+                                    :ARG2 (e3 / enemy)))
+                        :ARG1-of (c / complete-02))
+                  :op4 (s2 / spread-03
+                        :ARG0 i
+                        :ARG1 (p3 / prestige
+                              :mod (d / dragon)
+                              :poss (w3 / we)))))
+      :degree (m / much
+            :degree (v / very)))
+
+# ::id bolt12_6455_6561.3
+# ::tok Hello , everyone ! We all know the `` September 18th '' Incident , but now Japan again has a premeditated plan for another `` September 18th '' on the sea , another `` Lugou Bridge on the sea '' .
+(m / multi-sentence
+      :snt1 (s3 / say-01
+            :ARG0 (i4 / i)
+            :ARG1 (h2 / hello)
+            :ARG2 (e / everyone))
+      :snt2 (h / have-concession-91
+            :ARG1 (p2 / plan-01
+                  :ARG0 (c2 / country :wiki "Japan" :name (n2 / name :op1 "Japan"))
+                  :ARG1 (i2 / incident
+                        :mod (a3 / another)
+                        :location (s / sea)
+                        :ARG1-of (m2 / mean-01
+                              :ARG2 (i3 / incident :wiki "Marco_Polo_Bridge_Incident" :name (n5 / name :op1 "Lugou" :op2 "Bridge")
+                                    :mod (a4 / another)
+                                    :location (s2 / sea)))
+                        :ARG1-of (r / resemble-01
+                              :ARG2 i))
+                  :ARG1-of (p / premeditate-01)
+                  :time (n3 / now)
+                  :mod (a2 / again))
+            :ARG2 (k / know-01
+                  :ARG0 (w / we
+                        :mod (a / all))
+                  :ARG1 (i / incident :wiki "Mukden_Incident" :name (n / name :op1 "September" :op2 "18th")))))
+
+# ::id bolt12_6455_6561.4
+# ::tok Japan surprisingly defied the strong condemnation of the whole world , openly invaded our country 's sacred territory , `` the Diaoyu Islands '' .
+(a / and
+      :op1 (d / defy-01
+            :ARG0 (c / country :wiki "Japan" :name (n / name :op1 "Japan"))
+            :ARG1 (c2 / condemn-01
+                  :ARG0 (w / world
+                        :mod (w2 / whole))
+                  :ARG1 c
+                  :ARG1-of (s2 / strong-02))
+            :ARG0-of (s / surprise-01))
+      :op2 (i / invade-01
+            :ARG1 (t / territory
+                  :poss (c3 / country
+                        :poss (w3 / we))
+                  :mod (s3 / sacred)
+                  :ARG1-of (m / mean-01
+                        :ARG2 (i2 / island :wiki "Senkaku_Islands" :name (n3 / name :op1 "Diaoyu" :op2 "Islands"))))
+            :ARG1-of (o / open-04)))
+
+# ::id bolt12_6455_6561.5
+# ::tok As we all know , the `` Diaoyu Islands '' have always belonged to China ; due to historical reasons , what originally belongs us has become controversial .
+(m / multi-sentence
+      :snt1 (b / belong-01
+            :ARG0 (i / island :wiki "Senkaku_Islands"
+                  :name (n / name :op1 "Diaoyu" :op2 "Islands"))
+            :ARG1 (c2 / country :wiki "China"
+                  :name (n2 / name :op1 "China"))
+            :time (a / always)
+            :ARG1-of (k / know-01
+                  :ARG0 (w / we
+                        :mod (a2 / all))))
+      :snt2 (c4 / cause-01
+            :ARG0 (r / reason
+                  :mod (h / history))
+            :ARG1 (b2 / become-01
+                  :ARG1 (t / thing
+                        :ARG0-of (b3 / belong-01
+                              :ARG1 (w2 / we)
+                              :mod (o / original)))
+                  :ARG2 (c3 / controversy))))
+
+# ::id bolt12_6455_6561.6
+# ::tok My fellow citizens , ours is ours , what need is there to negotiate ! Japan thus goes even further - wants to create a fact of occupation . Can we allow this ? No - absolutely not !
+(m / multi-sentence
+      :snt1 (s / say-01
+            :ARG0 (i / i)
+            :ARG1 (a3 / and
+                  :op1 (t2 / thing
+                        :poss (w3 / we)
+                        :domain (t3 / thing
+                              :poss w3))
+                  :op2 (c4 / cause-01
+                        :ARG0 (a4 / amr-unknown)
+                        :ARG1 (n3 / need-01
+                              :ARG1 (n4 / negotiate-01))))
+            :ARG2 (c / citizen
+                  :mod (f / fellow)
+                  :poss i))
+      :snt2 (c5 / cause-01
+            :ARG1 (g / go-01
+                  :ARG1 (c2 / country :wiki "Japan" :name (n2 / name :op1 "Japan"))
+                  :ARG2 (f2 / further
+                        :degree (e3 / even))
+                  :ARG1-of (m2 / mean-01
+                        :ARG2 (w2 / want-01
+                              :ARG0 c2
+                              :ARG1 (c3 / create-01
+                                    :ARG0 c2
+                                    :ARG1 (f3 / fact
+                                          :topic (o / occupy-01)))))))
+      :snt3 (p / possible-01 :mode interrogative
+            :ARG1 (a2 / allow-01
+                  :ARG0 (w / we)
+                  :ARG1 (t / this)))
+      :snt4 (h / have-polarity-91
+            :ARG2 -
+            :degree (a / absolute)))
+
+# ::id bolt12_6455_6561.7
+# ::tok My fellow citizens , Japan 's militarism has brought the people of Asia grave disasters .
+(s / say-01
+      :ARG0 (i / i)
+      :ARG1 (b / bring-01
+            :ARG0 (m2 / militarism
+                  :poss (c2 / country :wiki "Japan"
+                        :name (n / name :op1 "Japan")))
+            :ARG1 (d / disaster
+                  :mod (g / grave))
+            :ARG2 (p / person
+                  :mod (c3 / continent :wiki "Asia"
+                        :name (n2 / name :op1 "Asia"))))
+      :ARG2 (c / citizen
+            :mod (f / fellow)
+            :poss i))
+
+# ::id bolt12_6455_6561.8
+# ::tok Especially China suffered the ravages of Japan for as long as several decades .
+(s / suffer-01
+      :ARG0 (c / country :wiki "China" :name (n / name :op1 "China")
+            :mod (e / especially))
+      :ARG1 (r / ravage-01
+            :ARG0 (c2 / country :wiki "Japan" :name (n2 / name :op1 "Japan"))
+            :ARG1 c)
+      :duration (s4 / several
+            :op1 (t / temporal-quantity :quant 1
+                  :unit (d3 / decade))
+            :ARG1-of (l / long-03)))
+
+# ::id bolt12_6455_6561.10
+# ::tok My fellow citizens , of the heinous crimes committed by Japan in China , there are too many instances to cite , difficult to record without exhausting all bamboo strips .
+(s / say-01
+      :ARG0 (i2 / i)
+      :ARG1 (i / instance
+            :quant (m2 / many
+                  :degree (t / too))
+            :topic (c2 / crime-02
+                  :ARG1 (h / heinous)
+                  :ARG1-of (c3 / commit-02
+                        :ARG0 (c4 / country :wiki "Japan" :name (n / name :op1 "Japan"))
+                        :location (c5 / country :wiki "China" :name (n2 / name :op1 "China"))))
+            :ARG1-of (r / record-01
+                  :manner (d / difficult)
+                  :manner (e / exhaust-01 :polarity -
+                        :ARG1 (s2 / strip
+                              :consist-of (b / bamboo)
+                              :quant (a / all))))
+            :ARG1-of (c6 / cite-01))
+      :ARG2 (c / citizen
+            :mod (f / fellow)
+            :poss i2))
+
+# ::id bolt12_6455_6561.11
+# ::tok It 's just as if those ten million deceased souls who lost their lives are wandering over the Pacific Ocean , finding it difficult to rest in peace .
+(r2 / resemble-01
+      :ARG2 (a3 / and
+            :op1 (w / wander-01
+                  :ARG0 (s / soul :quant 10000000
+                        :ARG1-of (d2 / decease-01)
+                        :mod (t / that)
+                        :ARG0-of (l3 / lose-02
+                              :ARG1 (l / life
+                                    :poss s)))
+                  :ARG1 (o2 / over
+                        :op1 (o / ocean :wiki "Pacific_Ocean"
+                              :name (n / name :op1 "Pacific" :op2 "Ocean"))))
+            :op2 (f / find-02
+                  :ARG0 s
+                  :ARG1 (d / difficult
+                        :domain (r / rest-01
+                              :ARG1 s
+                              :manner (p / peace)))))
+      :mod (j / just))
+
+# ::id bolt12_6455_6561.12
+# ::tok All the people who experienced that era must still remember it vividly ; even our younger generations also will cry with tears streaming down our cheeks , and our blood boils with indignation , whenever we turn to this page of history and read !
+(m2 / multi-sentence
+      :snt1 (i2 / infer-01
+            :ARG1 (r / remember-01
+                  :ARG0 (p / person
+                        :quant (a / all)
+                        :ARG0-of (e2 / experience-01
+                              :ARG1 (e / era
+                                    :mod (t / that))))
+                  :ARG1 e
+                  :manner (v / vivid))
+            :mod (s / still))
+      :snt2 (a2 / and
+            :op1 (c / cry-02
+                  :ARG0 (g / generation
+                        :mod (y / young
+                              :degree (m / more))
+                        :poss (w / we)
+                        :mod (e3 / even))
+                  :ARG1 (t2 / tear
+                        :ARG1-of (s2 / stream-01
+                              :direction (d / down)
+                              :location (c2 / cheek
+                                    :part-of w)))
+                  :mod (a3 / also))
+            :op2 (b / boil-01
+                  :ARG1 (b2 / blood
+                        :poss w)
+                  :manner (i / indignation))
+            :time (a4 / and
+                  :op1 (t4 / turn-01
+                        :ARG1 w
+                        :direction (p2 / page
+                              :mod (h / history)
+                              :mod (t3 / this)))
+                  :op2 (r2 / read-01
+                        :ARG0 w
+                        :ARG1 p2))))
+
+# ::id bolt12_6455_6561.13
+# ::tok Now Japan actually wants to reverse the verdict on the history of its aggression - fellow citizens , fellow Chinese in Asia , wake up !
+(c4 / cause-01
+      :ARG0 (w2 / want-01
+            :ARG0 (c3 / country :wiki "Japan"
+                  :name (n2 / name :op1 "Japan"))
+            :ARG1 (r / reverse-01
+                  :ARG0 c3
+                  :ARG1 (v / verdict
+                        :topic (h / history
+                              :mod (a4 / aggression
+                                    :poss c3))))
+            :time (n3 / now)
+            :mod (a / actual))
+      :ARG1 (w / wake-up-02
+            :ARG0 w2
+            :ARG1 (a2 / and
+                  :op1 (c / citizen)
+                  :op2 (p / person
+                        :mod (c5 / country :wiki "China"
+                              :name (n4 / name :op1 "China"))
+                        :location (c2 / continent :wiki "Asia"
+                              :name (n / name :op1 "Asia")))
+                  :mod (f / fellow))))
+
+# ::id bolt12_6455_6561.14
+# ::tok Although it is painful to look back at these hundred years of shame , we must go face it ; although historical issues have not been resolved , let us create and choose history !
+(m / multi-sentence
+      :snt1 (o / obligate-01
+            :ARG1 (w / we)
+            :ARG2 (g / go-05
+                  :ARG0 w
+                  :ARG1 (f / face-01
+                        :ARG0 w
+                        :ARG1 t))
+            :concession (p / pain-01
+                  :ARG0 (l / look-01
+                        :ARG0 w
+                        :ARG1 (t / temporal-quantity :quant 100
+                              :unit (y / year)
+                              :mod (t2 / this)
+                              :duration-of (s / shame))
+                        :direction (b / back))
+                  :ARG1 w))
+      :snt2 (a2 / and
+            :op1 (c / create-01 :mode imperative
+                  :ARG0 (w2 / we)
+                  :ARG1 (h / history))
+            :op2 (c2 / choose-01 :mode imperative
+                  :ARG0 w2
+                  :ARG1 h)
+            :concession (r / resolve-01 :polarity -
+                  :ARG1 (i / issue-02
+                        :ARG0 (h2 / history)))))
+
+# ::id bolt12_6455_6561.16
+# ::tok My fellow citizens , for the Chinese nation , the advent of the twenty-first century means a time when we are beset with difficulties inside while being pressed from outside , and we will face many challenges .
+(s / say-01
+      :ARG0 i
+      :ARG1 (a / and
+            :op1 (m2 / mean-01
+                  :ARG1 (a2 / advent
+                        :mod (d / date-entity :century 21))
+                  :ARG2 (t / time
+                        :time-of (c4 / contrast-01
+                              :ARG1 (b / beset-01
+                                    :ARG0 (d2 / difficulty)
+                                    :ARG1 w
+                                    :location (i2 / inside))
+                              :ARG2 (p / press-01
+                                    :ARG1 w
+                                    :source (o / outside))))
+                  :ARG3 (n / nation
+                        :mod (c3 / country :wiki "China" :name (n2 / name :op1 "China"))))
+            :op2 (f2 / face-01
+                  :ARG0 (w / we)
+                  :ARG1 (t2 / thing
+                        :quant (m / many)
+                        :ARG2-of (c2 / challenge-01
+                              :ARG1 w))))
+      :ARG2 (c / citizen
+            :mod (f / fellow)
+            :poss (i / i)))
+
+# ::id bolt12_6455_6561.17
+# ::tok The Taiwan issue , the Tibet issue , the South China Sea issue , the surrounding environment , as well as the foreign forces which are aggressive to China - which way should we go ?
+(r / recommend-01
+      :ARG1 (g / go-06
+            :ARG0 (w / we)
+            :ARG1 (o3 / or
+                  :op1 (i / issue-02
+                        :ARG0 (c / country :wiki "Taiwan" :name (n / name :op1 "Taiwan")))
+                  :op2 (i2 / issue-02
+                        :ARG0 (p / province :wiki "Tibet" :name (n5 / name :op1 "Tibet")))
+                  :op3 (i3 / issue-02
+                        :ARG0 (s2 / sea :wiki "South_China_Sea" :name (n2 / name :op1 "South" :op2 "China" :op3 "Sea")))
+                  :op4 (e2 / environment
+                        :ARG1-of (s3 / surround-01))
+                  :op5 (f3 / force
+                        :mod (f4 / foreign)
+                        :mod (a2 / aggressive
+                              :prep-to (c2 / country :wiki "China" :name (n3 / name :op1 "China")))))
+            :ARG2 (w3 / way
+                  :mod (a / amr-unknown))))
+
+# ::id bolt12_6455_6561.18
+# ::tok What to do , fellow citizens ? Please take a look at the map of the world , that crescent-shaped encirclement is suppressing our breathing , strangling our development , and coveting our national territory .
+(m / multi-sentence
+      :snt1 (s / say-01
+            :ARG0 (i / i)
+            :ARG1 (d / do-02
+                  :ARG1 (a / amr-unknown))
+            :ARG2 (c / citizen
+                  :mod (f / fellow)))
+      :snt2 (a2 / and
+            :op1 (l / look-01 :mode imperative :polite +
+                  :ARG0 (y / you)
+                  :ARG1 (m2 / map
+                        :mod (w / world)))
+            :op2 (a3 / and
+                  :op1 (s2 / suppress-01
+                        :ARG0 (e / encircle-01
+                              :ARG1-of (s4 / shape-01
+                                    :ARG2 (c2 / crescent)))
+                        :ARG1 (b / breathe-01
+                              :ARG0 (w2 / we)))
+                  :op2 (s3 / strangle-01
+                        :ARG0 e
+                        :ARG1 (d2 / develop-02
+                              :ARG1 w2))
+                  :op3 (c3 / covet-01
+                        :ARG0 e
+                        :ARG1 (t / territory
+                              :mod (n / nation)
+                              :poss w2)))))
+
+# ::id bolt12_6455_6561.19
+# ::tok We do not want to make enemies , but are never afraid of enemies ; we do not want war , but are never afraid of war .
+(m / multi-sentence
+      :snt1 (h / have-concession-91
+            :ARG1 (f / fear-01 :polarity -
+                  :ARG0 w
+                  :ARG1 p
+                  :time (e2 / ever))
+            :ARG2 (w4 / want-01 :polarity -
+                  :ARG0 (w / we)
+                  :ARG1 (m2 / make-01
+                        :ARG0 w
+                        :ARG1 (p / person
+                              :ARG0-of (h3 / have-rel-role-91
+                                    :ARG1 w
+                                    :ARG2 (e / enemy))))))
+      :snt2 (h2 / have-concession-91
+            :ARG1 (f2 / fear-01 :polarity -
+                  :ARG0 w2
+                  :ARG1 w3)
+            :ARG2 (w5 / want-01 :polarity -
+                  :ARG0 (w2 / we)
+                  :ARG1 (w3 / war))))
+
+# ::id bolt12_6455_6561.20
+# ::tok We must urgently arrange arms , strengthen all military forces on land , on sea , and in the air .
+(o / obligate-01
+      :ARG1 (w / we)
+      :ARG2 (a / and
+            :op1 (a2 / arrange-01
+                  :ARG0 w
+                  :ARG1 (a3 / arm))
+            :op2 (s / strengthen-01
+                  :ARG0 w
+                  :ARG1 (f / force
+                        :mod (m / military)
+                        :location (a4 / and
+                              :op1 (l / land)
+                              :op2 (s2 / sea)
+                              :op3 (a5 / air))
+                        :mod (a6 / all)))
+            :manner (u / urgent)))
+
+# ::id bolt12_6455_6561.21
+# ::tok Over thousands of years , the Chinese nation has flourished several times , but before it has never had ambition to expand its territory outward .
+(h2 / have-concession-91
+      :ARG1 (h / have-03 :polarity -
+            :ARG0 n
+            :ARG1 (a / ambition
+                  :consist-of (e / expand-01
+                        :ARG0 n
+                        :ARG1 (t / territory
+                              :poss n)
+                        :direction (o / outward)))
+            :time (b / before)
+            :time (e2 / ever))
+      :ARG2 (f / flourish-01
+            :ARG1 (n / nation
+                  :mod (c2 / country :wiki "China"
+                        :name (n2 / name :op1 "China")))
+            :frequency (s2 / several)
+            :duration (m2 / multiple
+                  :op1 (t3 / temporal-quantity :quant 1000
+                        :unit (y / year)))))
+
+# ::id bolt12_6455_6561.22
+# ::tok Not imposing on others what we do n't want ourselves , what we follow is a foreign security strategic philosophy which applies benevolence and virtue .
+(c / cause-01
+      :ARG0 (i / impose-01 :polarity -
+            :ARG0 w
+            :ARG1 (t / thing
+                  :ARG1-of (w2 / want-01 :polarity -
+                        :ARG0 w))
+            :ARG2 (p2 / person
+                  :mod (o / other)))
+      :ARG1 (f / follow-02
+            :ARG0 (w / we)
+            :ARG1 (p / philosophy
+                  :mod (s / strategy)
+                  :mod (s2 / security
+                        :mod (f2 / foreign))
+                  :ARG0-of (a / apply-02
+                        :ARG1 (a2 / and
+                              :op1 (b / benevolence)
+                              :op2 (v / virtue))))))
+
+# ::id bolt12_6455_6561.23
+# ::tok The tolerance and liberalness of a country are like those of an individual - we avoid hurting others , but must insist on not being hurt ourselves .
+(r / resemble-01
+      :ARG1 (a / and
+            :op1 (t / tolerance)
+            :op2 (l / liberalness)
+            :poss (c / country))
+      :ARG2 (a3 / and
+            :op1 t
+            :op2 l
+            :poss (i / individual))
+      :ARG1-of (m / mean-01
+            :ARG2 (h3 / have-concession-91
+                  :ARG1 (o2 / obligate-01
+                        :ARG2 (i2 / insist-01
+                              :ARG0 (w / we)
+                              :ARG1 (h2 / hurt-01 :polarity -
+                                    :ARG1 w)))
+                  :ARG2 (a2 / avoid-01
+                        :ARG0 w
+                        :ARG1 (h / hurt-01
+                              :ARG0 w
+                              :ARG1 (p / person
+                                    :mod (o / other)))))))
+
+# ::id bolt12_6455_6561.24
+# ::tok Tolerance is certainly not fear , and sincerity does not have to be cowardice .
+(a / and
+      :op1 (f / fear :polarity -
+            :manner (c / certain)
+            :domain (t / tolerance))
+      :op2 (o / obligate-01 :polarity -
+            :ARG2 (c2 / cowardice
+                  :domain (s / sincerity))))
+
+# ::id bolt12_6455_6561.25
+# ::tok China exempting Japan from war reparations for World War II was in service of peace , benevolent peace .
+(s / serve-01
+      :ARG0 (e / exempt-01
+            :ARG0 (c / country :wiki "China"
+                  :name (n / name :op1 "China"))
+            :ARG1 (c3 / country :wiki "Japan"
+                  :name (n2 / name :op1 "Japan"))
+            :ARG2 (r / repair-01
+                  :ARG0 c3
+                  :mod (w / war)
+                  :ARG1-of (c4 / cause-01
+                        :ARG0 (w2 / war :wiki "World_War_II"
+                              :name (n3 / name :op1 "World" :op2 "War" :op3 "II")))))
+      :ARG2 (p / peace
+            :mod (b / benevolence)))
+
+# ::id bolt12_6455_6561.26
+# ::tok My fellow citizens , the People 's Heroes Monument is a condensed history of the Chinese nation striving for continuous self-improvement
+(s / say-01
+      :ARG0 i
+      :ARG1 (h / history
+            :ARG1-of (c2 / condense-01)
+            :topic (n / nation
+                  :mod (c3 / country :wiki "China"
+                        :name (n2 / name :op1 "China"))
+                  :ARG0-of (s2 / strive-01
+                        :ARG1 (i2 / improve-01
+                              :ARG1 n
+                              :ARG1-of (c4 / continue-01))))
+            :domain (f2 / facility :wiki "Monument_to_the_People's_Heroes"
+                  :name (n3 / name :op1 "People's" :op2 "Heroes" :op3 "Monument")))
+      :ARG2 (c / citizen
+            :mod (f / fellow)
+            :poss (i / i)))
+
+# ::id bolt12_6455_6561.27
+# ::tok The solemn and magnificent posture represents a sacred expectation for peace .
+(r / represent-01
+      :ARG0 (p / posture
+            :mod (s / solemn)
+            :mod (m / magnificent))
+      :ARG1 (e / expect-01
+            :ARG1 (p2 / peace)
+            :mod (s2 / sacred)))
+
+# ::id bolt12_6455_6561.28
+# ::tok The thought-strings of my memory have been agitated from time to time - many heroic , stirring , and tragic scenes of shining spears and armored horses spring up in my mind .
+(a / agitate-01
+      :ARG0 (s2 / spring-up-02
+            :ARG1 (s / scene
+                  :quant (m2 / many)
+                  :mod (h / heroic)
+                  :mod (t2 / tragic)
+                  :topic (a2 / and
+                        :op1 (s3 / spear
+                              :ARG1-of (s4 / shine-01))
+                        :op2 (h2 / horse
+                              :ARG1-of (a3 / armor-01)))
+                  :ARG2-of (s5 / stir-02))
+            :location (m3 / mind
+                  :poss i))
+      :ARG1 (s6 / string
+            :poss (m / memory
+                  :poss (i / i))
+            :mod (t4 / thing
+                  :ARG1-of (t3 / think-01)))
+      :frequency (o / occasional))
+
+# ::id bolt12_6455_6561.32
+# ::tok We must focus on national defense education , build up a Great Wall in the hearts of 1.3 billion people , and must establish the full range of a national defense system having the ability to both attack and defend ;
+(o / obligate-01
+      :ARG1 (w / we)
+      :ARG2 (a / and
+            :op1 (f / focus-01
+                  :ARG0 w
+                  :ARG2 (e / education
+                        :mod (d / defense
+                              :mod (n / nation))))
+            :op2 (b / build-up-05
+                  :ARG0 w
+                  :ARG1 (w2 / wall
+                        :mod (g / great))
+                  :location (h / heart
+                        :part-of (p / person :quant 1300000000)))
+            :op3 (e2 / establish-01
+                  :ARG0 w
+                  :ARG1 (s / system
+                        :mod (n3 / nation
+                              :mod (d2 / defense))
+                        :ARG1-of (r / range-01
+                              :ARG2 (f2 / full))
+                        :ARG1-of (c / capable-01
+                              :ARG2 (a6 / and
+                                    :op1 (a7 / attack-01
+                                          :ARG0 s)
+                                    :op2 (d4 / defend-01
+                                          :ARG0 s)))))))
+
+# ::id bolt12_6455_6561.34
+# ::tok The battle horn is about to sound , the people are already fully equipped and ready to go .
+(a / and
+      :op1 (s / sound-02
+            :ARG1 (h / horn
+                  :mod (b / battle))
+            :time (a2 / about-to))
+      :op2 (e / equip-01
+            :ARG1 (p / person)
+            :time (a3 / already)
+            :manner (f / full))
+      :op3 (r / ready-02
+            :ARG1 p
+            :ARG2 (g / go-01
+                  :ARG1 p)))
+
+# ::id bolt12_6455_6561.35
+# ::tok Without the people 's support we will accomplish nothing ; with the support of the people , we will be all-powerful .
+(c / contrast-01
+      :ARG1 (a / accomplish-01
+            :ARG0 (w / we)
+            :ARG1 (n / nothing)
+            :manner (s / support-01 :polarity -
+                  :ARG0 (p / person)
+                  :ARG1 w))
+      :ARG2 (p2 / powerful-02
+            :ARG1 w
+            :mod (a2 / all)
+            :manner (s2 / support-01
+                  :ARG0 p
+                  :ARG1 w)))
+
+# ::id bolt12_6455_6561.36
+# ::tok My fellow citizens , it is time for us to say `` no '' to others . Therefore , we must achieve :
+(m / multi-sentence
+      :snt1 (s / say-01
+            :ARG0 (i / i)
+            :ARG1 (t / time
+                  :time-of (s2 / say-01
+                        :ARG0 (w / we)
+                        :ARG1 (n / no)
+                        :ARG2 (p / person
+                              :mod (o / other))))
+            :ARG2 (c / citizen
+                  :mod (f / fellow)
+                  :poss i))
+      :snt2 (c2 / cause-01
+            :ARG1 (o2 / obligate-01
+                  :ARG1 (w2 / we)
+                  :ARG2 (a / achieve-01
+                        :ARG0 w2))))
+
+# ::id bolt12_6455_6562.1
+# ::tok 1 . Establish guaranteed funds , improve working environment and mechanisms , recruit back to China the hundreds of thousands of IT professionals who have emigrated to and linger in the United States and around the world .
+(a / and
+      :op1 (e / establish-01
+            :ARG1 (f / fund
+                  :ARG1-of (g / guarantee-01)))
+      :op2 (i / improve-01
+            :ARG1 (a2 / and
+                  :op1 (e2 / environment
+                        :mod (w / work-01))
+                  :op2 (m / mechanism
+                        :mod (w3 / work-01))))
+      :op3 (r / recruit-01
+            :ARG1 (p / professional
+                  :quant (m2 / multiple :op1 100000)
+                  :ARG0-of (e3 / emigrate-01
+                        :ARG2 (a3 / and
+                              :op1 (c / country :wiki "United_States"
+                                    :name (n / name :op1 "United" :op2 "States"))
+                              :op2 (a4 / around
+                                    :op1 (w2 / world))))
+                  :mod (i2 / IT)
+                  :ARG1-of (l / linger-01
+                        :ARG2 a3))
+            :direction (b / back)
+            :destination (c2 / country :wiki "China"
+                  :name (n2 / name :op1 "China")))
+      :li (x / 1))
+
+# ::id bolt12_6455_6562.2
+# ::tok 2 . Create a few nuclear-powered aircraft carrier battle groups .
+(c / create-01
+      :ARG1 (g / group
+            :mod (b / battle-01)
+            :quant (f / few)
+            :consist-of (c2 / carrier
+                  :mod (a / aircraft)
+                  :ARG1-of (p / power-01
+                        :ARG0 (n / nucleus))))
+      :li (x / 2))
+
+# ::id bolt12_6455_6562.3
+# ::tok 3 . Manufacture 5000 advanced combat aircraft of various kinds .
+(m / manufacture-01
+      :ARG1 (a / aircraft :quant 5000
+            :purpose (c / combat-01)
+            :ARG1-of (a2 / advanced-02)
+            :mod (k / kind
+                  :mod (v / various)))
+      :li (x / 3))
+
+# ::id bolt12_6455_6562.4
+# ::tok 4 . Accelerate the research and deployment of high-speed intercontinental ballistic missiles which can break missile defense systems and whose range is more than 10,000 nautical miles .
+(a / accelerate-01
+      :ARG1 (a2 / and
+            :op1 (r / research-01
+                  :ARG1 (m / missile
+                        :mod (b / ballistic)
+                        :mod (s2 / speed
+                              :ARG1-of (h / high-02))
+                        :mod (i / intercontinental)
+                        :ARG1-of (r2 / range-01
+                              :ARG2 (m2 / more-than
+                                    :op1 (d / distance-quantity :quant 10000
+                                          :unit (m3 / mile
+                                                :mod (n / nautical)))))
+                        :ARG2-of (b2 / break-01
+                              :ARG1 (s / system
+                                    :mod (d2 / defense
+                                          :mod (m4 / missile)))
+                              :ARG1-of (p / possible-01))))
+            :op2 (d3 / deploy-01
+                  :ARG1 m))
+      :li (x / 4))
+
+# ::id bolt12_6455_6562.5
+# ::tok 5 . Resume nuclear experiments , and establish military forces in space .
+(a / and
+      :op1 (r / resume-01
+            :ARG1 (e2 / experiment-01
+                  :mod (n / nucleus)))
+      :op2 (e / establish-01
+            :ARG1 (f / force
+                  :mod (m / military))
+            :location (s / space))
+      :li (x / 5))
+
+# ::id bolt12_6455_6562.6
+# ::tok 6 . Retain 1000 nuclear bombs equivalent to ten million tons of TNT , and when necessary , install nuclear warheads on all short- and middle-range missiles .
+(a / and
+      :op1 (r / retain-01
+            :ARG1 (b / bomb :quant 1000
+                  :mod (n / nucleus)
+                  :ARG1-of (e / equal-01
+                        :ARG2 (t3 / TNT
+                              :quant (m / mass-quantity :quant 10000000
+                                    :unit (t2 / ton))))))
+      :op2 (i / install-01
+            :ARG1 (w / warhead
+                  :mod (n3 / nucleus))
+            :ARG2 (a2 / and
+                  :op1 (m2 / missile
+                        :ARG1-of (r2 / range-01
+                              :ARG2 (s / short)))
+                  :op2 (m3 / missile
+                        :ARG1-of (r3 / range-01
+                              :ARG2 (m4 / middle)))
+                  :quant (a3 / all))
+            :time (n4 / need-01
+                  :ARG1 i))
+      :li (x / 6))
+
+# ::id bolt12_6455_6562.7
+# ::tok 7 . Retain 30 strategic nuclear submarines with the ability to inflict three devastating nuclear strikes against enemies .
+(r / retain-01
+      :ARG1 (s / submarine :quant 30
+            :mod (n / nucleus)
+            :mod (s2 / strategy)
+            :ARG1-of (c / capable-01
+                  :ARG2 (i / inflict-01
+                        :ARG0 s
+                        :ARG1 (s3 / strike-01 :quant 3
+                              :ARG0 s
+                              :mod (n2 / nucleus)
+                              :ARG0-of (d / devastate-01))
+                        :ARG2 (p / person
+                              :ARG0-of (h / have-rel-role-91
+                                    :ARG2 (e / enemy))))))
+      :li (x / 7))
+
+# ::id bolt12_6455_6562.8
+# ::tok 8 . Abandon the commitment to not use nuclear weapons first .
+(a / abandon-03
+      :ARG1 (c / commit-01
+            :ARG1 (y / you)
+            :ARG2 (u / use-01 :polarity -
+                  :ARG1 (w / weapon
+                        :mod (n / nucleus))
+                  :time (f / first)))
+      :li (x / 8))
+
+# ::id bolt12_6455_6562.9
+# ::tok 9 . Retain the right of pre-emptive strike when national security is threatened .
+(r / retain-01
+      :ARG1 (r2 / right-05
+            :ARG2 (s2 / strike-01
+                  :ARG0-of (p / preempt-01)))
+      :time (t / threaten-01
+            :ARG2 (s / security
+                  :mod (n / nation)))
+      :li (x / 9))
+
+# ::id bolt12_6455_6562.10
+# ::tok My fellow citizens , only if we have self-confidence and self-improvement , can we strive to be strong . Qin Shi Huang unified China . Zheng Chenggong recovered Taiwan . In our responsibilities we must carry on the farsightedness , insight , and strong will of our predecessors .
+(m / multi-sentence
+      :snt1 (s / say-01
+            :ARG1 (p3 / possible-01
+                  :ARG1 (s3 / strive-01
+                        :ARG0 (w / we)
+                        :ARG1 (s4 / strong-02
+                              :ARG1 w))
+                  :condition (a / and
+                        :op1 (c4 / confident-01
+                              :ARG1 w
+                              :ARG2 w)
+                        :op2 (i2 / improve-01
+                              :ARG0 w
+                              :ARG1 w)
+                        :mod (o2 / only)))
+            :ARG2 (c2 / citizen
+                  :mod (f / fellow)
+                  :poss (i / i)))
+      :snt2 (u / unify-01
+            :ARG0 (p2 / person :wiki "Qin_Shi_Huang" :name (n3 / name :op1 "Qin" :op2 "Shi" :op3 "Huang"))
+            :ARG1 (c / country :wiki "China" :name (n4 / name :op1 "China")))
+      :snt3 (r / recover-02
+            :ARG0 (p / person :wiki "Koxinga" :name (n / name :op1 "Zheng" :op2 "Chenggong"))
+            :ARG1 (c5 / country :wiki "Taiwan" :name (n2 / name :op1 "Taiwan")))
+      :snt4 (o / obligate-01
+            :ARG1 (w2 / we)
+            :ARG2 (c3 / carry-on-02
+                  :ARG1 (a2 / and
+                        :op1 (s2 / see-01
+                              :mod (f2 / far))
+                        :op2 (i3 / insight)
+                        :op3 (w3 / will
+                              :mod (s7 / strong))
+                        :poss (p4 / predecessor
+                              :poss w2)))
+            :ARG1-of (r2 / responsible-03
+                  :ARG0 w2)))
+
+# ::id bolt12_6455_6562.11
+# ::tok Now , that piece of land trembling far away from the embrace of the motherland is shaking , moaning , and calling . Fellow citizens , let us carry forward the unfulfilled wishes of previous generals , moving forward courageously !
+(m / multi-sentence
+      :snt1 (a / and
+            :op1 (s / shake-01
+                  :ARG1 (p / piece
+                        :part-of (l / land)
+                        :ARG1-of (t / tremble-01
+                              :location (r / relative-position
+                                    :op1 (e / embrace-01
+                                          :ARG0 (m3 / motherland)
+                                          :ARG1 p)
+                                    :quant (f / far)))
+                        :mod (t2 / that)))
+            :op2 (m2 / moan-01
+                  :ARG0 p)
+            :op3 (c / call-02
+                  :ARG0 p)
+            :time (n / now))
+      :snt2 (s2 / say-01
+            :ARG1 (c3 / carry-01 :mode imperative
+                  :ARG0 (w2 / we)
+                  :ARG1 (t3 / thing
+                        :ARG1-of (w / wish-01
+                              :ARG0 (p3 / person
+                                    :ARG0-of (h / have-org-role-91
+                                          :ARG2 (g / general)
+                                          :time (p2 / previous)))
+                              :ARG1-of (f5 / fulfill-01 :polarity -)))
+                  :direction (f4 / forward)
+                  :manner (m4 / move-01
+                        :ARG1 w2
+                        :direction (f3 / forward)
+                        :manner (c4 / courageous)))
+            :ARG2 (c2 / citizen
+                  :mod (f2 / fellow))))
+
+# ::id bolt12_6455_6562.13
+# ::tok Here , I 've composed a poem in classical ci form , to voice the aspirations of my heart .
+(c / compose-02
+      :ARG0 (i / i)
+      :ARG1 (p / poem)
+      :mod (h2 / here)
+      :manner (f / form
+            :mod (c2 / classical)
+            :mod (w / work-of-art :wiki "Ci_(poetry)"
+                  :name (n / name :op1 "Ci" :op2 "(poetry)")))
+      :purpose (v / voice-01
+            :ARG0 i
+            :ARG1 (a / aspire-01
+                  :ARG0 (h / heart
+                        :part-of i))))
+
+# ::id bolt12_6455_6562.17
+# ::tok How can we allow the Diaoyu Islands to fall to other countries
+(p / possible-01
+      :ARG1 (a / allow-01
+            :ARG0 (w / we)
+            :ARG1 (f / fall-05
+                  :ARG1 (i / island :wiki "Senkaku_Islands"
+                        :name (n / name :op1 "Diaoyu" :op2 "Islands"))
+                  :ARG2 (c / country
+                        :mod (o / other)))
+            :manner (a2 / amr-unknown)))
+
+# ::id bolt12_6455_6565.4
+# ::tok We should tell the whole world , that Chinese ca n't be bullied at will by others ...
+(r / recommend-01
+      :ARG1 (t / tell-01
+            :ARG0 (w / we)
+            :ARG1 (p / possible-01 :polarity -
+                  :ARG1 (b / bully-01
+                        :ARG0 (o / other)
+                        :ARG1 (c / country :wiki "China"
+                              :name (n / name :op1 "China"))
+                        :manner (w4 / will-02)))
+            :ARG2 (w2 / world
+                  :mod (w3 / whole))))
+
+# ::id bolt12_6455_6566.1
+# ::tok It is time to show our strength ! China has been calm for too long !
+(m / multi-sentence
+      :snt1 (t2 / time
+            :time-of (s / show-01
+                  :ARG0 (w / we)
+                  :ARG1 (s2 / strength
+                        :poss w)))
+      :snt2 (c / calm-03
+            :ARG1 (c2 / country :wiki "China" :name (n / name :op1 "China"))
+            :ARG1-of (l / long-03
+                  :degree (t / too))))
+
+# ::id bolt12_6455_6566.2
+# ::tok Currently our citizens ' lives are all too carefree ! The officials are too extravagant .
+(m / multi-sentence
+      :snt1 (c / carefree
+            :domain (l / life
+                  :poss (c2 / citizen
+                        :poss (w / we))
+                  :quant (a / all))
+            :time (c3 / current)
+            :degree (t / too))
+      :snt2 (e / extravagant
+            :degree (t2 / too)
+            :domain (p / person
+                  :ARG0-of (h / have-org-role-91
+                        :ARG2 (o2 / official)))))
+
+# ::id bolt12_6455_6566.3
+# ::tok Now we already have no cohesion ! China needs to start a war ! A harsh slap in the face of the countries which follow the United States ' rear !
+(m / multi-sentence
+      :snt1 (h / have-03 :polarity -
+            :ARG0 (w / we)
+            :ARG1 (c / cohesion)
+            :time (n / now)
+            :time (a / already))
+      :snt2 (n2 / need-01
+            :ARG0 (c2 / country :wiki "China" :name (n3 / name :op1 "China"))
+            :ARG1 (s / start-01
+                  :ARG0 c2
+                  :ARG1 (w2 / war)))
+      :snt3 (s2 / slap-01
+            :ARG1 (f / face
+                  :part-of (c3 / country
+                        :ARG0-of (f2 / follow-02
+                              :ARG1 (r / rear
+                                    :poss (c4 / country :wiki "United_States" :name (n4 / name :op1 "United" :op2 "States"))))))
+            :ARG1-of (h2 / harsh-02)))
+
+# ::id bolt12_91455_5310.1
+# ::tok We need shows in life , but it is really p. to show yourself within someone 's embrace .
+(c / contrast-01
+      :ARG1 (n / need-01
+            :ARG0 (w / we)
+            :ARG1 (s3 / show)
+            :prep-in (l / life))
+      :ARG2 (p / p
+            :degree (r / really)
+            :domain (s / show-01
+                  :ARG0 y2
+                  :ARG1 (y2 / you
+                        :ARG1-of (e / embrace-02
+                              :ARG0 (s2 / someone))))))
+
+# ::id bolt12_91455_5312.1
+# ::tok The whole society is like this , not to mention the stars
+(r / resemble-01
+      :ARG1 (s / society
+            :mod (w / whole)
+            :ARG2-of (i / include-91
+                  :ARG1 (p / person
+                        :ARG1-of (s2 / star-01))))
+      :ARG2 (t / this))
+
+# ::id bolt12_91455_5315.1
+# ::tok Agree , just cheap entertainers . Their reputation in feudal China somewhat makes sense .
+(m / multi-sentence
+      :snt1 (a / agree-01
+            :ARG1 (p / person
+                  :ARG0-of (e / entertain-01)
+                  :mod (j / just)
+                  :ARG1-of (c / cheap-02)))
+      :snt2 (s / sense-02
+            :ARG1 (t2 / thing
+                  :ARG2-of (r / repute-01
+                        :ARG1 (t / they)
+                        :location (c2 / country :wiki "China" :name (n / name :op1 "China")
+                              :mod (f / feudal))))
+            :degree (s2 / somewhat)))
+
+# ::id bolt12_91455_5320.1
+# ::tok That 's normal , it has always been the case that a whore is heartless and a performer is unrighteous
+(m / multi-sentence
+      :snt1 (n / normal-02
+            :ARG1 (t / that))
+      :snt2 (a / and
+            :op2 (a2 / and
+                  :op1 (h / heartless
+                        :domain (w2 / whore))
+                  :op2 (r / righteous-07 :polarity -
+                        :ARG1 (p2 / person
+                              :ARG0-of (p3 / perform-01)))
+                  :time (a3 / always))))
+
+# ::id bolt12_91455_5322.1
+# ::tok Have a look at the `` wolf with glasses '' near Ms . Fan , you will know the actress has no choice but drink with him or she will be forced out or even framed .
+(m / multi-sentence
+      :snt1 (l / look-01 :mode imperative
+            :ARG0 (y2 / you)
+            :ARG1 (w / wolf
+                  :ARG1-of (n / near-02
+                        :ARG2 (p / person :wiki - :name (n2 / name :op1 "Ms." :op2 "Fan")))
+                  :ARG0-of (h2 / have-03
+                        :ARG1 (g / glasses))))
+      :snt2 (k / know-01
+            :ARG0 (y / you)
+            :ARG1 (o / obligate-01
+                  :ARG1 (p2 / person
+                        :ARG0-of (a2 / act-01))
+                  :ARG2 (d / drink-01
+                        :ARG0 p2
+                        :accompanier (h / he))
+                  :ARG2-of (h3 / have-condition-91
+                        :ARG1 (o2 / or
+                              :op1 (f / force-01 :polarity -
+                                    :ARG1 p2
+                                    :ARG2 (o3 / out))
+                              :op2 (f2 / frame-02 :polarity -
+                                    :ARG1 p2
+                                    :mod (e / even)))))))
+
+# ::id bolt12_91455_5324.1
+# ::tok It 's ok as long as there is something to eat : loveliness :
+(o / okay-04
+      :condition (a / as-long-as
+            :op1 (s2 / something
+                  :ARG1-of (e / eat-01)
+                  :mod (l / loveliness))))
+
+# ::id bolt12_91455_5325.1
+# ::tok No one is easy . Life is like a show , you must have a look at the script to know how to perform
+(m / multi-sentence
+      :snt1 (e / easy-05
+            :ARG1 (n / no-one))
+      :snt1 (r / resemble-01
+            :ARG1 (l / live-01)
+            :ARG2 (s / show-04)
+            :ARG1-of (m2 / mean-01
+                  :ARG2 (o / obligate-01
+                        :ARG1 (y / you)
+                        :ARG2 (l2 / look-01
+                              :ARG0 y
+                              :ARG1 (s2 / script)
+                              :purpose (k / know-01
+                                    :ARG0 y
+                                    :ARG1 (t / thing
+                                          :manner-of (p2 / perform-01))))))))
+
+# ::id bolt12_91455_5327.1
+# ::tok There are top scorer in the Imperial Examination in all 360 walks of life ! What effort and endeavor behind those top scorer in the Imperial Examination ! This is humiliating the word `` bean vermicelli '' !
+(m / multi-sentence
+      :snt1 (p / person
+            :ARG1-of (s / score-01
+                  :ARG3 (t2 / thing :wiki "Imperial_examination" :name (n / name :op1 "Imperial" :op2 "Examination"))
+                  :degree (t / top))
+            :location (w / walk :quant 360
+                  :quant (a / all)
+                  :mod (l / life)))
+      :snt2 (a2 / and
+            :op1 (e / effort)
+            :op2 (e2 / endeavor-01)
+            :location (b / behind
+                  :op1 (p2 / person
+                        :ARG1-of (s2 / score-01
+                              :ARG3 (t4 / thing :wiki "Imperial_examination" :name (n2 / name :op1 "Imperial" :op2 "Examination"))
+                              :degree (t6 / top))))
+            :degree (s3 / so))
+      :snt3 (h / humiliate-01
+            :ARG0 (t5 / this)
+            :ARG1 (w3 / word
+                  :mod (v / vermicelli
+                        :mod (b2 / bean)))))
+
+# ::id bolt12_91455_5334.1
+# ::tok The entertainment circle is a dirty one , all men in it are birds and beasts and scum
+(m2 / multi-sentence
+      :snt1 (d / dirty-02
+            :ARG1 (c / circle
+                  :mod (e / entertain-01)))
+      :snt2 (a2 / and
+            :op1 (b / bird)
+            :op2 (b2 / beast)
+            :op3 (s / scum)
+            :domain (m / man
+                  :quant (a3 / all)
+                  :location (i / it))))
+
+# ::id bolt12_91455_5335.1
+# ::tok Pity them , but who is to blame ? Those female stars are not easy
+(m / multi-sentence
+      :snt2 (e / easy-05 :polarity -
+            :ARG1 (f2 / female
+                  :mod (t2 / that)
+                  :ARG1-of (s2 / star-01)))
+      :snt1 (c / contrast-01
+            :ARG1 (p / pity-01
+                  :ARG1 (t / they))
+            :ARG2 (b2 / blame-01
+                  :ARG1 (a / amr-unknown))))
+
+# ::id bolt12_91455_5336.1
+# ::tok Everybody is doing this , how can you make money if you do n't do this
+(m3 / multi-sentence
+      :snt1 (d / do-02
+            :ARG0 (e2 / everybody)
+            :ARG1 (t / this))
+      :snt2 (p2 / possible-01
+            :ARG1 (m / make-05
+                  :ARG0 (y / you)
+                  :ARG1 (m2 / money)
+                  :manner (a2 / amr-unknown)
+                  :condition (d2 / do-02 :polarity -
+                        :ARG0 y
+                        :ARG1 t))))
+
+# ::id bolt12_91455_5337.1
+# ::tok She is a proud woman in front of others but is in melancholy mood when staying alone ...
+(c / contrast-01
+      :ARG1 (p / pride-01
+            :ARG0 (w / woman)
+            :time (b / be-located-at-91
+                  :ARG1 w
+                  :ARG2 (f / front
+                        :op1 (p2 / person
+                              :mod (o / other)))))
+      :ARG2 (m / mood
+            :mod (m2 / melancholy)
+            :domain w
+            :time (s / stay-01
+                  :ARG1 w
+                  :ARG3 (a / alone))))
+
+# ::id bolt12_91455_5338.1
+# ::tok To put it plainly stars nowadays are just popular prostitutes in ancient times . Now that they are famous prostitutes , it should be just normal to drink with some high officials or even sleep with them
+(m / multi-sentence
+      :snt1 (p6 / person
+            :ARG1-of (p3 / prostitute-01
+                  :ARG0 p6)
+            :ARG1-of (p4 / popular-02)
+            :mod (j / just)
+            :time (t2 / time
+                  :mod (a / ancient))
+            :domain (p7 / person
+                  :ARG1-of (s4 / star-01)
+                  :time (n4 / nowadays))
+            :ARG1-of (p / put-02
+                  :manner (p2 / plain)))
+      :snt2 (c / cause-01
+            :ARG0 (p8 / person
+                  :ARG1-of (p5 / prostitute-01
+                        :ARG0 p8)
+                  :ARG1-of (f / fame-01)
+                  :domain (t / they)
+                  :time (n2 / now))
+            :ARG1 (r / recommend-01
+                  :ARG1 (n / normal-02
+                        :ARG1 (o / or
+                              :op1 (d / drink-01
+                                    :ARG0 t
+                                    :accompanier (p9 / person
+                                          :quant (s2 / some)
+                                          :ARG0-of (h2 / have-org-role-91
+                                                :ARG2 (o2 / official
+                                                      :ARG1-of (h / high-02)))))
+                              :op2 (s3 / sleep-02
+                                    :ARG0 t
+                                    :ARG1 o2
+                                    :mod (e / even)))
+                        :mod (j2 / just)))))
+
+# ::id bolt12_91455_5340.1
+# ::tok What should we do in the future ! Ability alone is n't enough to become successful ! Are we goin ' to face such hard choices too ?
+(m / multi-sentence
+      :snt1 (r / recommend-01
+            :ARG1 (d / do-02
+                  :ARG1 (a / amr-unknown)
+                  :time (f / future))
+            :ARG2 (w / we))
+      :snt2 (e / enough :polarity -
+            :domain (c2 / capable-01
+                  :mod (a3 / alone))
+            :purpose (s3 / succeed-01))
+      :snt3 (f2 / face-01 :mode interrogative
+            :ARG0 (w2 / we)
+            :ARG1 (t / thing
+                  :ARG1-of (c / choose-01)
+                  :ARG1-of (h / hard-02
+                        :mod (s2 / such)))
+            :mod (t2 / too)))
+
+# ::id bolt12_91455_5341.1
+# ::tok More suffering is under the disguise of glorious looks , 't is the undisputable fact .
+(d2 / disguise-01
+      :ARG1 (s / suffer-01
+            :quant (m / more))
+      :ARG2 (l / look-02
+            :ARG1 (g / glorious))
+      :ARG2-of (d / dispute-01
+            :ARG1-of (p / possible-01 :polarity -)))
+
+# ::id bolt12_91455_5342.1
+# ::tok It 's not so bad , they 're just playing in their own circle , out of sight , out of mind ,
+(c2 / cause-01
+      :ARG0 (p / play-01
+            :ARG0 (t / they)
+            :location (c / circle
+                  :poss t)
+            :mod (j / just)
+            :manner (o / out-06
+                  :ARG1 t
+                  :ARG2 (s / see-01))
+            :manner (o2 / out-06
+                  :ARG1 t
+                  :ARG2 (m / mind)))
+      :ARG1 (b / bad-07 :polarity -
+            :ARG1 (i / it)
+            :degree (s2 / so)))
+
+# ::id bolt12_91455_5342.2
+# ::tok Not like the old guy Zhang Jizhong not only behaved like a hooligan in his own circle , but also thinks he is virtuous without any talent . He makes TV series when he has nothing to do to wreck people of the whole country .
+(m / multi-sentence
+      :snt1 (c / contrast-01
+            :ARG2 (g / guy :wiki - :name (n / name :op1 "Zhang" :op2 "Jizhong")
+                  :mod (o / old)
+                  :ARG0-of (b / behave-01
+                        :ARG1 (h / hooligan)
+                        :location (c2 / circle
+                              :poss g))
+                  :ARG0-of (t / think-01
+                        :ARG1 (v / virtuous
+                              :domain g
+                              :manner (t2 / talent :polarity -))
+                        :mod (a2 / also))))
+      :snt2 (m2 / make-01
+            :ARG0 (h3 / he)
+            :ARG1 (s / series
+                  :mod (t3 / TV))
+            :time (h2 / have-03
+                  :ARG0 g
+                  :ARG1 (n2 / nothing
+                        :ARG1-of (d / do-02)))
+            :purpose (w / wreck-01
+                  :ARG0 h3
+                  :ARG1 (p / person
+                        :poss (c3 / country
+                              :mod (w2 / whole))))))
+
+# ::id bolt12_91455_5344.1
+# ::tok When can China have a pure , innocent girl ?
+(p / possible-01
+      :ARG1 (h / have-03
+            :ARG0 (c / country :wiki "China" :name (n / name :op1 "China"))
+            :ARG1 (g / girl
+                  :ARG1-of (p2 / pure-02)
+                  :ARG1-of (i / innocent-01)))
+      :time (a / amr-unknown))
+
+# ::id bolt12_9145_5531.2
+# ::tok Much envied super stars often encounter social engagements or circumstances which they do n't welcome but have to join in ,
+(e / encounter-01
+      :ARG0 (p / person
+            :mod (s2 / super)
+            :ARG1-of (e2 / envy-01
+                  :degree (m / much))
+            :ARG1-of (s / star-01))
+      :ARG1 (o2 / or
+            :op1 (e3 / engage-01
+                  :mod (s3 / social))
+            :op2 (c2 / circumstance)
+            :ARG1-of (w / welcome-01 :polarity -
+                  :ARG0 p
+                  :concession-of (o3 / obligate-01
+                        :ARG1 p
+                        :ARG2 (j / join-in-05
+                              :ARG0 p
+                              :ARG1 o2))))
+      :frequency (o / often))
+
+# ::id bolt12_9145_5531.3
+# ::tok After all , there are many things they ca n't decide themselves 'cause that will have to do with many aspects and the interests of many people ,
+(c / cause-01
+      :ARG0 (o / obligate-01
+            :ARG2 (h / have-to-do-with-04
+                  :ARG0 d
+                  :ARG1 (a / and
+                        :op1 (a2 / aspect
+                              :quant (m2 / many))
+                        :op2 (i / interest
+                              :poss (p2 / person
+                                    :quant (m3 / many))))))
+      :ARG1 (p / possible-01 :polarity -
+            :ARG1 (d / decide-01
+                  :ARG0 (t / they)
+                  :ARG3 (t2 / thing
+                        :quant (m / many)))
+            :mod (a3 / after-all)))
+
+# ::id bolt12_9145_5531.4
+# ::tok Sometimes a dinner party which seems very normal for us ordinary people may not be that simple for stars as we imagined .
+(p3 / possible-01
+      :ARG1 (s3 / simple-02 :polarity -
+            :ARG1 (p / party
+                  :ARG1-of (n / normal-02
+                        :degree (v / very))
+                  :mod (d / dinner)
+                  :ARG1-of (s / seem-01
+                        :ARG2 (w / we
+                              :mod (p2 / person
+                                    :mod (o / ordinary)))))
+            :prep-for (p4 / person
+                  :ARG1-of (s4 / star-01))
+            :degree (t / that)
+            :ARG1-of (r / resemble-01
+                  :ARG2 (i / imagine-01
+                        :ARG0 w)))
+      :frequency (s2 / sometimes))
+
+# ::id bolt12_9145_5531.5
+# ::tok A star will have lots of contracts and her source of money will be rolling if she tackles well ; If she does n't tack well , what comes after her heel would be forcing out or even frame-ups ...
+(m / multi-sentence
+      :snt1 (a / and
+            :op1 (h / have-03
+                  :ARG0 (p / person
+                        :ARG1-of (s3 / star-01))
+                  :ARG1 (c3 / contract-02
+                        :quant (l / lot)))
+            :op2 (r / roll-01
+                  :ARG1 (s2 / source-01
+                        :ARG0 p
+                        :ARG1 (m2 / money))
+                  :condition (t2 / tackle-01
+                        :ARG0 p
+                        :manner (g2 / good))))
+      :snt2 (c2 / come-02
+            :ARG0 (o2 / or
+                  :op1 (f2 / force-01
+                        :ARG2 (o / out))
+                  :op2 (f3 / frame-02
+                        :mod (e / even)))
+            :ARG1 (h2 / heel
+                  :part-of (s / she))
+            :condition (t3 / tack-00 :polarity -
+                  :ARG0 s
+                  :manner (g / good))))
+
+# ::id bolt12_9145_5531.6
+# ::tok There are two kinds of smart female stars . Those of the first kind always hold very high integrity and sternly reject all such invitations ;
+(m / multi-sentence
+      :snt2 (a / and
+            :op1 (h / hold-01
+                  :ARG0 (p2 / person
+                        :mod (k2 / kind
+                              :ord (o / ordinal-entity :value 1))
+                        :mod (t / that))
+                  :ARG1 (i / integrity
+                        :ARG1-of (h2 / high-02
+                              :degree (v / very)))
+                  :time (a2 / always))
+            :op2 (r / reject-01
+                  :ARG0 p2
+                  :ARG1 (i2 / invite-01
+                        :mod (s2 / such)
+                        :quant (a3 / all))
+                  :manner (s3 / stern)))
+      :snt1 (k / kind :quant 2
+            :domain (f2 / female
+                  :ARG1-of (s / star-01)
+                  :ARG1-of (s4 / smart-06))))
+
+# ::id bolt12_9145_5531.7
+# ::tok the second kind are good at playing the trick and making their objectives achieved with their seed money ,
+(g3 / good-03
+      :ARG1 (p3 / person
+            :mod (k2 / kind
+                  :ord (o / ordinal-entity :value 2)))
+      :ARG2 (a3 / and
+            :op1 (p / play-10
+                  :ARG0 p3
+                  :ARG1 (t / trick))
+            :op2 (a4 / achieve-01
+                  :ARG0 p3
+                  :ARG1 (o2 / objective
+                        :poss p3)
+                  :manner (m2 / money
+                        :mod (s2 / seed)
+                        :poss p3))))
+
+# ::id bolt12_9145_5531.8
+# ::tok It 's rumored that even some super female stars won their first roles in this way .
+(r2 / rumor-01
+      :ARG1 (w / win-01
+            :ARG0 (f2 / female
+                  :quant (s3 / some)
+                  :mod (e / even)
+                  :mod (s2 / super)
+                  :ARG1-of (s / star-01))
+            :ARG1 (r / role
+                  :ord (o / ordinal-entity :value 1)
+                  :poss f2)
+            :manner (w2 / way
+                  :mod (t / this))))
+
+# ::id bolt12_9145_5531.9
+# ::tok After drinking some alcohol , the advertiser or show sponsor may take the chance to lie on the female star 's shoulder , feel her chin or kiss her cheek , and endurance is the attitude most adopted by the female stars .
+(a / and
+      :op1 (p / possible-01
+            :ARG1 (c / chance-02
+                  :ARG0 (o / or
+                        :op1 (p2 / person
+                              :ARG0-of (a2 / advertise-01))
+                        :op2 (p3 / person
+                              :ARG0-of (s / sponsor-01
+                                    :ARG1 (s2 / show-04))))
+                  :ARG1 (o2 / or
+                        :op1 (l / lie-07
+                              :ARG1 o
+                              :ARG2 (s3 / shoulder
+                                    :part-of (f3 / female
+                                          :ARG1-of (s4 / star-01))))
+                        :op2 (f / feel-01
+                              :ARG0 o
+                              :ARG1 (c2 / chin
+                                    :part-of f3))
+                        :op3 (k / kiss-01
+                              :ARG0 o
+                              :ARG1 (c3 / cheek
+                                    :part-of f3))))
+            :time (a3 / after
+                  :op1 (d / drink-01
+                        :ARG0 o
+                        :ARG1 (a4 / alcohol
+                              :quant (s5 / some)))))
+      :op2 (a5 / adopt-01
+            :ARG0 f3
+            :ARG1 (a6 / attitude
+                  :mod (e / endure-01))
+            :degree (m / most)))
+
+# ::id bolt12_9145_5533.1
+# ::tok Those stars are just pretending , they are all actually living a much damned better life than this
+(a3 / and
+      :op1 (p / pretend-01
+            :ARG0 (p2 / person
+                  :mod (t / that)
+                  :ARG1-of (s / star-01))
+            :mod (j / just))
+      :op2 (l / live-01
+            :ARG0 p2
+            :ARG1 (l2 / life
+                  :mod (g / good
+                        :degree (m / more
+                              :quant (m2 / much)))
+                  :ARG1-of (d / damn-01 :mode expressive))
+            :mod (a2 / actual)
+            :compared-to (t2 / this)))
+
+# ::id bolt12_9145_5534.1
+# ::tok Agree , just cheap entertainers . Their reputation in feudal China somewhat makes sense .
+(m / multi-sentence
+      :snt1 (a / agree-01
+            :ARG1 (p / person
+                  :ARG0-of (e / entertain-01)
+                  :mod (j / just)
+                  :ARG1-of (c / cheap-02)))
+      :snt2 (s3 / sense-02
+            :ARG1 (t2 / thing
+                  :ARG2-of (r / repute-01
+                        :ARG1 (t / they)
+                        :location (c2 / country :wiki "China" :name (n / name :op1 "China")
+                              :mod (f / feudal))))
+            :degree (s2 / somewhat)))
+
+# ::id bolt12_9145_5536.1
+# ::tok Ah well , it is not easy to be an actress
+(e / easy-05 :polarity -
+      :ARG1 (p / person
+            :ARG0-of (a / act-01))
+      :mod (a2 / ah-well :mode expressive))
+
+# ::id bolt12_9145_5539.1
+# ::tok The women are birds and beasts , and the men are worse than birds and beasts
+(a / and
+      :op1 (a3 / and
+            :op1 (b4 / bird)
+            :op1 (b5 / beast)
+            :domain (w / woman))
+      :op1 (b / bad-07
+            :ARG1 (m / man)
+            :degree (m2 / more)
+            :compared-to (a2 / and
+                  :op1 b4
+                  :op2 b5)))
+
+# ::id wb.eng_0003.4
+# ::tok Route 288 , the circumferential highway running around the south - western quadrant of the Richmond New Urban Region , opened in late 2004 .
+(o / open-01
+      :ARG1 (h / highway :wiki "Virginia_State_Route_288"
+            :name (r / name :op1 "Route" :op2 288)
+            :ARG1-of (r3 / run-04
+                  :direction (a / around
+                        :op1 (q / quadrant
+                              :part-of (c / country-region :wiki -
+                                    :name (r2 / name :op1 "Richmond" :op2 "New" :op3 "Urban" :op4 "Region"))
+                              :mod (s / south-west))))
+            :mod (c2 / circumference))
+      :time (l / late
+            :op1 (d / date-entity :year 2004)))
+
+# ::id wb.eng_0003.5
+# ::tok Already it is changing development patterns for the worse and causing localized traffic congestion around its exits .
+(a / and
+      :op1 (c / change-01
+            :ARG0 (i / it)
+            :ARG1 (p / pattern
+                  :mod (d / develop-02))
+            :ARG1-of (c4 / cause-01
+                  :ARG0 (w / worsen-01
+                        :ARG1 p)))
+      :op2 (c2 / cause-01
+            :ARG0 i
+            :ARG1 (c3 / congest-01
+                  :ARG1 (a2 / around
+                        :op1 (e / exit
+                              :poss i))
+                  :ARG2 (t / traffic)
+                  :ARG1-of (l2 / localize-01)))
+      :time (a3 / already))
+
+# ::id wb.eng_0003.6
+# ::tok The Richmond Times - Dispatch tells the tale today about the impact on the Huguenot Trail in Powhatan County .
+(t / tell-01
+      :ARG0 (n / newspaper :wiki "Richmond_Times-Dispatch"
+            :name (r / name :op1 "Richmond" :op2 "Times-Dispatch"))
+      :ARG1 (t2 / tale
+            :topic (i / impact-01
+                  :ARG1 (r2 / road :wiki -
+                        :name (h / name :op1 "Huguenot" :op2 "Trail")
+                        :location (c / county :wiki "Powhatan_County,_Virginia"
+                              :name (p / name :op1 "Powhatan" :op2 "County")))))
+      :time (t3 / today))
+
+# ::id wb.eng_0003.7
+# ::tok Traffic has more than doubled in one section of Huguenot Trail since 288 opened , reports Will Jones .
+(r2 / report-01
+      :ARG0 (p / person :wiki -
+            :name (w / name :op1 "Will" :op2 "Jones"))
+      :ARG1 (d / double-01
+            :ARG1 (t / traffic
+                  :location (s / section :quant 1
+                        :part-of (r / road :wiki -
+                              :name (h / name :op1 "Huguenot" :op2 "Trail"))))
+            :time (s2 / since
+                  :op1 (o / open-01
+                        :ARG1 (r3 / road :wiki "Virginia_State_Route_288"
+                              :name (x / name :op1 288))))
+            :mod (m / more-than)))
+
+# ::id wb.eng_0003.9
+# ::tok 17 accidents have been reported near the intersection of Winterfield Road so far this year , up from 12 for all of 2004 .
+(r / report-01
+      :ARG1 (a / accident
+            :ARG1-of (n / near-02
+                  :ARG2 (i4 / intersect-01
+                        :ARG0 (r2 / road :wiki - :name (w / name :op1 "Winterfield" :op2 "Road"))))
+            :quant (x / 17
+                  :ARG4-of (u / up-02
+                        :ARG3 (x2 / 12
+                              :quant-of (a3 / accident
+                                    :time (a2 / all
+                                          :op1 (d / date-entity :year 2004)))))))
+      :time (s2 / so-far
+            :op1 (y / year
+                  :mod (t / this))))
+
+# ::id wb.eng_0003.10
+# ::tok Dale Totten , resident engineer for the Virginia Department of Transportation , noted that VDOT would four - lane the road for about $ 13 million if it had more money .
+(n / note-01
+      :ARG0 (p / person :wiki -
+            :name (d / name :op1 "Dale" :op2 "Totten")
+            :ARG0-of (h2 / have-org-role-91
+                  :ARG1 (g / government-organization :wiki "Virginia_Department_of_Transportation"
+                        :name (v / name :op1 "Virginia" :op2 "Department" :op3 "of" :op4 "Transportation"))
+                  :ARG2 (p3 / person
+                        :ARG0-of (e2 / engineer-01)
+                        :mod (p2 / person
+                              :ARG0-of (r / reside-01)))))
+      :ARG1 (l2 / lane-01 :quant 4
+            :ARG0 g
+            :ARG1 (r2 / road)
+            :condition (h / have-03
+                  :ARG0 g
+                  :ARG1 (m2 / money
+                        :mod (m3 / more)))
+            :ARG1-of (c / cost-01
+                  :ARG2 (a / about
+                        :op1 (m / monetary-quantity :quant 13000000
+                              :unit (d2 / dollar))))))
+
+# ::id wb.eng_0003.11
+# ::tok Of course , VDOT has no more money for road construction in the Richmond region .
+(h / have-03 :polarity -
+      :ARG0 (g / government-organization :wiki "Virginia_Department_of_Transportation"
+            :name (v / name :op1 "VDOT"))
+      :ARG1 (m / money
+            :purpose (c2 / construct-01
+                  :ARG1 (r2 / road
+                        :location (r3 / region
+                              :part (c / city :wiki "Richmond,_Virginia"
+                                    :name (r / name :op1 "Richmond"))))))
+      :mod (o / of-course))
+
+# ::id wb.eng_0003.12
+# ::tok One reason is that VDOT , at the behest of local politicians and boosters , spent all its friggin ' money on 288 !
+(c / cause-01
+      :ARG0 (s / spend-01
+            :ARG0 (g / government-organization :wiki "Virginia_Department_of_Transportation"
+                  :name (v / name :op1 "VDOT"))
+            :ARG1 (r / road :wiki "Virginia_State_Route_288"
+                  :name (n / name :op1 288))
+            :ARG3 (m / money
+                  :poss g
+                  :mod (x / friggin')
+                  :mod (a / all))
+            :ARG1-of (c2 / cause-01
+                  :ARG0 (a2 / and
+                        :op1 (p / politician)
+                        :op2 (p2 / person
+                              :ARG0-of (b2 / boost-01))
+                        :ARG1-of (l / local-02)))))
+
+# ::id wb.eng_0003.14
+# ::tok This is a major `` D'oh ! '' moment .
+(m / moment
+      :ARG1-of (m2 / major-02)
+      :domain (t / this)
+      :mod (d / d'oh :mode expressive))
+
+# ::id wb.eng_0003.15
+# ::tok As we predicted , Route 288 is generating residential development in scarcely populated areas all around its exits , overtaxing the local country roads .
+(g / generate-01
+      :ARG0 (r2 / road :wiki "Virginia_State_Route_288"
+            :name (r / name :op1 "Route" :op2 288))
+      :ARG1 (d / develop-02
+            :ARG1 (r3 / residence)
+            :location (a / area
+                  :ARG1-of (p2 / populate-01
+                        :mod (s / scarce))
+                  :location (a2 / around
+                        :op1 (e / exit
+                              :part-of r2)
+                        :mod (a3 / all)))
+            :ARG0-of (o / overtax-01
+                  :ARG2 (r4 / road
+                        :ARG1-of (l / local-02
+                              :ARG2 (c2 / country)))))
+      :ARG1-of (p / predict-01
+            :ARG0 (w / we)))
+
+# ::id wb.eng_0003.16
+# ::tok While the limited access highway might provide limited traffic relief for people driving back and forth between Chesterfield and Goochland counties , other people are making choices about where they live and work ,
+(c5 / contrast-01
+      :ARG1 (c2 / choose-01
+            :ARG0 (p / person
+                  :mod (o / other))
+            :ARG1 (a / and
+                  :op1 (l / location
+                        :location-of (w / work-01
+                              :ARG0 p))
+                  :op2 (l4 / location
+                        :location-of (l2 / live-01
+                              :ARG0 p))))
+      :ARG2 (p4 / possible-01
+            :ARG1 (r2 / relieve-01
+                  :ARG0 (h / highway
+                        :ARG1-of (a2 / access-01
+                              :ARG1-of (l3 / limit-01)))
+                  :ARG1 (t / traffic)
+                  :ARG2 (p2 / person
+                        :ARG0-of (d / drive-01
+                              :location (b / between
+                                    :op1 (c3 / county :wiki "Chesterfield_County,_Virginia"
+                                          :name (c / name :op1 "Chesterfield" :op2 "County"))
+                                    :op2 (c4 / county :wiki "Goochland_County,_Virginia"
+                                          :name (g3 / name :op1 "Goochland" :op2 "County")))
+                              :direction (a3 / and
+                                    :op1 (b2 / back)
+                                    :op2 (f / forth)))))))
+
+# ::id wb.eng_0003.17
+# ::tok and they are creating traffic congestion in new places .
+(a / and
+  :op2 (c / create-01
+         :ARG0 (t / they)
+         :ARG1 (c2 / congest-01
+                 :ARG2 (t2 / traffic)
+                 :location (p / place
+                             :mod (n / new)))))
+
+# ::id wb.eng_0003.18
+# ::tok The only thing that surprises me is how rapidly this is happening .
+(s / surprise-01
+  :ARG0 (r / rapid
+          :manner-of (t / this)
+          :mod (o / only))
+  :ARG1 (i / i))
+
+# ::id wb.eng_0003.19
+# ::tok Even I thought there might be a lag of three or four years .
+(t2 / think-01
+  :ARG0 (i / i
+          :mod (e / even))
+  :ARG1 (p / possible-01
+          :ARG1 (l / lag-01
+                    :ARG2 (o2 / or
+                            :op1 (t3 / temporal-quantity
+                                   :quant 3
+                                   :unit (y3 / year))
+                            :op2 (t / temporal-quantity
+                                   :quant 4
+                                   :unit (y2 / year))))))
+
+# ::id wb.eng_0003.20
+# ::tok If Route 288 has already created a $ 13 million road - construction in just this one exist , think of the liability it has created for all of its exits !
+(t / think-01 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (l / liable-01
+            :ARG1-of (c / create-01
+                  :ARG0 r2
+                  :ARG3 (e / exit
+                        :mod (a / all)
+                        :poss r2)))
+      :ARG1-of (c5 / cause-01
+            :ARG0 (c2 / create-01
+                  :ARG0 (r2 / road :wiki "Virginia_State_Route_288"
+                        :name (r / name :op1 "Route" :op2 288))
+                  :ARG1 (c3 / construct-01
+                        :ARG1 (r3 / road)
+                        :ARG1-of (c4 / cost-01
+                              :ARG2 (m / monetary-quantity :quant 13000000
+                                    :unit (d / dollar)))
+                        :location (e2 / exit :quant 1
+                              :mod (t2 / this)
+                              :mod (j / just)))
+                  :time (a2 / already))))
+
+# ::id wb.eng_0003.22
+# ::tok After a few more years of scattered subdivision development and approval of mega-commercial projects at major 288 intersections , the need for new road improvements will soar .
+(s / soar-01
+      :ARG1 (n / need-01
+            :ARG1 (i / improve-01
+                  :ARG1 (r / road)
+                  :mod (n2 / new)))
+      :time (a / after
+            :op1 (a2 / and
+                  :op1 (d / develop-02
+                        :ARG1 (s2 / subdivision)
+                        :ARG1-of (s3 / scatter-01))
+                  :op2 (a3 / approve-01
+                        :ARG1 (p / project
+                              :mod (c / commerce
+                                    :mod (m2 / mega))
+                              :location (i2 / intersect-01
+                                    :ARG0 (r2 / road :wiki "Virginia_State_Route_288"
+                                          :name (x / name :op1 288))
+                                    :ARG1 (r3 / road
+                                          :ARG1-of (m3 / major-02)))))
+                  :duration (f3 / few
+                        :op1 (t / temporal-quantity :quant 1
+                              :unit (y / year))
+                        :mod (m / more)))))
+
+# ::id wb.eng_0003.23
+# ::tok Before the end of the decade , we may well see the unfunded liability zoom well past the original $ 400 million it took to build the original highway .
+(p / possible-01
+      :ARG1 (s / see-01
+            :ARG0 (w / we)
+            :ARG1 (z / zoom-01
+                  :ARG1 (l / liability
+                        :ARG1-of (f / fund-01 :polarity -))
+                  :ARG4 (p2 / past
+                        :op1 (m / monetary-quantity :quant 400000000
+                              :unit (d / dollar)
+                              :ARG1-of (t / take-10
+                                    :ARG0 (b2 / build-01
+                                          :ARG1 (h / highway
+                                                :mod (o / original))))
+                              :mod (o2 / original))
+                        :mod (w2 / well)))
+            :time (b / before
+                  :op1 (e / end-01
+                        :ARG1 (d2 / decade))))
+      :degree (w3 / well))
+
+# ::id wb.eng_0003.24
+# ::tok To the brainiacs who thought Route 288 was such a great idea :
+(s / say-01
+      :ARG0 i
+      :ARG2 (b / brainiac
+            :ARG0-of (t / think-01
+                  :ARG1 (i / idea
+                        :mod (g / great
+                              :mod (s2 / such))
+                        :domain (r2 / road :wiki "Virginia_State_Route_288"
+                              :name (r / name :op1 "Route" :op2 288))))))
+
+# ::id wb.eng_0003.26
+# ::tok I think we could have spent the $ 400 million better elsewhere .
+(t / think-01
+  :ARG0 (i / i)
+  :ARG1 (p / possible-01
+          :ARG1 (s / spend-01
+                    :ARG0 (w / we)
+                    :ARG1 (e / elsewhere)
+                    :ARG3 (m / monetary-quantity
+                            :unit (d / dollar)
+                            :quant 400000000)
+                    :manner (g / good
+                              :degree (m2 / more)))))
+
+# ::id wb.eng_0003.27
+# ::tok I do n't think you can blame 288 for creating those people .
+(t / think-01
+      :ARG0 (i / i)
+      :ARG1 (r / recommend-01 :polarity -
+            :ARG1 (b / blame-01
+                  :ARG0 (y / you)
+                  :ARG1 (r2 / road :wiki "Virginia_State_Route_288"
+                        :name (x / name :op1 288))
+                  :ARG2 (c / create-01
+                        :ARG1 (p / person
+                              :mod (t2 / that))))
+            :ARG2 (y2 / you)))
+
