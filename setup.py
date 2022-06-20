@@ -6,6 +6,9 @@ with open("README.md", "r") as fh:
 
 base = [
         "pytrips>=0.5.16",
+        "Penman==1.2.1",
+        "Levenshtein==0.18.1",
+        "networkx==2.8.4"
     ]
 
 if __name__ == '__main__':
